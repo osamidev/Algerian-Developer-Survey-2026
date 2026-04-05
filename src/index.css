@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+:root {
+--color-background-card: #23262C;
+--color-background-main: #0B0E14;
+--color-background-surface: #1E293B;
+--color-border-subtle: #3C3E43;
+--color-brand-hover: #976CF7;
+--color-brand-light: #C5AEFB;
+--color-brand-primary: #6A2ACC;
+--color-text-disabled: #54565B;
+--color-text-high-emphasis: #FFFFFF;
+--color-text-medium-emphasis: #A5A9B1;
+
+--font-primary: "Jetbrains Mono", "Open Sans Jakarta", "Inter";
+--font-secondary: "Inter";
+}
+
