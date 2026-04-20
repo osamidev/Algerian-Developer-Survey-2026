@@ -18,9 +18,9 @@ export function QuestionsProvider({ questions, children }) {
 
     // Check if the user's answer is in the show_if whitelist
     if (Array.isArray(sourceAnswer)) {
-      return sourceAnswer.some((v) => question.show_if.includes(v));
+      return sourceAnswer.some((v) => question.show_if.includes(Number(v)));
     }
-    return question.show_if.includes(sourceAnswer);
+    return question.show_if.includes(Number(sourceAnswer));
   };
 
   const goNext = () => {
@@ -66,11 +66,11 @@ export function QuestionsProvider({ questions, children }) {
   );
 }
 
-export function useQuestions() {
+export function useSurvey() {
   const context = useContext(QuestionsContext);
 
   if (context === undefined) {
-    throw new Error("useQuestions must be used within a QuestionsProvider");
+    throw new Error("useSurvey must be used within a QuestionsProvider");
   }
 
   return context;

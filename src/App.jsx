@@ -1,13 +1,21 @@
 import { Routes, Route, Link } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
-import QuestionCard from "./features/survey/QuestionCard";
+import SurveyPage from "./pages/SurveyPage";
 
 function App() {
+
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/survey" element={<QuestionCard />} />
-      <Route path="*" element={<p>Not Found<Link to="/">Go Home</Link></p>} />
+      <Route path="/survey" element={<SurveyPage />} />
+      <Route
+        path="*"
+        element={
+          <p>
+            Page Not Found <Link to="/">Go Home</Link>
+          </p>
+        }
+      />
     </Routes>
   );
 }
