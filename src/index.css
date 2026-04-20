@@ -1,18 +1,44 @@
 @import "tailwindcss";
 
-:root {
---color-background-card: #23262C;
---color-background-main: #0B0E14;
---color-background-surface: #1E293B;
---color-border-subtle: #3C3E43;
---color-brand-hover: #976CF7;
---color-brand-light: #C5AEFB;
---color-brand-primary: #6A2ACC;
---color-text-disabled: #54565B;
---color-text-high-emphasis: #FFFFFF;
---color-text-medium-emphasis: #A5A9B1;
+@theme {
+  /* --color-background-card: var(--background-card); */
+  --color-background-main: var(--background-main);
+  --color-brand-accent: var(--brand-accent);
+  /* --color-background-surface: var(--background-surface); */
+  --color-border-subtle: var(--border-subtle);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-light: var(--brand-light);
+  --color-brand-primary: var(--brand-primary);
+  --color-text-disabled: var(--text-disabled);
+  --color-text-high: var(--text-high-emphasis);
+  --color-text-medium: var(--text-medium-emphasis);
 
---font-primary: "Jetbrains Mono", "Open Sans Jakarta", "Inter";
---font-secondary: "Inter";
+  --font-primary: var(--font-primary);
+  --font-secondary: var(--font-secondary);
 }
 
+:root {
+  --background-card: #23262c;
+  --background-main: #0b0e14;
+  --background-surface: #1e293b;
+  --border-subtle: #3c3e43;
+  --brand-hover: #976cf7;
+  --brand-light: #c5aefb;
+  --brand-primary: #6a2acc;
+  --brand-accent: #c3ff1f;
+
+  --text-disabled: #54565b;
+  --text-high-emphasis: #ffffff;
+  --text-medium-emphasis: #a5a9b1;
+
+  --font-primary:
+    "Jetbrains Mono", "Roboto Mono", "Lexend Deca", "Open Sans Jakarta",
+    monospace, "Inter";
+  --font-secondary: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--background-main);
+  color: var(--text-high-emphasis);
+  font-family: var(--font-primary);
+}
