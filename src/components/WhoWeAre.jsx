@@ -1,8 +1,8 @@
 function WhoWeAre() {
   const members = [
     { name: "Yacia Mehdi Akram", role: "Frontend", status: "active" },
-    { name: "Younes Belabbes", role: "Frontend", status: "active" },
-    { name: "Mechri Issam", role: "Backend", status: "active" },
+    { name: "Younes Belabbes", role: "Frontend/Design", status: "active" },
+    { name: "Mecheri Issam Eddine", role: "Backend", status: "active" },
     { name: "Seddiki Anis", role: "Database", status: "active" },
     { name: "Kouidri Salah Eddine", role: "Database", status: "active" },
     { name: "Mefti Zakaria", role: "Design", status: "active" },
