@@ -1,38 +1,39 @@
-import { useFormContext } from "react-hook-form";
 import { useSurvey } from "../../Contexts/QuestionsContext";
+// import { useFormContext } from "react-hook-form";
 
 function NavButtons() {
-  const { progress, goBack, goNext, isLast } = useSurvey();
-  const {} = useFormContext();
+  const { progress, goBack, goNext, isLast, isLoading } = useSurvey();
+  // const { isValid } = useFormContext();
 
   return (
-    <div className="mt-8 flex justify-between items-center border-t border-border-subtle pt-6">
-      <button
-        type="button"
-        onClick={goBack}
-        disabled={progress <= 0}
-        className="px-4 py-2 text-brand-light hover:text-white disabled:opacity-50 disabled:cursor-not-allowed font-secondary transition-colors"
-      >
-        Back
-      </button>
-
+    <div className="flex w-full flex-row-reverse gap-8">
       {!isLast ? (
         <button
+          key="btn-next"
           type="button"
           onClick={goNext}
-          className="bg-brand-primary text-text-high hover:bg-brand-hover px-6 py-2 rounded-md font-primary font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full rounded-full bg-[#6329c3] py-4 text-xl font-semibold tracking-wide text-white uppercase transition-colors hover:bg-[#522299] disabled:opacity-50"
         >
           Next
         </button>
       ) : (
         <button
+          key="btn-submit"
           type="submit"
-          disabled={!isValid}
-          className="bg-brand-accent text-background-main hover:opacity-90 px-6 py-2 rounded-md font-primary font-bold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex w-full items-center justify-center rounded-full bg-[#6329c3] py-4 text-xl font-semibold tracking-wide text-white uppercase transition-colors hover:bg-[#522299] disabled:opacity-50"
         >
-          Submit Survey
+          {isLoading ? <div className="loader"></div> : "Submit"}
         </button>
       )}
+
+      <button
+        type="button"
+        onClick={goBack}
+        disabled={progress <= 0}
+        className="w-full rounded-full border border-white/20 bg-transparent py-4 text-xl font-medium tracking-wide text-white uppercase transition-colors hover:bg-white/5 disabled:opacity-30"
+      >
+        Back
+      </button>
     </div>
   );
 }

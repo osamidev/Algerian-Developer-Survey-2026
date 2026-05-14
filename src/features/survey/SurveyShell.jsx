@@ -5,33 +5,76 @@ import NavButtons from "./NavButtons";
 import Header from "./Header";
 
 function SurveyShell() {
-  const { currentQuestion, progress } = useSurvey();
+  const { currentQuestion, progress, setIsLoading } = useSurvey();
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useFormContext();
 
-  const onSubmit = (data) => {
-    console.log("Final Survey Data Submitted:", data);
-  };
+  async function onSubmit(data) {
+    setIsLoading(true);
 
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    console.log("Simulating API call with data:", data);
+
+    const formattedData = {};
+    for (const key in data) {
+      const qId = parseInt(key, 10);
+      const val = data[key];
+
+      if (Array.isArray(val)) {
+        // multiple choice (array of strings/numbers) or ranking (array of objects)
+        formattedData[qId] = val.map((v) =>
+          typeof v === "object" && v?.id ? parseInt(v.id, 10) : parseInt(v, 10),
+        );
+      } else if (typeof val === "string" && !isNaN(val)) {
+        formattedData[qId] = parseInt(val, 10);
+      } else {
+        formattedData[qId] = val;
+      }
+    }
+    console.log("Final Survey Data Submitted:", formattedData);
+
+    setIsLoading(false);
+  }
+
+  // bg-[#0A0A0A]
   return (
-    <div className="min-h bg-background-main text-text-high min-h-dvh w-dvw flex flex-col items-center">
-      <Header progress={progress} />
-      <div className="flex-1 w-full max-w-2xl p-4 flex flex-col">
+    <div className="bg-background-main scrollbar-hide relative flex h-dvh max-w-dvw flex-col items-center overflow-x-hidden overflow-y-auto text-white">
+      {/* Cozy Top Gradient */}
+      <div className="from-brand-primary/20 pointer-events-none absolute top-0 right-0 left-0 h-[45vh] bg-gradient-to-b to-transparent opacity-80"></div>
+
+      <div className="z-10 flex w-full flex-col items-center">
+        <Header progress={progress} />
+      </div>
+      <div className="z-10 flex min-h-0 w-full max-w-125 flex-1 flex-col">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="p-8 shadow-lg mt-8 flex flex-col flex-1 min-h-screen"
+          className="flex h-full w-full flex-col justify-between"
         >
-          <div className="flex-1 overflow-y-auto">
+          <div className="flex-1 px-4 pb-32">
+            {currentQuestion && (
+              <div className="mb-8 flex flex-col">
+                <h2 className="mb-4 font-mono text-2xl leading-[1.3] font-bold tracking-wide text-white antialiased">
+                  {currentQuestion.text}
+                </h2>
+                <span className="font-mono text-sm tracking-wider text-white/50">
+                  {currentQuestion.description || "Select one that apply"}
+                </span>
+              </div>
+            )}
             <QuestionRenderer
               question={currentQuestion}
               register={register}
               errors={errors}
+              control={control}
             />
           </div>
-          <NavButtons />
+          <div className="bg-background-main sticky bottom-0 z-20 w-full shrink-0 rounded-t-2xl px-4 py-6">
+            <NavButtons />
+          </div>
         </form>
       </div>
     </div>

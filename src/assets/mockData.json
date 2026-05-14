@@ -1,72 +1,88 @@
 {
-  "survey_title": "State of the Algerian Developer Ecosystem 2026",
-  "description": "Help us map the future of the Algerian tech ecosystem. Your anonymous insights power open-source statistics for our community.",
   "questions": [
     {
       "id": 1,
-      "type": "single_choice",
-      "text": "What best describes your current journey in tech?",
+      "type": "rating",
+      "text": "How satisfied are you with the current state of the Algerian developer ecosystem?",
+      "description": "Rate from 1 (very dissatisfied) to 5 (very satisfied).",
       "required": true,
-      "options": [
-        { "id": 101, "text": "Building everything (Full-Stack)" },
-        { "id": 102, "text": "Crafting interfaces (Front-End & UI/UX)" },
-        { "id": 103, "text": "Scaling systems (Back-End & DevOps)" },
-        { "id": 104, "text": "Training models (Data & AI)" },
-        { "id": 105, "text": "Creating apps (Mobile)" },
-        { "id": 106, "text": "Still learning (Student)" }
-      ]
-    },
-    {
-      "id": 2,
-      "type": "multiple_choice",
-      "text": "How did you acquire your coding superpowers? (Select all that apply)",
-      "required": true,
-      "options": [
-        { "id": 201, "text": "Self-taught through the internet" },
-        { "id": 202, "text": "Traditional University Degree" },
-        { "id": 203, "text": "Intensive Coding Bootcamp" },
-        { "id": 204, "text": "On-the-job training" },
-        { "id": 205, "text": "Community groups and hackathons" }
-      ]
+      "option": [1, 2, 3, 4, 5]
     },
     {
       "id": 3,
-      "type": "single_choice",
-      "text": "Be honest: How much of your code is currently written by AI?",
+      "type": "ranking",
+      "text": "Rank these programming languages based on your preference.",
+      "description": "Drag and drop to reorder. The top one is your most preferred.",
       "required": true,
       "options": [
-        { "id": 301, "text": "0% - I type every character manually" },
-        { "id": 302, "text": "1-25% - Mostly boilerplate and autocomplete" },
-        { "id": 303, "text": "25-75% - Copilot is my full-time pair programmer" },
-        { "id": 304, "text": "75%+ - I'm basically a prompt engineer now" }
+        { "id": 101, "text": "JavaScript" },
+        { "id": 102, "text": "Python" },
+        { "id": 103, "text": "Java" },
+        { "id": 104, "text": "C#" },
+        { "id": 105, "text": "Ruby" }
       ]
     },
     {
       "id": 4,
-      "type": "multiple_choice",
-      "text": "Which AI companions do you rely on daily?",
-      "required": true,
-      "show_if": [302, 303, 304],
-      "options": [
-        { "id": 401, "text": "ChatGPT / GPT-4" },
-        { "id": 402, "text": "GitHub Copilot" },
-        { "id": 403, "text": "Claude" },
-        { "id": 404, "text": "Gemini" },
-        { "id": 405, "text": "Local Models (Ollama, Llama 3, etc.)" }
-      ]
+      "type": "numeric",
+      "text": "how do you rate your skills from 1 to 5?",
+      "description": "Please rate your skills on a scale of 1 to 5.",
+      "required": false
     },
+
     {
       "id": 5,
       "type": "single_choice",
-      "text": "What is your total monthly compensation in DZD? (Used strictly for anonymous market averages)",
+      "text": "Which frontend framework do you prefer?",
+      "description": "Select one that applies",
+      "required": true,
       "options": [
-        { "id": 501, "text": "Not making any money" },
-        { "id": 502, "text": "1-2 million DZD" },
-        { "id": 503, "text": "2-5 million DZD" },
-        { "id": 504, "text": "5-10 million DZD" },
-        { "id": 505, "text": "10-20 million DZD" },
-        { "id": 506, "text": "20-50 million DZD" },
-        { "id": 507, "text": "+50 million DZD" }
+        { "id": 201, "text": "React" },
+        { "id": 202, "text": "Vue" },
+        { "id": 203, "text": "Angular" },
+        { "id": 204, "text": "Svelte" }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "single_choice",
+      "text": "Which programming language do you prefer?",
+      "description": "Select one that applies",
+      "required": true,
+      "options": [
+        { "id": 201, "text": "JavaScript" },
+        { "id": 202, "text": "Python" },
+        { "id": 203, "text": "Java" },
+        { "id": 204, "text": "C#" },
+        { "id": 205, "text": "Ruby" },
+        { "id": 206, "text": "Go" },
+        { "id": 207, "text": "Rust" },
+        { "id": 208, "text": "Kotlin" },
+        { "id": 209, "text": "Swift" },
+        { "id": 210, "text": "PHP" },
+        { "id": 211, "text": "TypeScript" },
+        { "id": 212, "text": "C++" },
+        { "id": 213, "text": "C" },
+        { "id": 214, "text": "Dart" },
+        { "id": 215, "text": "Scala" },
+        { "id": 216, "text": "Elixir" },
+        { "id": 217, "text": "Haskell" },
+        { "id": 218, "text": "Perl" },
+        { "id": 219, "text": "Lua" }
+      ]
+    },
+
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "text": "Which backend technologies do you use? (Select all that apply)",
+      "description": "Select at least one",
+      "required": true,
+      "options": [
+        { "id": 301, "text": "Node.js" },
+        { "id": 302, "text": "Django" },
+        { "id": 303, "text": "Spring Boot" },
+        { "id": 304, "text": ".NET Core" }
       ]
     }
   ]

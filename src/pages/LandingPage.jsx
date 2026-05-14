@@ -5,7 +5,7 @@ function LandingPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/survey");
+    navigate("/login");
   });
   return <div>hello this is Landing page</div>;
 }

@@ -1,0 +1,31 @@
+{
+  "user_id": "anonymous-uuid-1234",
+  "submitted_at": "2026-04-24T12:00:00Z",
+  "answers": [
+    {
+      "question_id": 3,
+      "type": "ranking",
+      "answer_value": [101, 102, 103, 104, 105]
+    },
+    {
+      "question_id": 4,
+      "type": "numeric",
+      "answer_value": 4
+    },
+    {
+      "question_id": 5,
+      "type": "single-choice",
+      "answer_value": 201
+    },
+    {
+      "question_id": 6,
+      "type": "multiple-choice",
+      "answer_value": [301, 302]
+    },
+    {
+      "question_id": 7,
+      "type": "rating",
+      "answer_value": 5
+    }
+  ]
+}

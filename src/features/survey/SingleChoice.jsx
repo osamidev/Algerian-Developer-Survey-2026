@@ -1,35 +1,55 @@
+import { Check } from "lucide-react";
+import { useWatch } from "react-hook-form"; // to check which option is selected
+
 export default function SingleChoice({ question, register, errors }) {
-  const fieldName = `q_${question.id}`;
+  const fieldName = question.id.toString();
   const { ref, ...rest } = register(fieldName, {
-    required: question.required ? "Please select an option" : false,
+    required: false,
+  });
+
+  // watch the value of the radio input
+  const selectedValue = useWatch({
+    name: fieldName,
   });
 
   return (
-    <div className="flex flex-col w-full">
-      <h2 className="text-3xl font-bold font-primary mb-6 text-text-high">
-        {question.text}
-      </h2>
+    <div className="flex w-full flex-col">
       <div className="flex flex-col gap-3">
-        {question.options.map((option) => (
-          <label
-            key={option.id}
-            className="flex items-center gap-4 p-4 border border-border-subtle rounded-xl cursor-pointer hover:bg-background-surface transition-colors focus-within:border-brand-primary"
-          >
-            <input
-              type="radio"
-              value={String(option.id)} // ← the option ID is the value
-              {...rest}
-              ref={ref}
-              className="w-5 h-5 accent-brand-primary"
-            />
-            <span className="text-text-high font-secondary font-medium">
-              {option.text}
-            </span>
-          </label>
-        ))}
+        {question.options.map((option) => {
+          const isSelected = selectedValue === String(option.id);
+
+          return (
+            <label
+              key={option.id}
+              className={`group flex w-full cursor-pointer items-center justify-between rounded-[12px] border border-[#5D29B7] px-[24px] py-[16px] transition-colors ${
+                isSelected ? "bg-[#201042]" : "hover:bg-[#201042]/50"
+              }`}
+            >
+              <input
+                type="radio"
+                value={String(option.id)}
+                {...rest}
+                ref={ref}
+                className="sr-only" // hidden input
+              />
+              <div className="flex items-center justify-center text-base font-medium text-white/90">
+                <span>{option.text}</span>
+              </div>
+
+              {isSelected && (
+                <div className="shrink-0 pl-4">
+                  <Check
+                    className="h-[24px] w-[24px] text-[#A874F5]"
+                    strokeWidth={2.5}
+                  />
+                </div>
+              )}
+            </label>
+          );
+        })}
       </div>
       {errors[fieldName] && (
-        <p className="text-red-400 mt-4 text-sm font-secondary">
+        <p className="font-secondary mt-4 text-sm text-red-400">
           {errors[fieldName].message}
         </p>
       )}

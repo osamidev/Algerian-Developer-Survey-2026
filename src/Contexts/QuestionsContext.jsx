@@ -7,6 +7,8 @@ export function QuestionsProvider({ questions, children }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { getValues } = useFormContext();
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const isVisible = (question) => {
     if (!question.show_if) return true; // no condition = always show
 
@@ -14,7 +16,7 @@ export function QuestionsProvider({ questions, children }) {
 
     // depends_on tells us WHICH question's answer to check
     const sourceQuestion = questions.find((q) => q.id === question.depends_on);
-    const sourceAnswer = answers[`q_${sourceQuestion?.id}`];
+    const sourceAnswer = answers[sourceQuestion?.id];
 
     // Check if the user's answer is in the show_if whitelist
     if (Array.isArray(sourceAnswer)) {
@@ -40,13 +42,13 @@ export function QuestionsProvider({ questions, children }) {
     setCurrentIndex(prev);
   };
 
-  const getOptionsCount = (options) => options.length;
+  const getOptionsCount = (options) => (options ? options.length : 0);
 
   const totalVisible = questions.filter(isVisible).length;
   const visibleSoFar = questions
     .slice(0, currentIndex + 1)
     .filter(isVisible).length;
-  const progress = (visibleSoFar / totalVisible) * 100;
+  const progress = ((visibleSoFar / totalVisible) * 100).toFixed(0);
 
   const currentQuestion = questions[currentIndex];
 
@@ -59,6 +61,8 @@ export function QuestionsProvider({ questions, children }) {
         progress,
         isLast: currentIndex === questions.length - 1,
         isManyOptions: getOptionsCount(currentQuestion.options) > 10,
+        isLoading,
+        setIsLoading,
       }}
     >
       {children}

@@ -1,14 +1,16 @@
-function Header({ progress, stage }) {
-  stage = stage || "Developer profile";
+import Logo from "./../../components/Logo";
+import CircularProgress from "./CircularProgress";
+import User from "lucide-react/dist/esm/icons/user";
+
+function Header({ progress }) {
   return (
-    <header className="flex items-center justify-between min-w-md p-4">
-      <h3 className="text-lg font-medium text-text-disabled text-center">
-        Stage: {stage}
-      </h3>
-      <div>
-        <p className="text-sm text-center text-text-medium mt-1">
-          Progress: {progress}%
-        </p>
+    <header className="z-10 w-full py-6 md:px-8">
+      <div className="flex w-full items-center justify-between px-4">
+        <Logo />
+        <div className="flex items-center space-x-4">
+          <CircularProgress progress={progress} />
+          <User />
+        </div>
       </div>
     </header>
   );
