@@ -4,7 +4,7 @@ function WhoWeAre() {
     { name: "Younes Belabbes", role: "Frontend", status: "active" },
     { name: "Mechri Issam", role: "Backend", status: "active" },
     { name: "Seddiki Anis", role: "Database", status: "active" },
-    { name: "Kwidri Salah", role: "Database", status: "active" },
+    { name: "Kouidri Salah Eddine", role: "Database", status: "active" },
     { name: "Mefti Zakaria", role: "Design", status: "active" },
   ];
 
