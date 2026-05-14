@@ -2,7 +2,7 @@ import { useSurvey } from "../../Contexts/QuestionsContext";
 // import { useFormContext } from "react-hook-form";
 
 function NavButtons() {
-  const { progress, goBack, goNext, isLast, isLoading } = useSurvey();
+  const { progress, goBack, goNext, isLast, isSubmitting } = useSurvey();
   // const { isValid } = useFormContext();
 
   return (
@@ -22,7 +22,7 @@ function NavButtons() {
           type="submit"
           className="flex w-full items-center justify-center rounded-full bg-[#6329c3] py-4 text-xl font-semibold tracking-wide text-white uppercase transition-colors hover:bg-[#522299] disabled:opacity-50"
         >
-          {isLoading ? <div className="loader"></div> : "Submit"}
+          {isSubmitting ? <div className="loader-spinner"></div> : "Submit"}
         </button>
       )}
 

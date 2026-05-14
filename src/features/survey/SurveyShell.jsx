@@ -5,7 +5,7 @@ import NavButtons from "./NavButtons";
 import Header from "./Header";
 
 function SurveyShell() {
-  const { currentQuestion, progress, setIsLoading } = useSurvey();
+  const { currentQuestion, progress, setIsSubmitting } = useSurvey();
   const {
     register,
     handleSubmit,
@@ -14,7 +14,7 @@ function SurveyShell() {
   } = useFormContext();
 
   async function onSubmit(data) {
-    setIsLoading(true);
+    setIsSubmitting(true);
 
     await new Promise((resolve) => setTimeout(resolve, 1500));
     console.log("Simulating API call with data:", data);
@@ -37,7 +37,7 @@ function SurveyShell() {
     }
     console.log("Final Survey Data Submitted:", formattedData);
 
-    setIsLoading(false);
+    setIsSubmitting(false);
   }
 
   // bg-[#0A0A0A]

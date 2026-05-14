@@ -25,7 +25,7 @@ function QuestionRenderer({ question, register, control, errors }) {
     case "numeric":
       return <NumericInput question={question} />;
     case "rating":
-      return <RatingInput question={question, control} />;
+      return <RatingInput question={question} />;
     default:
       return null;
   }

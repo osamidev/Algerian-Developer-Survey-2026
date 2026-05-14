@@ -7,13 +7,13 @@ function NumericInput({ question }) {
   } = useFormContext();
 
   return (
-    <div className="mt-4 flex w-full flex-col">
-      <div className="focus-within:border-brand-primary relative border-b-2 border-white pb-2 transition-colors duration-300">
+    <div className="md:mt6 mt-4 flex w-full flex-col">
+      <div className="focus-within:border-brand-primary relative border-b-2 border-white pb-2 transition-colors duration-300 md:pb-3">
         <input
           type="number"
           id={question.id.toString()}
-          placeholder="Example: 25"
-          className="w-full appearance-none bg-transparent font-mono text-base text-white placeholder-white/40 ring-0 outline-none"
+          placeholder=""
+          className="py w-full appearance-none bg-transparent font-mono text-base text-white placeholder-white/40 ring-0 outline-none"
           {...register(question.id.toString(), {
             required: false,
             valueAsNumber: true,

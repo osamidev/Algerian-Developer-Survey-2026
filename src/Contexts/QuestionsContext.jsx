@@ -8,6 +8,7 @@ export function QuestionsProvider({ questions, children }) {
   const { getValues } = useFormContext();
 
   const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const isVisible = (question) => {
     if (!question.show_if) return true; // no condition = always show
@@ -63,6 +64,8 @@ export function QuestionsProvider({ questions, children }) {
         isManyOptions: getOptionsCount(currentQuestion.options) > 10,
         isLoading,
         setIsLoading,
+        isSubmitting,
+        setIsSubmitting,
       }}
     >
       {children}
