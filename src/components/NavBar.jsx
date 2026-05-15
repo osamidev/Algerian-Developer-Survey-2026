@@ -16,11 +16,11 @@ function NavBar() {
 
   return (
     <nav className="bg-background-main/60 border-border-subtle/30 fixed top-0 right-0 left-0 z-50 border-b backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-8 py-4">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-8 py-4 relative">
         <Logo />
 
         {/* Desktop Links */}
-        <div className="text-text-medium border-border-subtle hidden gap-8 rounded-full border bg-white/5 px-8 py-3 text-sm shadow-[0_8px_32px_rgba(0,0,0,0.25)] backdrop-blur-xl md:flex">
+        <div className="text-text-medium border-border-subtle hidden gap-8 rounded-full border bg-white/5 px-8 py-3 text-sm shadow-[0_8px_32px_rgba(0,0,0,0.25)] backdrop-blur-xl md:flex absolute left-1/2 -translate-x-1/2">
           <button
             onClick={() => scrollTo("Hero")}
             className="hover:text-brand-hover transition"
