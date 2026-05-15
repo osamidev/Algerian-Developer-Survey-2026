@@ -34,13 +34,13 @@ function NavBar() {
             About
           </button>
           <button
-            onClick={() => scrollTo("Us")}
+            onClick={() => scrollTo("who")}
             className="hover:text-brand-hover transition"
           >
             Who We Are
           </button>
           <button
-            onClick={() => scrollTo("Showcase")}
+            onClick={() => scrollTo("showcase")}
             className="hover:text-brand-hover transition"
           >
             Showcase
@@ -95,13 +95,13 @@ function NavBar() {
           About
         </button>
         <button
-          onClick={() => scrollTo("Us")}
+          onClick={() => scrollTo("who")}
           className="hover:text-brand-hover text-left transition"
         >
           Who We Are
         </button>
         <button
-          onClick={() => scrollTo("Showcase")}
+          onClick={() => scrollTo("showcase")}
           className="hover:text-brand-hover text-left transition"
         >
           Showcase
