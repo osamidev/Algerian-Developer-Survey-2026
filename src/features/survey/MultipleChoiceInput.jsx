@@ -1,9 +1,23 @@
 import React from "react";
 import { Controller } from "react-hook-form";
 import { Check } from "lucide-react";
+import toast from "react-hot-toast";
+import { multipleChoiceSchema } from "./validationSchemas";
 
 export default function MultipleChoice({ question, control }) {
   const fieldName = question.id.toString();
+
+  const validateSelection = (value) => {
+    try {
+      multipleChoiceSchema.parse({ value });
+      return true;
+    } catch (error) {
+      const message =
+        error.issues?.[0]?.message || "Please select at least one option";
+      toast.error(message);
+      return message;
+    }
+  };
 
   return (
     <div className="flex w-full flex-col">
@@ -12,7 +26,7 @@ export default function MultipleChoice({ question, control }) {
         control={control}
         defaultValue={[]}
         rules={{
-          validate: () => true, // ignored for now
+          validate: (value) => validateSelection(value),
         }}
         render={({ field }) => (
           <div className="flex flex-col gap-4">

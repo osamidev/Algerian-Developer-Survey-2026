@@ -1,6 +1,13 @@
 {
   "questions": [
     {
+      "question_id": 0,
+      "survey_id": 1,
+      "question_text": "What are you primary learning sources?",
+      "question_type": "ranking",
+      "position": 0
+    },
+    {
       "question_id": 1,
       "survey_id": 1,
       "question_text": "What is the highest level of formal education that you have achieved?",
@@ -296,6 +303,88 @@
     }
   ],
   "options": {
+    "0": [
+      {
+        "option_id": 0,
+        "question_id": 0,
+        "option_text": "AI code generation tools"
+      },
+      {
+        "option_id": 1,
+        "question_id": 0,
+        "option_text": "Books"
+      },
+      {
+        "option_id": 2,
+        "question_id": 0,
+        "option_text": "School"
+      },
+      {
+        "option_id": 3,
+        "question_id": 0,
+        "option_text": "E-courses"
+      },
+      {
+        "option_id": 4,
+        "question_id": 0,
+        "option_text": "Colleagues/ friends or family members"
+      },
+      {
+        "option_id": 5,
+        "question_id": 0,
+        "option_text": "Coding bootcamp"
+      },
+      {
+        "option_id": 6,
+        "question_id": 0,
+        "option_text": "Job training"
+      },
+      {
+        "option_id": 7,
+        "question_id": 0,
+        "option_text": "Technical documentations"
+      },
+      {
+        "option_id": 8,
+        "question_id": 0,
+        "option_text": "Youtube tutorials"
+      },
+      {
+        "option_id": 9,
+        "question_id": 0,
+        "option_text": "Stack Overflow questions/answers"
+      },
+      {
+        "option_id": 10,
+        "question_id": 0,
+        "option_text": "Online challenges (Ex. Leetcode)"
+      },
+      {
+        "option_id": 11,
+        "question_id": 0,
+        "option_text": "Coding sessions"
+      },
+      {
+        "option_id": 12,
+        "question_id": 0,
+        "option_text": "E-Books"
+      },
+      {
+        "option_id": 13,
+        "question_id": 0,
+        "option_text": "Blogs or podcasts"
+      },
+      {
+        "option_id": 14,
+        "question_id": 0,
+        "option_text": "Other online communities (Ex. Discord, Reddit. etc..)"
+      },
+      {
+        "option_id": 15,
+        "question_id": 0,
+        "option_text": "Others"
+      }
+    ],
     "1": [
       {
         "option_id": 1,
@@ -2305,6 +2394,11 @@
     ]
   },
   "DependsRows": [
+    {
+      "id": 0,
+      "question_id": 0,
+      "depends_on_option_id": null
+    },
     {
       "id": 1,
       "question_id": 1,

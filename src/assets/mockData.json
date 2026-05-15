@@ -2,7 +2,7 @@
   "questions": [
     {
       "id": 1,
-      "type": "rating",
+      "type": "range",
       "text": "How satisfied are you with the current state of the Algerian developer ecosystem?",
       "description": "Rate from 1 (very dissatisfied) to 5 (very satisfied).",
       "required": true,

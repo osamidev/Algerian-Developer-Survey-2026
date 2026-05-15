@@ -1,7 +1,7 @@
 import { useForm, FormProvider } from "react-hook-form";
 import { QuestionsProvider } from "../Contexts/QuestionsContext";
 import { getQuestions } from "../services/apiQuestions";
-import mockData from "../assets/mockData.json";
+import mockQuestions from "../assets/mockQuestions.json";
 import SurveyShell from "../features/survey/SurveyShell";
 import { useEffect } from "react";
 
@@ -23,7 +23,7 @@ function SurveyPage() {
 
   return (
     <FormProvider {...methods}>
-      <QuestionsProvider questions={mockData.questions}>
+      <QuestionsProvider surveyData={mockQuestions}>
         <SurveyShell />
       </QuestionsProvider>
     </FormProvider>

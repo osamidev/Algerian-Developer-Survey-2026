@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useWatch, useFormContext } from "react-hook-form";
 
-function RatingInput({ question }) {
+function RangeInput({ question }) {
   const { register, control } = useFormContext();
   const [isDragging, setIsDragging] = useState(false);
 
@@ -51,4 +51,4 @@ function RatingInput({ question }) {
   );
 }
 
-export default RatingInput;
+export default RangeInput;

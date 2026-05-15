@@ -1,8 +1,8 @@
-import SingleChoice from "./SingleChoice";
-import MultipleChoice from "./MultipleChoice";
+import SingleChoice from "./SingleChoiceInput";
+import MultipleChoice from "./MultipleChoiceInput";
 import RankingInput from "./RankingInput";
 import NumericInput from "./NumericInput";
-import RatingInput from "./RatingInput";
+import RangeInput from "./RangeInput";
 
 // QuestionRenderer.jsx
 function QuestionRenderer({ question, register, control, errors }) {
@@ -20,12 +20,14 @@ function QuestionRenderer({ question, register, control, errors }) {
           errors={errors}
         />
       );
-    case "ranking":
-      return <RankingInput question={question} />;
     case "numeric":
       return <NumericInput question={question} />;
-    case "rating":
-      return <RatingInput question={question} />;
+    case "ranking":
+      return <RankingInput question={question} />;
+    case "range":
+      return (
+        <RangeInput question={question} register={register} errors={errors} />
+      );
     default:
       return null;
   }
