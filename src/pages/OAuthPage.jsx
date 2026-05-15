@@ -158,10 +158,10 @@ export default function OAuthPage() {
   }
 
   return (
-    <div className="selection:bg-brand-primary/30 relative flex min-h-screen flex-col bg-[#0a0a0a] text-white">
+    <div className="selection:bg-brand-primary/30 bg-background-main relative flex min-h-screen flex-col text-white">
       {/* Visual background decoration */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-[10%] left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-[100%] bg-blue-500/10 blur-[120px]" />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="bg-brand-primary/10 absolute -top-[10%] left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-[100%] blur-[120px]" />
       </div>
 
       {/* Header */}
@@ -170,36 +170,60 @@ export default function OAuthPage() {
       </div>
 
       {/* Main Container */}
-      <main className="relative z-10 flex flex-1 flex-col items-center justify-center px-5 pb-20">
-        <div className="w-full max-w-[400px]">
+      <main className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 pb-20">
+        <div className="w-full max-w-[420px]">
           {/* Text Section */}
-          <div className="mb-8 text-center">
-            <h1 className="text-3xl font-bold tracking-tight text-white">
-              Welcome back
+          <div className="mb-10 flex flex-col items-center text-center">
+            <div className="bg-brand-primary/10 ring-brand-primary/20 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl ring-1 backdrop-blur-md">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-brand-primary"
+              >
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+            </div>
+            <h1 className="font-mono text-3xl font-bold tracking-tight text-white antialiased">
+              Join the 2026 Survey
             </h1>
-            <p className="mt-2 text-sm font-medium text-gray-400">
-              Choose a provider to access your survey
+            <p className="mt-3 px-4 font-mono text-sm tracking-wide text-white/50">
+              Authenticate to participate. We use this strictly to prevent
+              duplicate submissions.
             </p>
           </div>
 
           {/* Social Card */}
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-8 shadow-2xl backdrop-blur-sm">
-            <div className="flex flex-col gap-4">
-              <GoogleButton onClick={() => handleOAuth("google")} />
+          <div className="bg-background-surface/20 relative overflow-hidden rounded-[2rem] border border-white/10 p-8 shadow-2xl backdrop-blur-md md:p-10">
+            {/* Subtle inner glow */}
+            <div className="bg-brand-primary/10 absolute -top-24 -right-24 h-48 w-48 rounded-full blur-3xl" />
+
+            <div className="relative z-10 flex flex-col gap-4">
               <GitHubButton onClick={() => handleOAuth("github")} />
+              <GoogleButton onClick={() => handleOAuth("google")} />
             </div>
 
-            <div className="mt-8 flex items-center gap-3">
-              <div className="h-[1px] flex-1 bg-white/10" />
-              <span className="text-[10px] font-bold tracking-widest text-white/30 uppercase">
-                Secured Login
+            <div className="relative z-10 mt-8 flex items-center gap-4">
+              <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-white/10" />
+              <span className="font-mono text-xs font-semibold tracking-widest text-white/30 uppercase">
+                Anonymous & Secure
               </span>
-              <div className="h-[1px] flex-1 bg-white/10" />
+              <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-white/10" />
             </div>
+
+            <p className="relative z-10 mt-6 text-center font-mono text-[11px] leading-relaxed text-white/40">
+              Your identity is decoupled from your survey answers. Your
+              responses remain 100% anonymous.
+            </p>
           </div>
 
           {/* Footer */}
-          <div className="mt-8">
+          <div className="mt-10">
             <FooterLinks />
           </div>
         </div>

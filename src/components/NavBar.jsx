@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Logo from "./Logo";
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -15,60 +15,102 @@ function NavBar() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background-main/60 border-b border-border-subtle/30">
-      <div className="max-w-7xl mx-auto w-full px-10 py-6 flex justify-between items-center">
-
-        {/* Logo */}
-        <div className="text-xl font-semibold tracking-tight text-text-high">
-          insight
-        </div>
+    <nav className="bg-background-main/60 border-border-subtle/30 fixed top-0 right-0 left-0 z-50 border-b backdrop-blur-md">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-8 py-4">
+        <Logo />
 
         {/* Desktop Links */}
-        <div className="hidden md:flex gap-8 text-sm text-text-medium backdrop-blur-xl bg-white/5 border border-border-subtle rounded-full px-8 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
-          <button onClick={() => scrollTo("Hero")} className="hover:text-brand-hover transition">Home</button>
-          <button onClick={() => scrollTo("About")} className="hover:text-brand-hover transition">About</button>
-          <button onClick={() => scrollTo("Us")} className="hover:text-brand-hover transition">Who We Are</button>
-          <button onClick={() => scrollTo("Showcase")} className="hover:text-brand-hover transition">Showcase</button>
+        <div className="text-text-medium border-border-subtle hidden gap-8 rounded-full border bg-white/5 px-8 py-3 text-sm shadow-[0_8px_32px_rgba(0,0,0,0.25)] backdrop-blur-xl md:flex">
+          <button
+            onClick={() => scrollTo("Hero")}
+            className="hover:text-brand-hover transition"
+          >
+            Home
+          </button>
+          <button
+            onClick={() => scrollTo("About")}
+            className="hover:text-brand-hover transition"
+          >
+            About
+          </button>
+          <button
+            onClick={() => scrollTo("Us")}
+            className="hover:text-brand-hover transition"
+          >
+            Who We Are
+          </button>
+          <button
+            onClick={() => scrollTo("Showcase")}
+            className="hover:text-brand-hover transition"
+          >
+            Showcase
+          </button>
         </div>
 
         {/* Desktop Share Button */}
         <button
           onClick={handleShare}
-          className="hidden md:block px-4 py-2 text-sm border border-brand-primary/30 rounded-lg hover:bg-brand-primary/10 hover:cursor-pointer transition text-text-high">
+          className="border-brand-primary/30 hover:bg-brand-primary/10 text-text-high hidden rounded-lg border px-4 py-2 text-sm transition hover:cursor-pointer md:block"
+        >
           Share
         </button>
 
         {/* Hamburger */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-text-high focus:outline-none"
+          className="text-text-high focus:outline-none md:hidden"
         >
           <div className="space-y-1.5">
-            <span className={`block w-6 h-0.5 bg-text-high transition-transform duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`}></span>
-            <span className={`block w-6 h-0.5 bg-text-high transition-opacity duration-300 ${isOpen ? "opacity-0" : ""}`}></span>
-            <span className={`block w-6 h-0.5 bg-text-high transition-transform duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
+            <span
+              className={`bg-text-high block h-0.5 w-6 transition-transform duration-300 ${isOpen ? "translate-y-2 rotate-45" : ""}`}
+            ></span>
+            <span
+              className={`bg-text-high block h-0.5 w-6 transition-opacity duration-300 ${isOpen ? "opacity-0" : ""}`}
+            ></span>
+            <span
+              className={`bg-text-high block h-0.5 w-6 transition-transform duration-300 ${isOpen ? "-translate-y-2 -rotate-45" : ""}`}
+            ></span>
           </div>
         </button>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full mt-2 flex flex-col gap-4 text-sm text-text-medium
-        backdrop-blur-xl bg-background-main/95 border border-border-subtle rounded-2xl px-6 py-6
-        shadow-[0_8px_32px_rgba(0,0,0,0.25)] transition-all duration-300 ease-in-out origin-top
-        ${isOpen
-          ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
-          : "opacity-0 -translate-y-4 scale-95 pointer-events-none"
+        className={`text-text-medium bg-background-main/95 border-border-subtle absolute top-full left-0 mt-2 flex w-full origin-top flex-col gap-4 rounded-2xl border px-6 py-6 text-sm shadow-[0_8px_32px_rgba(0,0,0,0.25)] backdrop-blur-xl transition-all duration-300 ease-in-out md:hidden ${
+          isOpen
+            ? "pointer-events-auto translate-y-0 scale-100 opacity-100"
+            : "pointer-events-none -translate-y-4 scale-95 opacity-0"
         }`}
       >
-        <button onClick={() => scrollTo("Hero")} className="text-left hover:text-brand-hover transition">Home</button>
-        <button onClick={() => scrollTo("About")} className="text-left hover:text-brand-hover transition">About</button>
-        <button onClick={() => scrollTo("Us")} className="text-left hover:text-brand-hover transition">Who We Are</button>
-        <button onClick={() => scrollTo("Showcase")} className="text-left hover:text-brand-hover transition">Showcase</button>
+        <button
+          onClick={() => scrollTo("Hero")}
+          className="hover:text-brand-hover text-left transition"
+        >
+          Home
+        </button>
+        <button
+          onClick={() => scrollTo("About")}
+          className="hover:text-brand-hover text-left transition"
+        >
+          About
+        </button>
+        <button
+          onClick={() => scrollTo("Us")}
+          className="hover:text-brand-hover text-left transition"
+        >
+          Who We Are
+        </button>
+        <button
+          onClick={() => scrollTo("Showcase")}
+          className="hover:text-brand-hover text-left transition"
+        >
+          Showcase
+        </button>
 
         <button
           onClick={handleShare}
-          className="mt-2 px-4 py-2 border border-brand-primary/30 rounded-lg hover:bg-brand-primary/10 transition text-text-high">
+          className="border-brand-primary/30 hover:bg-brand-primary/10 text-text-high mt-2 rounded-lg border px-4 py-2 transition"
+        >
           Share
         </button>
       </div>
