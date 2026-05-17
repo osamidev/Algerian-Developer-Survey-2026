@@ -1,5 +1,6 @@
-import { createContext, useContext, useState, useMemo } from "react";
+import { createContext, useState, useMemo, useEffect } from "react";
 import { useFormContext } from "react-hook-form";
+import { getQuestions } from "../services/apiQuestions";
 
 const QuestionsContext = createContext(null);
 
@@ -10,14 +11,18 @@ export function QuestionsProvider({ surveyData, children }) {
 
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [remoteData, setRemoteData] = useState(null);
+  const [fetchError, setFetchError] = useState(null);
 
-  // Map the new upcoming data format to the internal structure
+  // Prefer explicit survey data, then fetched data.
+  const surveyDataEffective = surveyData || remoteData;
+
   const questions = useMemo(() => {
-    if (!surveyData || !surveyData.questions) return [];
+    if (!surveyDataEffective || !surveyDataEffective.questions) return [];
 
-    const rawQuestions = surveyData.questions;
-    const optionsMap = surveyData.options || {};
-    const dependsRows = surveyData.DependsRows || [];
+    const rawQuestions = surveyDataEffective.questions;
+    const optionsMap = surveyDataEffective.options || {};
+    const dependsRows = surveyDataEffective.DependsRows || [];
 
     return rawQuestions
       .map((q) => {
@@ -44,6 +49,32 @@ export function QuestionsProvider({ surveyData, children }) {
         };
       })
       .sort((a, b) => a.position - b.position);
+  }, [surveyDataEffective]);
+
+  // Fetch remote questions when no `surveyData` prop provided
+  useEffect(() => {
+    let mounted = true;
+
+    async function fetchRemote() {
+      setIsLoading(true);
+      setFetchError(null);
+
+      try {
+        const data = await getQuestions();
+        if (mounted) setRemoteData(data);
+      } catch (err) {
+        console.error("Error fetching questions:", err);
+        if (mounted) setFetchError(err);
+      } finally {
+        if (mounted) setIsLoading(false);
+      }
+    }
+
+    fetchRemote();
+
+    return () => {
+      mounted = false;
+    };
   }, [surveyData]);
 
   const isVisible = (question) => {
@@ -102,7 +133,7 @@ export function QuestionsProvider({ surveyData, children }) {
   const visibleSoFar = questions
     .slice(0, currentIndex + 1)
     .filter(isVisible).length;
-  const progress = ((visibleSoFar / totalVisible) * 100).toFixed(0);
+  const progress = ((visibleSoFar / totalVisible) * 100).toFixed(0) | 0;
 
   const currentQuestion = questions[currentIndex];
 
@@ -120,6 +151,8 @@ export function QuestionsProvider({ surveyData, children }) {
         setIsLoading,
         isSubmitting,
         setIsSubmitting,
+        fetchError,
+        remoteData,
       }}
     >
       {children}
@@ -127,12 +160,4 @@ export function QuestionsProvider({ surveyData, children }) {
   );
 }
 
-export function useSurvey() {
-  const context = useContext(QuestionsContext);
-
-  if (context === undefined) {
-    throw new Error("useSurvey must be used within a QuestionsProvider");
-  }
-
-  return context;
-}
+export { QuestionsContext };

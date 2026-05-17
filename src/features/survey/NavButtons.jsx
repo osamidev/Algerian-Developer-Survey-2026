@@ -1,4 +1,4 @@
-import { useSurvey } from "../../Contexts/QuestionsContext";
+import { useSurvey } from "../../Contexts/useSurvey";
 import { useFormContext } from "react-hook-form";
 
 function NavButtons() {

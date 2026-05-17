@@ -1,6 +1,6 @@
 import { Check } from "lucide-react";
 import { useWatch } from "react-hook-form"; // to check which option is selected
-import { useSurvey } from "../../Contexts/QuestionsContext";
+import { useSurvey } from "../../Contexts/useSurvey";
 
 export default function SingleChoice({ question, register, errors }) {
   const fieldName = question.id.toString();
