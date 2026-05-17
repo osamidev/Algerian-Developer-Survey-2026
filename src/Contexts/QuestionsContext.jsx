@@ -133,8 +133,7 @@ export function QuestionsProvider({ surveyData, children }) {
   const visibleSoFar = questions
     .slice(0, currentIndex + 1)
     .filter(isVisible).length;
-  const progress = ((visibleSoFar / totalVisible) * 100).toFixed(0) | 0;
-
+  let progress = ((visibleSoFar / totalVisible) * 100).toFixed(0) | 0;
   const currentQuestion = questions[currentIndex];
 
   return (
@@ -153,6 +152,7 @@ export function QuestionsProvider({ surveyData, children }) {
         setIsSubmitting,
         fetchError,
         remoteData,
+        questions,
       }}
     >
       {children}

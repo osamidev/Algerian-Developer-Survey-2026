@@ -29,7 +29,7 @@ function SurveyShell() {
     setIsSubmitting,
     navigationDirection,
     isLoading,
-    fetchError,
+    questions,
   } = useSurvey();
   const {
     register,
@@ -40,56 +40,56 @@ function SurveyShell() {
 
   async function onSubmit(data) {
     setIsSubmitting(true);
-
+    // Small delay to simulate processing
     await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log("Simulating API call with data:", data);
 
-    const formattedData = {};
+    const userId = "anonymous-uuid-1234"; // replace with real user id if available
+
+    const submission = { user_id: userId, answers: [] };
+
+    // Build a quick lookup for question metadata
+    const qLookup = new Map((questions || []).map((q) => [String(q.id), q]));
+
     for (const key in data) {
-      const qId = parseInt(key, 10);
-      const val = data[key];
+      const qIdNum = parseInt(key, 10);
+      const rawVal = data[key];
+      const meta = qLookup.get(String(key));
+      const qType = meta?.type || null; // e.g. 'multiple_choice', 'single_choice', 'numeric', 'ranking', 'range'
 
-      if (Array.isArray(val)) {
-        // multiple choice (array of strings/numbers) or ranking (array of objects)
-        formattedData[qId] = val.map((v) =>
-          typeof v === "object" && v?.id ? parseInt(v.id, 10) : parseInt(v, 10),
-        );
-      } else if (typeof val === "string" && !isNaN(val)) {
-        formattedData[qId] = parseInt(val, 10);
+      if (Array.isArray(rawVal)) {
+        if (rawVal.length > 0 && typeof rawVal[0] === "object") {
+          // ranking: push one entry per item preserving order
+          for (const item of rawVal) {
+            const ans = item?.id ? parseInt(item.id, 10) : parseInt(item, 10);
+            submission.answers.push({ question_id: qIdNum, type: "ranking", answer: ans });
+          }
+        } else {
+          // multiple-choice: push one entry per selected option
+          for (const item of rawVal) {
+            const ans = typeof item === "number" ? item : parseInt(item, 10);
+            submission.answers.push({ question_id: qIdNum, type: "multiple-choice", answer: ans });
+          }
+        }
       } else {
-        formattedData[qId] = val;
+        // single value
+        const isNumber = typeof rawVal === "number" || (!isNaN(parseFloat(rawVal)) && isFinite(rawVal));
+        const answerVal = isNumber ? Number(rawVal) : rawVal;
+
+        let outType = "single-choice";
+        if (qType === "numeric") outType = "numeric";
+        else if (qType === "range") outType = "rating";
+        else if (qType === "ranking") outType = "ranking";
+        else if (qType === "multiple_choice") outType = "multiple-choice";
+
+        submission.answers.push({ question_id: qIdNum, type: outType, answer: answerVal });
       }
     }
-    console.log("Final Survey Data Submitted:", formattedData);
+
+    console.log("Final Submission Payload:", submission);
 
     setIsSubmitting(false);
   }
 
-  // bg-[#0A0A0A]
-  // if (isLoading) {
-  //   return (
-   
-  //   );
-  // }
-
-  if (fetchError) {
-    return (
-      <div className="bg-background-main flex h-dvh w-full items-center justify-center px-6 text-white">
-        <div className="max-w-md rounded-2xl border border-red-500/20 bg-red-500/10 p-6 text-center backdrop-blur-sm">
-          <h2 className="mb-3 font-mono text-xl font-bold text-red-100">
-            Unable to load questions
-          </h2>
-          <p className="text-sm leading-6 text-red-50/80">
-            {fetchError.message ||
-              "Something went wrong while fetching the survey."}
-          </p>
-          <p className="mt-4 text-xs tracking-wider text-red-50/50">
-            Check your API URL, then refresh the page to try again.
-          </p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="bg-background-main scrollbar-hide relative flex h-dvh max-w-dvw flex-col items-center overflow-hidden text-white">
