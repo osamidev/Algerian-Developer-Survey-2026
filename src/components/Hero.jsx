@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import AlgeriaMap from "../assets/AlgeriaMap.svg";
-
+// hii
 function Hero() {
   function scrollTo(id) {
     const el = document.getElementById(id);
