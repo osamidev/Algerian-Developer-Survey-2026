@@ -1,11 +1,18 @@
 import { useState } from "react";
 import Logo from "./Logo";
+import toast from "react-hot-toast";
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-
   function handleShare() {
     navigator.clipboard.writeText(window.location.href);
-    alert("Link copied to clipboard!");
+    toast.success("Link copied to clipboard!", {
+      icon: "🔗",
+      style: {
+        borderRadius: "8px",
+        background: "#1e1e1e",
+        color: "#fff",
+      },
+    });
   }
 
   function scrollTo(id) {
@@ -16,11 +23,11 @@ function NavBar() {
 
   return (
     <nav className="bg-background-main/60 border-border-subtle/30 fixed top-0 right-0 left-0 z-50 border-b backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-8 py-4 relative">
+      <div className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-8 py-4">
         <Logo />
 
         {/* Desktop Links */}
-        <div className="text-text-medium border-border-subtle hidden gap-8 rounded-full border bg-white/5 px-8 py-3 text-sm shadow-[0_8px_32px_rgba(0,0,0,0.25)] backdrop-blur-xl md:flex absolute left-1/2 -translate-x-1/2">
+        <div className="text-text-medium border-border-subtle absolute left-1/2 hidden -translate-x-1/2 gap-8 rounded-full border bg-white/5 px-8 py-3 text-sm shadow-[0_8px_32px_rgba(0,0,0,0.25)] backdrop-blur-xl md:flex">
           <button
             onClick={() => scrollTo("Hero")}
             className="hover:text-brand-hover transition"
