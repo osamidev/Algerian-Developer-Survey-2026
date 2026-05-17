@@ -1,6 +1,6 @@
 import { createContext, useState, useMemo, useEffect } from "react";
 import { useFormContext } from "react-hook-form";
-import { getQuestions } from "../services/apiQuestions";
+import { getQuestions } from "../services/apiSurvey";
 
 const QuestionsContext = createContext(null);
 

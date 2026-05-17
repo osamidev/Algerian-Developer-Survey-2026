@@ -42,6 +42,8 @@ function RangeInput({ question }) {
           onPointerDown={() => setIsDragging(true)}
           onPointerUp={() => setIsDragging(false)}
           onPointerCancel={() => setIsDragging(false)}
+          onTouchMoveCapture={() => setIsDragging(true)}
+          onTouchCancel={() => setIsDragging(false)}
           className="bg-brand-primary/30 focus:ring-brand-primary [&::-moz-range-thumb]:border-brand-primary [&::-moz-range-thumb]:bg-brand-primary [&::-webkit-slider-thumb]:border-brand-primary [&::-webkit-slider-thumb]:bg-brand-primary h-3 w-full cursor-pointer appearance-none rounded-full outline-none focus:ring-2 [&::-moz-range-thumb]:h-8 [&::-moz-range-thumb]:w-8 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:rounded-full [&::-webkit-slider-thumb]:h-8 [&::-webkit-slider-thumb]:w-8 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full"
         />
       </div>

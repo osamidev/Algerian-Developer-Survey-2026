@@ -1,0 +1,68 @@
+{
+  "questions": [
+    {
+      "question_id": 1,
+      "question_text": "What is the highest level of formal education that you have achieved?",
+      "question_type": "single_choice",
+      "position": 1,
+      "description": "Select one that applies"
+    },
+    {
+      "question_id": 2,
+      "question_text": "How do you learn to code?",
+      "question_type": "multiple_choice",
+      "position": 2,
+      "description": "Select all that apply"
+    },
+    {
+      "question_id": 3,
+      "question_text": "How many years have you been coding in total? (Including education years)",
+      "question_type": "single_choice",
+      "position": 3,
+      "description": "Select one that applies"
+    },
+    {
+      "question_id": 4,
+      "question_text": "Choose your gender",
+      "question_type": "single_choice",
+      "position": 4,
+      "description": "Select one that applies"
+    },
+    {
+      "question_id": 5,
+      "question_text": "What is your age?",
+      "question_type": "numeric",
+      "position": 5,
+      "description": "Enter your age as a number"
+    }
+  ],
+  "options": {
+    "1": [
+      { "option_id": 101, "option_text": "High school" },
+      { "option_id": 102, "option_text": "Vocational training" },
+      { "option_id": 103, "option_text": "Bachelor's degree" },
+      { "option_id": 104, "option_text": "Master's degree" },
+      { "option_id": 105, "option_text": "Doctorate" }
+    ],
+    "2": [
+      { "option_id": 201, "option_text": "Online courses" },
+      { "option_id": 202, "option_text": "Books and documentation" },
+      { "option_id": 203, "option_text": "YouTube tutorials" },
+      { "option_id": 204, "option_text": "Bootcamps" },
+      { "option_id": 205, "option_text": "University classes" }
+    ],
+    "3": [
+      { "option_id": 301, "option_text": "Less than 1 year" },
+      { "option_id": 302, "option_text": "1 to 3 years" },
+      { "option_id": 303, "option_text": "4 to 6 years" },
+      { "option_id": 304, "option_text": "7 to 10 years" },
+      { "option_id": 305, "option_text": "More than 10 years" }
+    ],
+    "4": [
+      { "option_id": 401, "option_text": "Male" },
+      { "option_id": 402, "option_text": "Female" },
+      { "option_id": 403, "option_text": "Prefer not to say" }
+    ]
+  },
+  "DependsRows": []
+}

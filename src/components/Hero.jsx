@@ -10,7 +10,7 @@ function Hero() {
   return (
     <section
       id="Hero"
-      className="text-text-high relative isolate flex h-auto items-start justify-start overflow-hidden px-4 pt-20 md:mt-0 sm:mt-4 mt-8 sm:min-h-dvh sm:items-center sm:justify-center sm:px-6 sm:pt-0 sm:pb-8 lg:px-10 lg:pb-0"
+      className="text-text-high relative isolate mt-8 flex h-auto items-start justify-start overflow-hidden px-4 pt-20 sm:mt-4 sm:min-h-dvh sm:items-center sm:justify-center sm:px-6 sm:pt-0 sm:pb-8 md:mt-0 lg:px-10 lg:pb-0"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_58%,rgba(106,42,204,0.18),rgba(11,14,20,0)_52%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,rgba(106,42,204,0.12),rgba(11,14,20,0)_58%)]" />
@@ -37,8 +37,8 @@ function Hero() {
       {/* Content - Relative positioning on top */}
       <div className="relative z-10 flex w-full max-w-6xl flex-col items-center justify-center pt-0">
         <div className="relative z-20 mx-auto flex w-full max-w-5xl flex-col items-center text-center">
-          <h1 className="font-primary text-[42px] font-bold text-white sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] leading-[1.1]">
-              The state of development in Algeria in 2026
+          <h1 className="font-primary text-[42px] leading-[1.1] font-bold text-white sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px]">
+            The state of development in Algeria in 2026
           </h1>
 
           <p className="text-text-medium mt-5 max-w-2xl text-base leading-relaxed sm:mt-6 sm:text-lg md:text-xl">
