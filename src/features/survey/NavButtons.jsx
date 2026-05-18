@@ -36,7 +36,8 @@ function NavButtons() {
         <button
           key="btn-submit"
           type="submit"
-          className="flex w-full cursor-pointer items-center justify-center rounded-full bg-[#6329c3] py-4 text-xl font-semibold tracking-wide text-white uppercase transition-colors hover:bg-[#522299] disabled:opacity-50"
+          disabled={isSubmitting}
+          className="flex w-full cursor-pointer items-center justify-center rounded-full bg-[#6329c3] py-4 text-xl font-semibold tracking-wide text-white uppercase transition-colors hover:bg-[#522299] disabled:cursor-not-allowed disabled:opacity-50"
         >
           {isSubmitting ? <div className="loader-spinner"></div> : "Submit"}
         </button>

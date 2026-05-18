@@ -6,7 +6,8 @@ import NavButtons from "./NavButtons";
 import Header from "./Header";
 import toast from "react-hot-toast";
 import { submitResponses } from "../../services/apiSurvey";
-
+import { useSearchParams } from "react-router";
+import { jwtDecode } from "jwt-decode";
 const questionSlideVariants = {
   enter: (direction) => ({
     y: direction > 0 ? 40 : -40,
@@ -25,6 +26,11 @@ const questionSlideVariants = {
 const MotionDiv = motion.div;
 
 function SurveyShell() {
+  const [searchParams] = useSearchParams();
+  const sessionToken = searchParams.get("session");
+  const decoded = sessionToken ? jwtDecode(sessionToken) : null;
+  console.log("Decoded Token:", decoded);
+
   const {
     currentQuestion,
     progress,
@@ -45,7 +51,7 @@ function SurveyShell() {
     // Small delay to simulate processing
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
-    const id = 18; // replace with real user id if available
+    const id = decoded?.user_id || 18; // fallback to 18 if token missing
 
     const submission = { user_id: id, answers: [] };
 
