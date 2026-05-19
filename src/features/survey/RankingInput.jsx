@@ -20,12 +20,7 @@ function RankingInput({ question }) {
   useEffect(() => {
     const fieldName = question.id.toString();
 
-    register(fieldName, {
-      validate: (value) => {
-        // Ignored required for now
-        return true;
-      },
-    });
+    register(fieldName);
 
     if (!getValues(fieldName)) {
       setValue(fieldName, items, { shouldValidate: true });

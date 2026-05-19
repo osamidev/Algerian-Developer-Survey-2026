@@ -1,17 +1,27 @@
 import { useForm, FormProvider } from "react-hook-form";
+import { useEffect } from "react";
 import { QuestionsProvider } from "../Contexts/QuestionsContext";
 import SurveyShell from "../features/survey/SurveyShell";
-import localQuestions5 from "../assets/localQuestions5.json";
 
 function SurveyPage() {
-  const methods = useForm({ mode: "onSubmit" });
-  const useLocalQuestions = import.meta.env.VITE_USE_LOCAL_QUESTIONS === "true";
+  const savedAnswers = JSON.parse(
+    localStorage.getItem("surveyAnswers") || "{}",
+  );
+  const methods = useForm({
+    mode: "onSubmit",
+    defaultValues: savedAnswers,
+  });
+
+  useEffect(() => {
+    const subscription = methods.watch((value) => {
+      localStorage.setItem("surveyAnswers", JSON.stringify(value));
+    });
+    return () => subscription.unsubscribe();
+  }, [methods]);
 
   return (
     <FormProvider {...methods}>
-      <QuestionsProvider
-        surveyData={useLocalQuestions ? localQuestions5 : undefined}
-      >
+      <QuestionsProvider>
         <SurveyShell />
       </QuestionsProvider>
     </FormProvider>

@@ -10,11 +10,10 @@ export default function SingleChoice({ question, register, errors }) {
 
   const { goNext } = useSurvey();
 
-  const handleSelect = (event) => {
+  const handleAutoNext = () => {
     if (typeof navigator !== "undefined" && navigator.vibrate) {
       navigator.vibrate(40);
     }
-    rest.onChange?.(event);
     queueMicrotask(goNext);
   };
 
@@ -32,7 +31,7 @@ export default function SingleChoice({ question, register, errors }) {
           return (
             <label
               key={option.id}
-              className={`group flex w-full cursor-pointer items-center justify-between rounded-[12px] border border-[#5D29B7] px-[24px] py-[16px] transition-colors ${
+              className={`group relative flex w-full cursor-pointer items-center justify-between rounded-[12px] border border-[#5D29B7] px-[24px] py-[16px] transition-colors ${
                 isSelected ? "bg-[#201042]" : "hover:bg-[#201042]/50"
               }`}
             >
@@ -42,7 +41,15 @@ export default function SingleChoice({ question, register, errors }) {
                 {...rest}
                 ref={ref}
                 className="sr-only" // hidden input
-                onChange={handleSelect}
+                onChange={(e) => {
+                  rest.onChange?.(e);
+                  handleAutoNext();
+                }}
+                onClick={(e) => {
+                  if (isSelected) {
+                    handleAutoNext();
+                  }
+                }}
               />
               <div className="flex items-center justify-center text-base font-medium text-white/90">
                 <span>{option.text}</span>

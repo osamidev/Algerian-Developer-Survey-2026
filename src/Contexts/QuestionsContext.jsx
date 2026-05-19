@@ -4,8 +4,10 @@ import { getQuestions } from "../services/apiSurvey";
 
 const QuestionsContext = createContext(null);
 
-export function QuestionsProvider({ surveyData, children }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+export function QuestionsProvider({ children }) {
+  const [currentIndex, setCurrentIndex] = useState(
+    Number(localStorage.getItem("currentQuestionIndex")) || 0,
+  );
   const [navigationDirection, setNavigationDirection] = useState(1);
   const { getValues } = useFormContext();
 
@@ -14,15 +16,12 @@ export function QuestionsProvider({ surveyData, children }) {
   const [remoteData, setRemoteData] = useState(null);
   const [fetchError, setFetchError] = useState(null);
 
-  // Prefer explicit survey data, then fetched data.
-  const surveyDataEffective = surveyData || remoteData;
-
   const questions = useMemo(() => {
-    if (!surveyDataEffective || !surveyDataEffective.questions) return [];
+    if (!remoteData || !remoteData.questions) return [];
 
-    const rawQuestions = surveyDataEffective.questions;
-    const optionsMap = surveyDataEffective.options || {};
-    const dependsRows = surveyDataEffective.DependsRows || [];
+    const rawQuestions = remoteData.questions;
+    const optionsMap = remoteData.options || {};
+    const dependsRows = remoteData.DependsRows || [];
 
     return rawQuestions
       .map((q) => {
@@ -37,7 +36,7 @@ export function QuestionsProvider({ surveyData, children }) {
 
         return {
           ...q,
-          id: q.question_id, // alias for old UI components
+          id: q.question_id,
           text: q.question_text,
           type: q.question_type,
           options: qOptions.map((opt) => ({
@@ -49,9 +48,9 @@ export function QuestionsProvider({ surveyData, children }) {
         };
       })
       .sort((a, b) => a.position - b.position);
-  }, [surveyDataEffective]);
+  }, [remoteData]);
 
-  // Fetch remote questions when no `surveyData` prop provided
+  // Fetch remote questions from backend
   useEffect(() => {
     let mounted = true;
 
@@ -63,7 +62,6 @@ export function QuestionsProvider({ surveyData, children }) {
         const data = await getQuestions();
         if (mounted) setRemoteData(data);
       } catch (err) {
-        console.error("Error fetching questions:", err);
         if (mounted) setFetchError(err);
       } finally {
         if (mounted) setIsLoading(false);
@@ -75,7 +73,7 @@ export function QuestionsProvider({ surveyData, children }) {
     return () => {
       mounted = false;
     };
-  }, [surveyData]);
+  }, []);
 
   const isVisible = (question) => {
     if (
@@ -105,6 +103,7 @@ export function QuestionsProvider({ surveyData, children }) {
     if (next < questions.length) {
       setNavigationDirection(1);
       setCurrentIndex(next);
+      localStorage.setItem("currentQuestionIndex", next.toString());
     }
   };
 
@@ -116,6 +115,7 @@ export function QuestionsProvider({ surveyData, children }) {
     if (prev >= 0) {
       setNavigationDirection(-1);
       setCurrentIndex(prev);
+      localStorage.setItem("currentQuestionIndex", prev.toString());
     }
   };
 
@@ -133,7 +133,9 @@ export function QuestionsProvider({ surveyData, children }) {
   const visibleSoFar = questions
     .slice(0, currentIndex + 1)
     .filter(isVisible).length;
-  let progress = ((visibleSoFar / totalVisible) * 100).toFixed(0) | 0;
+
+  const progress = (((visibleSoFar - 1) / totalVisible) * 100).toFixed(0) | 0;
+
   const currentQuestion = questions[currentIndex];
 
   return (

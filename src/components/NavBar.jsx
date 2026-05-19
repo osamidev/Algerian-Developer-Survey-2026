@@ -1,10 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import toast from "react-hot-toast";
+import { useLocation, useNavigate } from "react-router";
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/" && location.state?.scrollToId) {
+      const timer = setTimeout(() => {
+        const el = document.getElementById(location.state.scrollToId);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+        navigate("/", { replace: true, state: {} });
+      }, 100);
+
+      return () => clearTimeout(timer);
+    }
+  }, [location, navigate]);
+
   function handleShare() {
-    navigator.clipboard.writeText(window.location.href);
+    let link = window.location.href;
+    if (link.endsWith("/oauth")) {
+      link = link.slice(0, -6); // Remove /oauth if present
+    }
+    navigator.clipboard.writeText(link);
     toast.success("Link copied to clipboard!", {
       icon: "🔗",
       style: {
@@ -15,10 +35,18 @@ function NavBar() {
     });
   }
 
+  // 2. Updated scroll logic to handle multi-page checks
   function scrollTo(id) {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
     setIsOpen(false);
+
+    // If we are on the home page, scroll normally
+    if (location.pathname === "/") {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // If we are on /oauth or any other page, redirect home and send the ID along
+      navigate("/", { state: { scrollToId: id } });
+    }
   }
 
   return (
@@ -30,25 +58,25 @@ function NavBar() {
         <div className="text-text-medium border-border-subtle absolute left-1/2 hidden -translate-x-1/2 gap-8 rounded-full border bg-white/5 px-8 py-3 text-sm shadow-[0_8px_32px_rgba(0,0,0,0.25)] backdrop-blur-xl md:flex">
           <button
             onClick={() => scrollTo("Hero")}
-            className="hover:text-brand-hover transition"
+            className="hover:text-brand-hover cursor-pointer transition"
           >
             Home
           </button>
           <button
             onClick={() => scrollTo("About")}
-            className="hover:text-brand-hover transition"
+            className="hover:text-brand-hover cursor-pointer transition"
           >
             About
           </button>
           <button
             onClick={() => scrollTo("who")}
-            className="hover:text-brand-hover transition"
+            className="hover:text-brand-hover cursor-pointer transition"
           >
             Who We Are
           </button>
           <button
             onClick={() => scrollTo("showcase")}
-            className="hover:text-brand-hover transition"
+            className="hover:text-brand-hover cursor-pointer transition"
           >
             Showcase
           </button>
@@ -91,7 +119,7 @@ function NavBar() {
       >
         <button
           onClick={() => scrollTo("Hero")}
-          className="hover:text-brand-hover text-left transition"
+          className="hover:text-brand-hover cursor-pointer text-left transition"
         >
           Home
         </button>

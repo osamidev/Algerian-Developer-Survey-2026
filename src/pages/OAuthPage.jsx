@@ -1,3 +1,4 @@
+import NavBar from "../components/NavBar";
 import Logo from "./../components/Logo";
 function GoogleButton({ onClick, disabled = false }) {
   return (
@@ -5,7 +6,7 @@ function GoogleButton({ onClick, disabled = false }) {
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className="flex w-full cursor-pointer items-center gap-3 rounded-xl border border-[#747775] bg-white px-4 py-3 font-mono text-sm font-medium tracking-wide text-[#1f1f1f] transition-colors duration-150 hover:bg-[#f5f5f5] disabled:cursor-not-allowed disabled:opacity-50"
+      className="flex w-full cursor-pointer items-center gap-3 rounded-xl border border-[#747775] bg-white px-4 py-4 font-mono text-sm font-medium tracking-wide text-[#1f1f1f] transition-all duration-150 hover:scale-105 hover:bg-[#f5f5f5] active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
     >
       <GoogleIcon />
       <span className="flex-1 text-sm font-semibold">Continue with Google</span>
@@ -19,7 +20,7 @@ function GitHubButton({ onClick, disabled = false }) {
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className="flex w-full cursor-pointer items-center rounded-xl border border-[#30363d] bg-[#24292f] px-4 py-4 font-mono text-sm font-medium tracking-wide text-white transition-colors duration-150 hover:bg-[#32383f] disabled:cursor-not-allowed disabled:opacity-50"
+      className="flex w-full cursor-pointer items-center rounded-xl border border-[#30363d] bg-[#24292f] px-4 py-4 font-mono text-sm font-medium tracking-wide text-white transition-all duration-150 hover:scale-105 hover:bg-[#32383f] active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
     >
       <GitHubIcon />
       <span className="flex-1 text-sm font-semibold">Continue with GitHub</span>
@@ -140,18 +141,19 @@ function FooterLinks() {
 // }
 
 export default function OAuthPage() {
+  const BACKEND_URL =
+    import.meta.env.VITE_API_BASE_URL || "http://localhost:4000";
+
   function handleOAuth(provider) {
-    // We send the user to the BACKEND, which then sends them to Google/GitHub
     if (provider === "github") {
-      const scope = "read:user user:email"; // Adjust scopes as needed
-      const redirectUri = "http://localhost:4000/auth/github/callback"; // Your backend callback URL
+      const scope = "read:user user:email";
+      const redirectUri = `${BACKEND_URL}/auth/github/callback`;
       const clientId = import.meta.env.VITE_GITHUB_CLIENT_ID;
-      console.log(clientId);
       const githubUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}`;
       window.location.assign(githubUrl);
     } else if (provider === "google") {
       const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
-      const redirectUri = "http://localhost:4000/auth/google/callback";
+      const redirectUri = `${BACKEND_URL}/auth/google/callback`;
       const googleUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&scope=openid email profile&response_type=code`;
       window.location.assign(googleUrl);
     }
@@ -161,69 +163,27 @@ export default function OAuthPage() {
     <div className="selection:bg-brand-primary/30 bg-background-main relative flex min-h-screen flex-col text-white">
       {/* Visual background decoration */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="bg-brand-primary/10 absolute -top-[10%] left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-[100%] blur-[120px]" />
+        <div className="absolute left-1/2 h-[500px] w-[800px] -translate-x-1/2 translate-y-24 rounded-[100%] bg-blue-800/20 blur-[120px]" />
       </div>
 
-      {/* Header */}
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl px-6 py-8">
-        <Logo />
-      </div>
+      <NavBar />
 
       {/* Main Container */}
-      <main className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 pb-20">
-        <div className="w-full max-w-[420px]">
-          {/* Text Section */}
-          <div className="mb-10 flex flex-col items-center text-center">
-            <div className="bg-brand-primary/10 ring-brand-primary/20 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl ring-1 backdrop-blur-md">
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-brand-primary"
-              >
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-              </svg>
-            </div>
-            <h1 className="font-mono text-3xl font-bold tracking-tight text-white antialiased">
-              Join the 2026 Survey
-            </h1>
-            <p className="mt-3 px-4 font-mono text-sm tracking-wide text-white/50">
-              Authenticate to participate. We use this strictly to prevent
-              duplicate submissions.
-            </p>
+      <main className="relative z-10 flex flex-1 translate-y-12 flex-col items-center justify-center px-4">
+        <div className="w-full max-w-[340px]">
+          {/* Social Buttons */}
+          <div className="flex flex-col gap-4">
+            <GitHubButton onClick={() => handleOAuth("github")} />
+            <GoogleButton onClick={() => handleOAuth("google")} />
           </div>
 
-          {/* Social Card */}
-          <div className="bg-background-surface/20 relative overflow-hidden rounded-[2rem] border border-white/10 p-8 shadow-2xl backdrop-blur-md md:p-10">
-            {/* Subtle inner glow */}
-            <div className="bg-brand-primary/10 absolute -top-24 -right-24 h-48 w-48 rounded-full blur-3xl" />
-
-            <div className="relative z-10 flex flex-col gap-4">
-              <GitHubButton onClick={() => handleOAuth("github")} />
-              <GoogleButton onClick={() => handleOAuth("google")} />
-            </div>
-
-            <div className="relative z-10 mt-8 flex items-center gap-4">
-              <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-white/10" />
-              <span className="font-mono text-xs font-semibold tracking-widest text-white/30 uppercase">
-                Anonymous & Secure
-              </span>
-              <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-white/10" />
-            </div>
-
-            <p className="relative z-10 mt-6 text-center font-mono text-[11px] leading-relaxed text-white/40">
-              Your identity is decoupled from your survey answers. Your
-              responses remain 100% anonymous.
-            </p>
-          </div>
+          <p className="mt-8 text-center font-mono text-[11px] leading-relaxed text-white/40">
+            Authentication is required strictly to prevent duplicate
+            submissions. Your responses remain 100% anonymous.
+          </p>
 
           {/* Footer */}
-          <div className="mt-10">
+          <div className="mt-8">
             <FooterLinks />
           </div>
         </div>

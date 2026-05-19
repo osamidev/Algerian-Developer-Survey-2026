@@ -46,7 +46,7 @@ export default function MultipleChoice({ question, control }) {
               return (
                 <label
                   key={id}
-                  className="group flex w-full cursor-pointer items-center gap-4 rounded-[12px] border border-[#5D29B7] px-[24px] py-[16px] transition-colors"
+                  className="group relative flex w-full cursor-pointer items-center gap-4 rounded-[12px] border border-[#5D29B7] px-[24px] py-[16px] transition-colors"
                 >
                   <div
                     className={`flex h-6 w-6 shrink-0 items-center justify-around rounded-md border transition-colors ${

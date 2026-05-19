@@ -70,7 +70,7 @@ body {
 .loader-bars {
   width: 45px;
   aspect-ratio: 1;
-  --c: no-repeat linear-gradient(#000 0 0);
+  --c: no-repeat linear-gradient(var(--text-medium-emphasis) 0 0);
   background:
     var(--c) 0% 50%,
     var(--c) 50% 50%,

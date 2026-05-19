@@ -17,9 +17,13 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
+
+const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173";
+const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:4000";
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: FRONTEND_URL,
     credentials: true,
   }),
 );
@@ -50,7 +54,6 @@ function readSessionCookie(req) {
 
 async function buildSessionPayload({ provider, userProfile, userRow, isNew }) {
   const userId = userRow.user_id;
-  console.log(`Building session for user ID: ${userId} (New: ${isNew})`);
   const alreadySubmitted = await hasSubmittedSurvey(userId);
 
   return {
@@ -70,8 +73,6 @@ app.get("/about", (req, res) => {
 app.get("/auth/github/callback", async (req, res) => {
   const { code } = req.query;
   if (!code) return res.status(400).send("Auth code missing");
-
-  console.log(`The Code: ${code}`);
 
   try {
     // Exchange code for Access Token
@@ -103,7 +104,6 @@ app.get("/auth/github/callback", async (req, res) => {
 
     // Save/Update in our Supabase DB
     const intsertUser = await handleGithubUser(githubUser.id);
-    console.log("User saved:", intsertUser);
     const sessionPayload = await buildSessionPayload({
       provider: "github",
       userProfile: githubUser,
@@ -115,25 +115,22 @@ app.get("/auth/github/callback", async (req, res) => {
     res.cookie("survey_session", sessionToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
-    res.redirect(`http://localhost:5173/survey?session=${sessionToken}`);
+    res.redirect(`${FRONTEND_URL}/survey?session=${sessionToken}`);
   } catch (error) {
     console.error("Critical Auth Failure:", error.message);
-    res.redirect(`http://localhost:5173/index.html?status=error`);
+    res.redirect(`${FRONTEND_URL}/index.html?status=error`);
   }
 });
 
 app.get("/auth/google/callback", async (req, res) => {
   const { code } = req.query;
   if (!code) {
-    console.log("Missing Code");
-    return res.status(404).send("Missing Code");
+    return res.status(400).send("Missing Code");
   }
-
-  console.log(`The Code: ${code}`);
 
   try {
     const tokenRes = await fetch("https://oauth2.googleapis.com/token", {
@@ -147,7 +144,7 @@ app.get("/auth/google/callback", async (req, res) => {
         client_secret: process.env.GOOGLE_CLIENT_SECRET,
         code: code,
         grant_type: "authorization_code",
-        redirect_uri: "http://localhost:4000/auth/google/callback",
+        redirect_uri: `${BACKEND_URL}/auth/google/callback`,
       }),
     });
 
@@ -163,7 +160,6 @@ app.get("/auth/google/callback", async (req, res) => {
     const googleUser = await userRes.json();
 
     const intsertUser = await handleGoogleUser(googleUser.sub);
-    console.log("User saved:", intsertUser);
     const sessionPayload = await buildSessionPayload({
       provider: "google",
       userProfile: googleUser,
@@ -175,14 +171,14 @@ app.get("/auth/google/callback", async (req, res) => {
     res.cookie("survey_session", sessionToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
-    res.redirect(`http://localhost:5173/survey?session=${sessionToken}`);
+    res.redirect(`${FRONTEND_URL}/survey?session=${sessionToken}`);
   } catch (err) {
-    console.error(`Login Failed: ${err}`);
-    return res.status(404).send("Login Failed");
+    console.error(`Login Failed: ${err.message}`);
+    return res.status(500).send("Login Failed");
   }
 });
 
@@ -202,6 +198,17 @@ app.get("/auth/session", async (req, res) => {
   } catch {
     return res.status(401).json({ success: false, message: "Invalid session" });
   }
+});
+
+app.post("/auth/logout", (req, res) => {
+  // Clear the cookie by setting maxAge: 0 or using clearCookie
+  res.clearCookie("survey_session", {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+  });
+
+  res.status(200).json({ success: true, message: "Logged out" });
 });
 
 app.get("/survey/:surveyId/questions", async (req, res) => {
@@ -229,7 +236,6 @@ app.get("/survey/:surveyId/questions", async (req, res) => {
 app.post("/survey/:surveyId/answers", async (req, res) => {
   try {
     const answer = req.body;
-    console.log("BODY:", req.body);
     await SaveAnswers(answer.user_id, answer.answers);
     res.status(200).send({
       success: true,
