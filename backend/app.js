@@ -213,7 +213,13 @@ app.post("/auth/logout", (req, res) => {
 
 app.get("/survey/:surveyId/questions", async (req, res) => {
   try {
-    const questions = await GetQuestions();
+    const surveyId = req.params.surveyId;
+    const questions = await GetQuestions(surveyId);
+    
+    if (!questions || questions.length === 0) {
+      return res.json({ questions: [], options: {}, DependsRows: [] });
+    }
+
     const optionsRows = await GetOptions(questions.map((q) => q.question_id));
     const DependsRows = await GetDepends();
 
