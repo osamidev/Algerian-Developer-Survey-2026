@@ -58,7 +58,7 @@ function RankingInput({ question }) {
           >
             <GripVertical className="h-5 w-5 text-white/50" />
             <span className="text-base font-medium text-white/90">
-              {item.text || item}
+              {item.option_text || item}
             </span>
           </Reorder.Item>
         ))}

@@ -71,25 +71,29 @@ async function handleGoogleUser(ID) {
 }
 
 async function GetQuestions(surveyId) {
-  const SearchQue = 'SELECT id as question_id, question as question_text, type as question_type, "order" as position, * FROM questions WHERE survey_id = $1 ORDER BY "order"';
+  const SearchQue =
+    'SELECT id as question_id, question as question_text, type as question_type, "order" as position, * FROM questions WHERE survey_id = $1 ORDER BY "order"';
   const GetQue = await pool.query(SearchQue, [surveyId]);
   return GetQue.rows;
 }
 
 async function GetOptions(questionID) {
-  const searchQue = 'SELECT id as option_id, "order" as position, * FROM options WHERE question_id = ANY($1) ORDER BY "order"';
+  const searchQue =
+    'SELECT id as option_id, "order" as position, * FROM options WHERE question_id = ANY($1) ORDER BY "order"';
   const GetQue = await pool.query(searchQue, [questionID]);
   return GetQue.rows;
 }
 
 async function GetDepends() {
-  const GetQue = await pool.query('SELECT target_question_id as question_id, source_option_id as depends_on_option_id, condition_type, * FROM questions_depedencies');
+  const GetQue = await pool.query(
+    "SELECT target_question_id as question_id, source_option_id as depends_on_option_id, condition_type, * FROM questions_depedencies",
+  );
   return GetQue.rows;
 }
 
 async function SaveAnswers(user_id, answers) {
   const rankTracker = {};
-  
+
   for (const ans of answers) {
     if (ans.type === "multiple_choice" || ans.type === "single_choice") {
       await pool.query(
@@ -102,11 +106,11 @@ async function SaveAnswers(user_id, answers) {
         rankTracker[ans.question_id] = 1;
       }
       const currentRank = rankTracker[ans.question_id]++;
-      
+
       await pool.query(
         `INSERT INTO answers (user_id, question_id, option_id, raw_numbers, answered_at)
                  VALUES ($1, $2, $3, $4, NOW())`,
-        [user_id, ans.question_id, ans.answer, currentRank], 
+        [user_id, ans.question_id, ans.answer, currentRank],
       );
     } else if (ans.type === "rating" || ans.type === "numeric") {
       await pool.query(

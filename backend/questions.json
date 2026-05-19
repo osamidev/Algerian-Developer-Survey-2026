@@ -1,2681 +1,4454 @@
 [
   {
     "id": 1,
-    "text": "What's your primary role right now?",
+    "survey_id": 1,
+    "question": "What's your primary role right now?",
     "type": "single_choice",
+    "order": 1,
+    "category": "background",
+    "description": "Pick the one that fits best — you can specify more later.",
+    "required": true,
     "options": [
       {
         "id": 1,
-        "text": "Full Stack Developer"
+        "question_id": 1,
+        "option_text": "Full Stack Developer",
+        "order": 1
       },
       {
         "id": 2,
-        "text": "Backend Developer"
+        "question_id": 1,
+        "option_text": "Backend Developer",
+        "order": 2
       },
       {
         "id": 3,
-        "text": "Frontend Developer"
+        "question_id": 1,
+        "option_text": "Frontend Developer",
+        "order": 3
       },
       {
         "id": 4,
-        "text": "Mobile Developer"
+        "question_id": 1,
+        "option_text": "Mobile Developer",
+        "order": 4
       },
       {
         "id": 5,
-        "text": "UI/UX Designer"
+        "question_id": 1,
+        "option_text": "UI/UX Designer",
+        "order": 5
       },
       {
         "id": 6,
-        "text": "Data Engineer"
+        "question_id": 1,
+        "option_text": "Data Engineer",
+        "order": 6
       },
       {
         "id": 7,
-        "text": "Data Scientist"
+        "question_id": 1,
+        "option_text": "Data Scientist",
+        "order": 7
       },
       {
         "id": 8,
-        "text": "ML / AI Engineer"
+        "question_id": 1,
+        "option_text": "ML / AI Engineer",
+        "order": 8
       },
       {
         "id": 9,
-        "text": "DevOps / Cloud Engineer"
+        "question_id": 1,
+        "option_text": "DevOps / Cloud Engineer",
+        "order": 9
       },
       {
         "id": 10,
-        "text": "Cybersecurity Specialist"
+        "question_id": 1,
+        "option_text": "Cybersecurity Specialist",
+        "order": 10
       },
       {
         "id": 11,
-        "text": "Embedded / Hardware Engineer"
+        "question_id": 1,
+        "option_text": "Embedded / Hardware Engineer",
+        "order": 11
       },
       {
         "id": 12,
-        "text": "Game Developer"
+        "question_id": 1,
+        "option_text": "Game Developer",
+        "order": 12
       },
       {
         "id": 13,
-        "text": "Blockchain Developer"
+        "question_id": 1,
+        "option_text": "Blockchain Developer",
+        "order": 13
       },
       {
         "id": 14,
-        "text": "Academic Researcher"
+        "question_id": 1,
+        "option_text": "Academic Researcher",
+        "order": 14
       },
       {
         "id": 15,
-        "text": "Engineering Manager / Tech Lead"
+        "question_id": 1,
+        "option_text": "Engineering Manager / Tech Lead",
+        "order": 15
       },
       {
         "id": 16,
-        "text": "Student"
+        "question_id": 1,
+        "option_text": "Student",
+        "order": 16
       },
       {
         "id": 17,
-        "text": "Educator / Instructor"
+        "question_id": 1,
+        "option_text": "Educator / Instructor",
+        "order": 17
       },
       {
         "id": 18,
-        "text": "Freelancer (generalist)"
+        "question_id": 1,
+        "option_text": "Freelancer (generalist)",
+        "order": 18
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 2,
-    "text": "How many years have you been writing code?",
+    "survey_id": 1,
+    "question": "How many years have you been writing code?",
     "type": "single_choice",
+    "order": 2,
+    "category": "background",
+    "description": "Count from when you seriously started — school included.",
+    "required": true,
     "options": [
       {
         "id": 19,
-        "text": "Less than 1 year"
+        "question_id": 2,
+        "option_text": "Less than 1 year",
+        "order": 1
       },
       {
         "id": 20,
-        "text": "1–2 years"
+        "question_id": 2,
+        "option_text": "1–2 years",
+        "order": 2
       },
       {
         "id": 21,
-        "text": "3–5 years"
+        "question_id": 2,
+        "option_text": "3–5 years",
+        "order": 3
       },
       {
         "id": 22,
-        "text": "6–10 years"
+        "question_id": 2,
+        "option_text": "6–10 years",
+        "order": 4
       },
       {
         "id": 23,
-        "text": "11–15 years"
+        "question_id": 2,
+        "option_text": "11–15 years",
+        "order": 5
       },
       {
         "id": 24,
-        "text": "More than 15 years"
+        "question_id": 2,
+        "option_text": "More than 15 years",
+        "order": 6
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 3,
-    "text": "What's your age range?",
+    "survey_id": 1,
+    "question": "What's your age range?",
     "type": "single_choice",
+    "order": 3,
+    "category": "background",
+    "description": null,
+    "required": true,
     "options": [
       {
         "id": 25,
-        "text": "Under 18"
+        "question_id": 3,
+        "option_text": "Under 18",
+        "order": 1
       },
       {
         "id": 26,
-        "text": "18–24"
+        "question_id": 3,
+        "option_text": "18–24",
+        "order": 2
       },
       {
         "id": 27,
-        "text": "25–34"
+        "question_id": 3,
+        "option_text": "25–34",
+        "order": 3
       },
       {
         "id": 28,
-        "text": "35–44"
+        "question_id": 3,
+        "option_text": "35–44",
+        "order": 4
       },
       {
         "id": 29,
-        "text": "45 or older"
+        "question_id": 3,
+        "option_text": "45 or older",
+        "order": 5
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 4,
-    "text": "Where are you based?",
+    "survey_id": 1,
+    "question": "Where are you based?",
     "type": "single_choice",
+    "order": 4,
+    "category": "background",
+    "description": "Your current location — not necessarily where you're from.",
+    "required": true,
     "options": [
       {
         "id": 30,
-        "text": "Algiers"
+        "question_id": 4,
+        "option_text": "Algiers",
+        "order": 1
       },
       {
         "id": 31,
-        "text": "Oran"
+        "question_id": 4,
+        "option_text": "Oran",
+        "order": 2
       },
       {
         "id": 32,
-        "text": "Constantine"
+        "question_id": 4,
+        "option_text": "Constantine",
+        "order": 3
       },
       {
         "id": 33,
-        "text": "Annaba"
+        "question_id": 4,
+        "option_text": "Annaba",
+        "order": 4
       },
       {
         "id": 34,
-        "text": "Blida / Mitidja"
+        "question_id": 4,
+        "option_text": "Blida / Mitidja",
+        "order": 5
       },
       {
         "id": 35,
-        "text": "Tizi Ouzou / Bejaia"
+        "question_id": 4,
+        "option_text": "Tizi Ouzou / Bejaia",
+        "order": 6
       },
       {
         "id": 36,
-        "text": "Another Algerian city"
+        "question_id": 4,
+        "option_text": "Another Algerian city",
+        "order": 7
       },
       {
         "id": 37,
-        "text": "Outside Algeria"
+        "question_id": 4,
+        "option_text": "Outside Algeria",
+        "order": 8
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 5,
-    "text": "What's your gender?",
+    "survey_id": 1,
+    "question": "What's your gender?",
     "type": "single_choice",
+    "order": 5,
+    "category": "background",
+    "description": null,
+    "required": false,
     "options": [
       {
         "id": 38,
-        "text": "Male"
+        "question_id": 5,
+        "option_text": "Male",
+        "order": 1
       },
       {
         "id": 39,
-        "text": "Female"
+        "question_id": 5,
+        "option_text": "Female",
+        "order": 2
       },
       {
         "id": 40,
-        "text": "Prefer not to say"
+        "question_id": 5,
+        "option_text": "Prefer not to say",
+        "order": 3
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 6,
-    "text": "What's your highest level of education?",
+    "survey_id": 1,
+    "question": "What's your highest level of education?",
     "type": "single_choice",
+    "order": 6,
+    "category": "education",
+    "description": "Doesn't have to be in tech.",
+    "required": true,
     "options": [
       {
         "id": 41,
-        "text": "Primary or middle school"
+        "question_id": 6,
+        "option_text": "Primary or middle school",
+        "order": 1
       },
       {
         "id": 42,
-        "text": "High school (baccalauréat)"
+        "question_id": 6,
+        "option_text": "High school (baccalauréat)",
+        "order": 2
       },
       {
         "id": 43,
-        "text": "University — no degree (dropped out or in progress)"
+        "question_id": 6,
+        "option_text": "University — no degree (dropped out or in progress)",
+        "order": 3
       },
       {
         "id": 44,
-        "text": "Bachelor's degree"
+        "question_id": 6,
+        "option_text": "Bachelor's degree",
+        "order": 4
       },
       {
         "id": 45,
-        "text": "Master's degree"
+        "question_id": 6,
+        "option_text": "Master's degree",
+        "order": 5
       },
       {
         "id": 46,
-        "text": "Engineering degree (Grande École / Ingénieur)"
+        "question_id": 6,
+        "option_text": "Engineering degree (Grande École / Ingénieur)",
+        "order": 6
       },
       {
         "id": 47,
-        "text": "Doctorate / PhD"
+        "question_id": 6,
+        "option_text": "Doctorate / PhD",
+        "order": 7
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 7,
-    "text": "How did you actually learn to code?",
+    "survey_id": 1,
+    "question": "How did you actually learn to code?",
     "type": "multiple_choice",
+    "order": 7,
+    "category": "education",
+    "description": "Pick everything that genuinely shaped your skills.",
+    "required": true,
     "options": [
       {
         "id": 48,
-        "text": "Self-taught from YouTube & tutorials"
+        "question_id": 7,
+        "option_text": "Self-taught from YouTube & tutorials",
+        "order": 1
       },
       {
         "id": 49,
-        "text": "University or school coursework"
+        "question_id": 7,
+        "option_text": "University or school coursework",
+        "order": 2
       },
       {
         "id": 50,
-        "text": "Online courses (Coursera, Udemy, etc.)"
+        "question_id": 7,
+        "option_text": "Online courses (Coursera, Udemy, etc.)",
+        "order": 3
       },
       {
         "id": 51,
-        "text": "Books and technical documentation"
+        "question_id": 7,
+        "option_text": "Books and technical documentation",
+        "order": 4
       },
       {
         "id": 52,
-        "text": "Bootcamp or intensive program"
+        "question_id": 7,
+        "option_text": "Bootcamp or intensive program",
+        "order": 5
       },
       {
         "id": 53,
-        "text": "Colleagues, mentors, or friends"
+        "question_id": 7,
+        "option_text": "Colleagues, mentors, or friends",
+        "order": 6
       },
       {
         "id": 54,
-        "text": "Open source contributions"
+        "question_id": 7,
+        "option_text": "Open source contributions",
+        "order": 7
       },
       {
         "id": 55,
-        "text": "Building personal projects"
+        "question_id": 7,
+        "option_text": "Building personal projects",
+        "order": 8
       },
       {
         "id": 56,
-        "text": "Job training on the fly"
+        "question_id": 7,
+        "option_text": "Job training on the fly",
+        "order": 9
       },
       {
         "id": 57,
-        "text": "AI coding assistants"
+        "question_id": 7,
+        "option_text": "AI coding assistants",
+        "order": 10
       },
       {
         "id": 58,
-        "text": "Stack Overflow and community forums"
+        "question_id": 7,
+        "option_text": "Stack Overflow and community forums",
+        "order": 11
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 8,
-    "text": "What's your primary coding language today?",
+    "survey_id": 1,
+    "question": "What's your primary coding language today?",
     "type": "single_choice",
+    "order": 8,
+    "category": "education",
+    "description": "The one you'd reach for first on a new project.",
+    "required": true,
     "options": [
       {
         "id": 59,
-        "text": "JavaScript / TypeScript"
+        "question_id": 8,
+        "option_text": "JavaScript / TypeScript",
+        "order": 1
       },
       {
         "id": 60,
-        "text": "Python"
+        "question_id": 8,
+        "option_text": "Python",
+        "order": 2
       },
       {
         "id": 61,
-        "text": "Java"
+        "question_id": 8,
+        "option_text": "Java",
+        "order": 3
       },
       {
         "id": 62,
-        "text": "C / C++"
+        "question_id": 8,
+        "option_text": "C / C++",
+        "order": 4
       },
       {
         "id": 63,
-        "text": "C#"
+        "question_id": 8,
+        "option_text": "C#",
+        "order": 5
       },
       {
         "id": 64,
-        "text": "PHP"
+        "question_id": 8,
+        "option_text": "PHP",
+        "order": 6
       },
       {
         "id": 65,
-        "text": "Go"
+        "question_id": 8,
+        "option_text": "Go",
+        "order": 7
       },
       {
         "id": 66,
-        "text": "Rust"
+        "question_id": 8,
+        "option_text": "Rust",
+        "order": 8
       },
       {
         "id": 67,
-        "text": "Kotlin"
+        "question_id": 8,
+        "option_text": "Kotlin",
+        "order": 9
       },
       {
         "id": 68,
-        "text": "Swift"
+        "question_id": 8,
+        "option_text": "Swift",
+        "order": 10
       },
       {
         "id": 69,
-        "text": "Dart"
+        "question_id": 8,
+        "option_text": "Dart",
+        "order": 11
       },
       {
         "id": 70,
-        "text": "Ruby"
+        "question_id": 8,
+        "option_text": "Ruby",
+        "order": 12
       },
       {
         "id": 71,
-        "text": "Scala"
+        "question_id": 8,
+        "option_text": "Scala",
+        "order": 13
       },
       {
         "id": 72,
-        "text": "R"
+        "question_id": 8,
+        "option_text": "R",
+        "order": 14
       },
       {
         "id": 73,
-        "text": "MATLAB"
+        "question_id": 8,
+        "option_text": "MATLAB",
+        "order": 15
       },
       {
         "id": 74,
-        "text": "Bash / Shell scripting"
+        "question_id": 8,
+        "option_text": "Bash / Shell scripting",
+        "order": 16
       },
       {
         "id": 75,
-        "text": "Assembly"
+        "question_id": 8,
+        "option_text": "Assembly",
+        "order": 17
       },
       {
         "id": 76,
-        "text": "GDScript"
+        "question_id": 8,
+        "option_text": "GDScript",
+        "order": 18
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 9,
-    "text": "Which languages have you used seriously in the past 6 months?",
+    "survey_id": 1,
+    "question": "Which languages have you used seriously in the past 6 months?",
     "type": "multiple_choice",
+    "order": 9,
+    "category": "tech_stack",
+    "description": "Not just touched — actually built with.",
+    "required": true,
     "options": [
       {
         "id": 77,
-        "text": "JavaScript"
+        "question_id": 9,
+        "option_text": "JavaScript",
+        "order": 1
       },
       {
         "id": 78,
-        "text": "TypeScript"
+        "question_id": 9,
+        "option_text": "TypeScript",
+        "order": 2
       },
       {
         "id": 79,
-        "text": "Python"
+        "question_id": 9,
+        "option_text": "Python",
+        "order": 3
       },
       {
         "id": 80,
-        "text": "Java"
+        "question_id": 9,
+        "option_text": "Java",
+        "order": 4
       },
       {
         "id": 81,
-        "text": "C#"
+        "question_id": 9,
+        "option_text": "C#",
+        "order": 5
       },
       {
         "id": 82,
-        "text": "C++"
+        "question_id": 9,
+        "option_text": "C++",
+        "order": 6
       },
       {
         "id": 83,
-        "text": "C"
+        "question_id": 9,
+        "option_text": "C",
+        "order": 7
       },
       {
         "id": 84,
-        "text": "PHP"
+        "question_id": 9,
+        "option_text": "PHP",
+        "order": 8
       },
       {
         "id": 85,
-        "text": "Go"
+        "question_id": 9,
+        "option_text": "Go",
+        "order": 9
       },
       {
         "id": 86,
-        "text": "Rust"
+        "question_id": 9,
+        "option_text": "Rust",
+        "order": 10
       },
       {
         "id": 87,
-        "text": "Kotlin"
+        "question_id": 9,
+        "option_text": "Kotlin",
+        "order": 11
       },
       {
         "id": 88,
-        "text": "Swift"
+        "question_id": 9,
+        "option_text": "Swift",
+        "order": 12
       },
       {
         "id": 89,
-        "text": "Dart"
+        "question_id": 9,
+        "option_text": "Dart",
+        "order": 13
       },
       {
         "id": 90,
-        "text": "Bash / Shell"
+        "question_id": 9,
+        "option_text": "Bash / Shell",
+        "order": 14
       },
       {
         "id": 91,
-        "text": "SQL"
+        "question_id": 9,
+        "option_text": "SQL",
+        "order": 15
       },
       {
         "id": 92,
-        "text": "HTML / CSS"
+        "question_id": 9,
+        "option_text": "HTML / CSS",
+        "order": 16
       },
       {
         "id": 93,
-        "text": "Ruby"
+        "question_id": 9,
+        "option_text": "Ruby",
+        "order": 17
       },
       {
         "id": 94,
-        "text": "Scala"
+        "question_id": 9,
+        "option_text": "Scala",
+        "order": 18
       },
       {
         "id": 95,
-        "text": "R"
+        "question_id": 9,
+        "option_text": "R",
+        "order": 19
       },
       {
         "id": 96,
-        "text": "MATLAB"
+        "question_id": 9,
+        "option_text": "MATLAB",
+        "order": 20
       },
       {
         "id": 97,
-        "text": "Lua"
+        "question_id": 9,
+        "option_text": "Lua",
+        "order": 21
       },
       {
         "id": 98,
-        "text": "GDScript"
+        "question_id": 9,
+        "option_text": "GDScript",
+        "order": 22
       },
       {
         "id": 99,
-        "text": "Assembly"
+        "question_id": 9,
+        "option_text": "Assembly",
+        "order": 23
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 10,
-    "text": "Which databases are in your current stack?",
+    "survey_id": 1,
+    "question": "Which databases are in your current stack?",
     "type": "multiple_choice",
+    "order": 10,
+    "category": "tech_stack",
+    "description": "Select all you've used in production or real projects recently.",
+    "required": true,
     "options": [
       {
         "id": 100,
-        "text": "PostgreSQL"
+        "question_id": 10,
+        "option_text": "PostgreSQL",
+        "order": 1
       },
       {
         "id": 101,
-        "text": "MySQL / MariaDB"
+        "question_id": 10,
+        "option_text": "MySQL / MariaDB",
+        "order": 2
       },
       {
         "id": 102,
-        "text": "MongoDB"
+        "question_id": 10,
+        "option_text": "MongoDB",
+        "order": 3
       },
       {
         "id": 103,
-        "text": "Redis"
+        "question_id": 10,
+        "option_text": "Redis",
+        "order": 4
       },
       {
         "id": 104,
-        "text": "SQLite"
+        "question_id": 10,
+        "option_text": "SQLite",
+        "order": 5
       },
       {
         "id": 105,
-        "text": "Microsoft SQL Server"
+        "question_id": 10,
+        "option_text": "Microsoft SQL Server",
+        "order": 6
       },
       {
         "id": 106,
-        "text": "Oracle DB"
+        "question_id": 10,
+        "option_text": "Oracle DB",
+        "order": 7
       },
       {
         "id": 107,
-        "text": "Supabase"
+        "question_id": 10,
+        "option_text": "Supabase",
+        "order": 8
       },
       {
         "id": 108,
-        "text": "Firebase / Firestore"
+        "question_id": 10,
+        "option_text": "Firebase / Firestore",
+        "order": 9
       },
       {
         "id": 109,
-        "text": "Elasticsearch"
+        "question_id": 10,
+        "option_text": "Elasticsearch",
+        "order": 10
       },
       {
         "id": 110,
-        "text": "BigQuery"
+        "question_id": 10,
+        "option_text": "BigQuery",
+        "order": 11
       },
       {
         "id": 111,
-        "text": "Snowflake"
+        "question_id": 10,
+        "option_text": "Snowflake",
+        "order": 12
       },
       {
         "id": 112,
-        "text": "DuckDB"
+        "question_id": 10,
+        "option_text": "DuckDB",
+        "order": 13
       },
       {
         "id": 113,
-        "text": "Neo4j"
+        "question_id": 10,
+        "option_text": "Neo4j",
+        "order": 14
       },
       {
         "id": 114,
-        "text": "Cassandra"
+        "question_id": 10,
+        "option_text": "Cassandra",
+        "order": 15
       },
       {
         "id": 115,
-        "text": "Databricks"
+        "question_id": 10,
+        "option_text": "Databricks",
+        "order": 16
       },
       {
         "id": 116,
-        "text": "Cosmos DB"
+        "question_id": 10,
+        "option_text": "Cosmos DB",
+        "order": 17
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 11,
-    "text": "Which cloud platforms or deployment targets do you use?",
+    "survey_id": 1,
+    "question": "Which cloud platforms or deployment targets do you use?",
     "type": "multiple_choice",
+    "order": 11,
+    "category": "tech_stack",
+    "description": "Where your code actually runs.",
+    "required": true,
     "options": [
       {
         "id": 117,
-        "text": "AWS"
+        "question_id": 11,
+        "option_text": "AWS",
+        "order": 1
       },
       {
         "id": 118,
-        "text": "Google Cloud (GCP)"
+        "question_id": 11,
+        "option_text": "Google Cloud (GCP)",
+        "order": 2
       },
       {
         "id": 119,
-        "text": "Microsoft Azure"
+        "question_id": 11,
+        "option_text": "Microsoft Azure",
+        "order": 3
       },
       {
         "id": 120,
-        "text": "Cloudflare"
+        "question_id": 11,
+        "option_text": "Cloudflare",
+        "order": 4
       },
       {
         "id": 121,
-        "text": "Vercel"
+        "question_id": 11,
+        "option_text": "Vercel",
+        "order": 5
       },
       {
         "id": 122,
-        "text": "Netlify"
+        "question_id": 11,
+        "option_text": "Netlify",
+        "order": 6
       },
       {
         "id": 123,
-        "text": "Railway / Render"
+        "question_id": 11,
+        "option_text": "Railway / Render",
+        "order": 7
       },
       {
         "id": 124,
-        "text": "DigitalOcean"
+        "question_id": 11,
+        "option_text": "DigitalOcean",
+        "order": 8
       },
       {
         "id": 125,
-        "text": "Heroku"
+        "question_id": 11,
+        "option_text": "Heroku",
+        "order": 9
       },
       {
         "id": 126,
-        "text": "Supabase"
+        "question_id": 11,
+        "option_text": "Supabase",
+        "order": 10
       },
       {
         "id": 127,
-        "text": "Firebase"
+        "question_id": 11,
+        "option_text": "Firebase",
+        "order": 11
       },
       {
         "id": 128,
-        "text": "IBM Cloud"
+        "question_id": 11,
+        "option_text": "IBM Cloud",
+        "order": 12
       },
       {
         "id": 129,
-        "text": "Docker (self-hosted)"
+        "question_id": 11,
+        "option_text": "Docker (self-hosted)",
+        "order": 13
       },
       {
         "id": 130,
-        "text": "Kubernetes (self-hosted)"
+        "question_id": 11,
+        "option_text": "Kubernetes (self-hosted)",
+        "order": 14
       },
       {
         "id": 131,
-        "text": "On-premise / bare metal"
+        "question_id": 11,
+        "option_text": "On-premise / bare metal",
+        "order": 15
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 12,
-    "text": "Which web frameworks are part of your daily workflow?",
+    "survey_id": 1,
+    "question": "Which web frameworks are part of your daily workflow?",
     "type": "multiple_choice",
+    "order": 12,
+    "category": "tech_stack",
+    "description": "Frontend or backend — whatever you're actively building with.",
+    "required": true,
     "options": [
       {
         "id": 132,
-        "text": "React"
+        "question_id": 12,
+        "option_text": "React",
+        "order": 1
       },
       {
         "id": 133,
-        "text": "Next.js"
+        "question_id": 12,
+        "option_text": "Next.js",
+        "order": 2
       },
       {
         "id": 134,
-        "text": "Vue.js"
+        "question_id": 12,
+        "option_text": "Vue.js",
+        "order": 3
       },
       {
         "id": 135,
-        "text": "Nuxt.js"
+        "question_id": 12,
+        "option_text": "Nuxt.js",
+        "order": 4
       },
       {
         "id": 136,
-        "text": "Angular"
+        "question_id": 12,
+        "option_text": "Angular",
+        "order": 5
       },
       {
         "id": 137,
-        "text": "Svelte / SvelteKit"
+        "question_id": 12,
+        "option_text": "Svelte / SvelteKit",
+        "order": 6
       },
       {
         "id": 138,
-        "text": "Astro"
+        "question_id": 12,
+        "option_text": "Astro",
+        "order": 7
       },
       {
         "id": 139,
-        "text": "Node.js / Express"
+        "question_id": 12,
+        "option_text": "Node.js / Express",
+        "order": 8
       },
       {
         "id": 140,
-        "text": "Nest.js"
+        "question_id": 12,
+        "option_text": "Nest.js",
+        "order": 9
       },
       {
         "id": 141,
-        "text": "FastAPI"
+        "question_id": 12,
+        "option_text": "FastAPI",
+        "order": 10
       },
       {
         "id": 142,
-        "text": "Django"
+        "question_id": 12,
+        "option_text": "Django",
+        "order": 11
       },
       {
         "id": 143,
-        "text": "Flask"
+        "question_id": 12,
+        "option_text": "Flask",
+        "order": 12
       },
       {
         "id": 144,
-        "text": "Laravel"
+        "question_id": 12,
+        "option_text": "Laravel",
+        "order": 13
       },
       {
         "id": 145,
-        "text": "Spring Boot"
+        "question_id": 12,
+        "option_text": "Spring Boot",
+        "order": 14
       },
       {
         "id": 146,
-        "text": "ASP.NET"
+        "question_id": 12,
+        "option_text": "ASP.NET",
+        "order": 15
       },
       {
         "id": 147,
-        "text": "Ruby on Rails"
+        "question_id": 12,
+        "option_text": "Ruby on Rails",
+        "order": 16
       },
       {
         "id": 148,
-        "text": "WordPress"
+        "question_id": 12,
+        "option_text": "WordPress",
+        "order": 17
       },
       {
         "id": 149,
-        "text": "Fastify"
+        "question_id": 12,
+        "option_text": "Fastify",
+        "order": 18
       },
       {
         "id": 150,
-        "text": "Symfony"
+        "question_id": 12,
+        "option_text": "Symfony",
+        "order": 19
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 13,
-    "text": "What's your IDE or editor of choice?",
+    "survey_id": 1,
+    "question": "What's your IDE or editor of choice?",
     "type": "single_choice",
+    "order": 13,
+    "category": "tech_stack",
+    "description": "The one open right now (or almost always).",
+    "required": true,
     "options": [
       {
         "id": 151,
-        "text": "VS Code"
+        "question_id": 13,
+        "option_text": "VS Code",
+        "order": 1
       },
       {
         "id": 152,
-        "text": "Cursor"
+        "question_id": 13,
+        "option_text": "Cursor",
+        "order": 2
       },
       {
         "id": 153,
-        "text": "Neovim"
+        "question_id": 13,
+        "option_text": "Neovim",
+        "order": 3
       },
       {
         "id": 154,
-        "text": "Vim"
+        "question_id": 13,
+        "option_text": "Vim",
+        "order": 4
       },
       {
         "id": 155,
-        "text": "JetBrains IDEs (IntelliJ, PyCharm, etc.)"
+        "question_id": 13,
+        "option_text": "JetBrains IDEs (IntelliJ, PyCharm, etc.)",
+        "order": 5
       },
       {
         "id": 156,
-        "text": "Visual Studio"
+        "question_id": 13,
+        "option_text": "Visual Studio",
+        "order": 6
       },
       {
         "id": 157,
-        "text": "Jupyter Notebook / JupyterLab"
+        "question_id": 13,
+        "option_text": "Jupyter Notebook / JupyterLab",
+        "order": 7
       },
       {
         "id": 158,
-        "text": "Eclipse"
+        "question_id": 13,
+        "option_text": "Eclipse",
+        "order": 8
       },
       {
         "id": 159,
-        "text": "Notepad++"
+        "question_id": 13,
+        "option_text": "Notepad++",
+        "order": 9
       },
       {
         "id": 160,
-        "text": "Windsurf"
+        "question_id": 13,
+        "option_text": "Windsurf",
+        "order": 10
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 14,
-    "text": "What OS do you primarily develop on?",
+    "survey_id": 1,
+    "question": "What OS do you primarily develop on?",
     "type": "single_choice",
+    "order": 14,
+    "category": "tech_stack",
+    "description": null,
+    "required": true,
     "options": [
       {
         "id": 161,
-        "text": "Windows"
+        "question_id": 14,
+        "option_text": "Windows",
+        "order": 1
       },
       {
         "id": 162,
-        "text": "Ubuntu"
+        "question_id": 14,
+        "option_text": "Ubuntu",
+        "order": 2
       },
       {
         "id": 163,
-        "text": "Debian"
+        "question_id": 14,
+        "option_text": "Debian",
+        "order": 3
       },
       {
         "id": 164,
-        "text": "Arch Linux"
+        "question_id": 14,
+        "option_text": "Arch Linux",
+        "order": 4
       },
       {
         "id": 165,
-        "text": "Fedora"
+        "question_id": 14,
+        "option_text": "Fedora",
+        "order": 5
       },
       {
         "id": 166,
-        "text": "Pop!_OS"
+        "question_id": 14,
+        "option_text": "Pop!_OS",
+        "order": 6
       },
       {
         "id": 167,
-        "text": "macOS"
+        "question_id": 14,
+        "option_text": "macOS",
+        "order": 7
       },
       {
         "id": 168,
-        "text": "ChromeOS"
+        "question_id": 14,
+        "option_text": "ChromeOS",
+        "order": 8
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 15,
-    "text": "How do you handle state management in your apps?",
+    "survey_id": 1,
+    "question": "How do you handle state management in your apps?",
     "type": "single_choice",
+    "order": 15,
+    "category": "tech_stack",
+    "description": "For frontend/fullstack devs.",
+    "required": false,
     "options": [
       {
         "id": 169,
-        "text": "Built-in framework state (Context, Vue stores, signals)"
+        "question_id": 15,
+        "option_text": "Built-in framework state (Context, Vue stores, signals)",
+        "order": 1
       },
       {
         "id": 170,
-        "text": "Redux / Redux Toolkit"
+        "question_id": 15,
+        "option_text": "Redux / Redux Toolkit",
+        "order": 2
       },
       {
         "id": 171,
-        "text": "Zustand"
+        "question_id": 15,
+        "option_text": "Zustand",
+        "order": 3
       },
       {
         "id": 172,
-        "text": "TanStack Query (server-state first)"
+        "question_id": 15,
+        "option_text": "TanStack Query (server-state first)",
+        "order": 4
       },
       {
         "id": 173,
-        "text": "URL / router-driven state"
+        "question_id": 15,
+        "option_text": "URL / router-driven state",
+        "order": 5
       },
       {
         "id": 174,
-        "text": "Signals-based (Solid, Angular signals)"
+        "question_id": 15,
+        "option_text": "Signals-based (Solid, Angular signals)",
+        "order": 6
       },
       {
         "id": 175,
-        "text": "Backend-driven UI (SSR / server actions)"
+        "question_id": 15,
+        "option_text": "Backend-driven UI (SSR / server actions)",
+        "order": 7
       },
       {
         "id": 176,
-        "text": "Custom architecture"
+        "question_id": 15,
+        "option_text": "Custom architecture",
+        "order": 8
       }
     ],
-    "depends_on_options": [
-      1,
-      2,
-      3
+    "dependencies": [
+      {
+        "id": 1,
+        "source_question_id": 1,
+        "source_option_id": 1,
+        "target_question_id": 15,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 2,
+        "source_question_id": 1,
+        "source_option_id": 2,
+        "target_question_id": 15,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 3,
+        "source_question_id": 1,
+        "source_option_id": 3,
+        "target_question_id": 15,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 16,
-    "text": "What's your go-to architecture for new projects?",
+    "survey_id": 1,
+    "question": "What's your go-to architecture for new projects?",
     "type": "single_choice",
+    "order": 16,
+    "category": "tech_stack",
+    "description": null,
+    "required": false,
     "options": [
       {
         "id": 177,
-        "text": "Monolith"
+        "question_id": 16,
+        "option_text": "Monolith",
+        "order": 1
       },
       {
         "id": 178,
-        "text": "Modular monolith"
+        "question_id": 16,
+        "option_text": "Modular monolith",
+        "order": 2
       },
       {
         "id": 179,
-        "text": "Microservices"
+        "question_id": 16,
+        "option_text": "Microservices",
+        "order": 3
       },
       {
         "id": 180,
-        "text": "Serverless"
+        "question_id": 16,
+        "option_text": "Serverless",
+        "order": 4
       },
       {
         "id": 181,
-        "text": "Event-driven"
+        "question_id": 16,
+        "option_text": "Event-driven",
+        "order": 5
       },
       {
         "id": 182,
-        "text": "Clean / hexagonal architecture"
+        "question_id": 16,
+        "option_text": "Clean / hexagonal architecture",
+        "order": 6
       },
       {
         "id": 183,
-        "text": "Domain-Driven Design (DDD)"
+        "question_id": 16,
+        "option_text": "Domain-Driven Design (DDD)",
+        "order": 7
       },
       {
         "id": 184,
-        "text": "API-first"
+        "question_id": 16,
+        "option_text": "API-first",
+        "order": 8
       }
     ],
-    "depends_on_options": [
-      1,
-      2
+    "dependencies": [
+      {
+        "id": 4,
+        "source_question_id": 1,
+        "source_option_id": 1,
+        "target_question_id": 16,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 5,
+        "source_question_id": 1,
+        "source_option_id": 2,
+        "target_question_id": 16,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 17,
-    "text": "What's your preferred full-stack setup right now?",
+    "survey_id": 1,
+    "question": "What's your preferred full-stack setup right now?",
     "type": "single_choice",
+    "order": 17,
+    "category": "tech_stack",
+    "description": null,
+    "required": false,
     "options": [
       {
         "id": 185,
-        "text": "React + Node.js"
+        "question_id": 17,
+        "option_text": "React + Node.js",
+        "order": 1
       },
       {
         "id": 186,
-        "text": "Next.js (full-stack)"
+        "question_id": 17,
+        "option_text": "Next.js (full-stack)",
+        "order": 2
       },
       {
         "id": 187,
-        "text": "Vue + Laravel"
+        "question_id": 17,
+        "option_text": "Vue + Laravel",
+        "order": 3
       },
       {
         "id": 188,
-        "text": "Angular + Spring Boot / Java"
+        "question_id": 17,
+        "option_text": "Angular + Spring Boot / Java",
+        "order": 4
       },
       {
         "id": 189,
-        "text": "Django or FastAPI full-stack"
+        "question_id": 17,
+        "option_text": "Django or FastAPI full-stack",
+        "order": 5
       },
       {
         "id": 190,
-        "text": ".NET full-stack"
+        "question_id": 17,
+        "option_text": ".NET full-stack",
+        "order": 6
       },
       {
         "id": 191,
-        "text": "MERN / MEAN stack"
+        "question_id": 17,
+        "option_text": "MERN / MEAN stack",
+        "order": 7
       },
       {
         "id": 192,
-        "text": "Jamstack"
+        "question_id": 17,
+        "option_text": "Jamstack",
+        "order": 8
       },
       {
         "id": 193,
-        "text": "Flutter + Firebase / Supabase"
+        "question_id": 17,
+        "option_text": "Flutter + Firebase / Supabase",
+        "order": 9
       }
     ],
-    "depends_on_options": [
-      1,
-      2,
-      3
+    "dependencies": [
+      {
+        "id": 6,
+        "source_question_id": 1,
+        "source_option_id": 1,
+        "target_question_id": 17,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 7,
+        "source_question_id": 1,
+        "source_option_id": 2,
+        "target_question_id": 17,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 8,
+        "source_question_id": 1,
+        "source_option_id": 3,
+        "target_question_id": 17,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 18,
-    "text": "Which mobile development approach do you use?",
+    "survey_id": 1,
+    "question": "Which mobile development approach do you use?",
     "type": "single_choice",
+    "order": 18,
+    "category": "tech_stack",
+    "description": null,
+    "required": false,
     "options": [
       {
         "id": 194,
-        "text": "Native Android (Kotlin)"
+        "question_id": 18,
+        "option_text": "Native Android (Kotlin)",
+        "order": 1
       },
       {
         "id": 195,
-        "text": "Native iOS (Swift)"
+        "question_id": 18,
+        "option_text": "Native iOS (Swift)",
+        "order": 2
       },
       {
         "id": 196,
-        "text": "Flutter"
+        "question_id": 18,
+        "option_text": "Flutter",
+        "order": 3
       },
       {
         "id": 197,
-        "text": "React Native"
+        "question_id": 18,
+        "option_text": "React Native",
+        "order": 4
       },
       {
         "id": 198,
-        "text": "Kotlin Multiplatform"
+        "question_id": 18,
+        "option_text": "Kotlin Multiplatform",
+        "order": 5
       },
       {
         "id": 199,
-        "text": "Progressive Web App (PWA)"
+        "question_id": 18,
+        "option_text": "Progressive Web App (PWA)",
+        "order": 6
       },
       {
         "id": 200,
-        "text": "Unity mobile"
+        "question_id": 18,
+        "option_text": "Unity mobile",
+        "order": 7
       },
       {
         "id": 201,
-        "text": "Cross-platform (.NET MAUI / Ionic)"
+        "question_id": 18,
+        "option_text": "Cross-platform (.NET MAUI / Ionic)",
+        "order": 8
       }
     ],
-    "depends_on_options": [
-      4
+    "dependencies": [
+      {
+        "id": 9,
+        "source_question_id": 1,
+        "source_option_id": 4,
+        "target_question_id": 18,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 19,
-    "text": "What's your primary design or prototyping tool?",
+    "survey_id": 1,
+    "question": "What's your primary design or prototyping tool?",
     "type": "multiple_choice",
+    "order": 19,
+    "category": "tech_stack",
+    "description": "For UI/UX designers and frontend devs.",
+    "required": false,
     "options": [
       {
         "id": 202,
-        "text": "Figma"
+        "question_id": 19,
+        "option_text": "Figma",
+        "order": 1
       },
       {
         "id": 203,
-        "text": "Framer"
+        "question_id": 19,
+        "option_text": "Framer",
+        "order": 2
       },
       {
         "id": 204,
-        "text": "Adobe XD"
+        "question_id": 19,
+        "option_text": "Adobe XD",
+        "order": 3
       },
       {
         "id": 205,
-        "text": "Sketch"
+        "question_id": 19,
+        "option_text": "Sketch",
+        "order": 4
       },
       {
         "id": 206,
-        "text": "ProtoPie"
+        "question_id": 19,
+        "option_text": "ProtoPie",
+        "order": 5
       },
       {
         "id": 207,
-        "text": "InVision"
+        "question_id": 19,
+        "option_text": "InVision",
+        "order": 6
       },
       {
         "id": 208,
-        "text": "Zeplin"
+        "question_id": 19,
+        "option_text": "Zeplin",
+        "order": 7
       },
       {
         "id": 209,
-        "text": "FigJam / collaborative whiteboarding"
+        "question_id": 19,
+        "option_text": "FigJam / collaborative whiteboarding",
+        "order": 8
       }
     ],
-    "depends_on_options": [
-      5,
-      3
+    "dependencies": [
+      {
+        "id": 10,
+        "source_question_id": 1,
+        "source_option_id": 5,
+        "target_question_id": 19,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 11,
+        "source_question_id": 1,
+        "source_option_id": 3,
+        "target_question_id": 19,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 20,
-    "text": "What hardware do you use to train or run ML models?",
+    "survey_id": 1,
+    "question": "What hardware do you use to train or run ML models?",
     "type": "single_choice",
+    "order": 20,
+    "category": "tech_stack",
+    "description": "For ML/AI engineers and data scientists.",
+    "required": false,
     "options": [
       {
         "id": 210,
-        "text": "Personal GPU workstation"
+        "question_id": 20,
+        "option_text": "Personal GPU workstation",
+        "order": 1
       },
       {
         "id": 211,
-        "text": "Cloud GPU instances (Vast.ai, Lambda, etc.)"
+        "question_id": 20,
+        "option_text": "Cloud GPU instances (Vast.ai, Lambda, etc.)",
+        "order": 2
       },
       {
         "id": 212,
-        "text": "Managed AI platforms (Vertex, SageMaker, etc.)"
+        "question_id": 20,
+        "option_text": "Managed AI platforms (Vertex, SageMaker, etc.)",
+        "order": 3
       },
       {
         "id": 213,
-        "text": "Distributed GPU cluster"
+        "question_id": 20,
+        "option_text": "Distributed GPU cluster",
+        "order": 4
       },
       {
         "id": 214,
-        "text": "TPU infrastructure"
+        "question_id": 20,
+        "option_text": "TPU infrastructure",
+        "order": 5
       },
       {
         "id": 215,
-        "text": "Hybrid local + cloud"
+        "question_id": 20,
+        "option_text": "Hybrid local + cloud",
+        "order": 6
       },
       {
         "id": 216,
-        "text": "CPU only — experimentation scale"
+        "question_id": 20,
+        "option_text": "CPU only — experimentation scale",
+        "order": 7
       },
       {
         "id": 217,
-        "text": "Research lab access"
+        "question_id": 20,
+        "option_text": "Research lab access",
+        "order": 8
       }
     ],
-    "depends_on_options": [
-      8,
-      7
+    "dependencies": [
+      {
+        "id": 12,
+        "source_question_id": 1,
+        "source_option_id": 8,
+        "target_question_id": 20,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 13,
+        "source_question_id": 1,
+        "source_option_id": 7,
+        "target_question_id": 20,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 21,
-    "text": "What's your main data pipeline or orchestration tool?",
+    "survey_id": 1,
+    "question": "What's your main data pipeline or orchestration tool?",
     "type": "single_choice",
+    "order": 21,
+    "category": "tech_stack",
+    "description": "For data engineers.",
+    "required": false,
     "options": [
       {
         "id": 218,
-        "text": "Apache Airflow"
+        "question_id": 21,
+        "option_text": "Apache Airflow",
+        "order": 1
       },
       {
         "id": 219,
-        "text": "Prefect"
+        "question_id": 21,
+        "option_text": "Prefect",
+        "order": 2
       },
       {
         "id": 220,
-        "text": "Dagster"
+        "question_id": 21,
+        "option_text": "Dagster",
+        "order": 3
       },
       {
         "id": 221,
-        "text": "Apache Spark"
+        "question_id": 21,
+        "option_text": "Apache Spark",
+        "order": 4
       },
       {
         "id": 222,
-        "text": "Cloud-native pipelines (AWS Glue, Dataflow, etc.)"
+        "question_id": 21,
+        "option_text": "Cloud-native pipelines (AWS Glue, Dataflow, etc.)",
+        "order": 5
       },
       {
         "id": 223,
-        "text": "dbt"
+        "question_id": 21,
+        "option_text": "dbt",
+        "order": 6
       },
       {
         "id": 224,
-        "text": "Custom Python scripts"
+        "question_id": 21,
+        "option_text": "Custom Python scripts",
+        "order": 7
       },
       {
         "id": 225,
-        "text": "Kubernetes-based workflows"
+        "question_id": 21,
+        "option_text": "Kubernetes-based workflows",
+        "order": 8
       }
     ],
-    "depends_on_options": [
-      6
+    "dependencies": [
+      {
+        "id": 14,
+        "source_question_id": 1,
+        "source_option_id": 6,
+        "target_question_id": 21,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 22,
-    "text": "What cloud deployment strategy do you rely on most?",
+    "survey_id": 1,
+    "question": "What cloud deployment strategy do you rely on most?",
     "type": "single_choice",
+    "order": 22,
+    "category": "tech_stack",
+    "description": "For cloud/DevOps engineers.",
+    "required": false,
     "options": [
       {
         "id": 226,
-        "text": "Docker containers"
+        "question_id": 22,
+        "option_text": "Docker containers",
+        "order": 1
       },
       {
         "id": 227,
-        "text": "Kubernetes orchestration"
+        "question_id": 22,
+        "option_text": "Kubernetes orchestration",
+        "order": 2
       },
       {
         "id": 228,
-        "text": "Serverless (Lambda, Cloud Functions)"
+        "question_id": 22,
+        "option_text": "Serverless (Lambda, Cloud Functions)",
+        "order": 3
       },
       {
         "id": 229,
-        "text": "Platform-as-a-Service (PaaS)"
+        "question_id": 22,
+        "option_text": "Platform-as-a-Service (PaaS)",
+        "order": 4
       },
       {
         "id": 230,
-        "text": "Infrastructure as Code (Terraform, Pulumi)"
+        "question_id": 22,
+        "option_text": "Infrastructure as Code (Terraform, Pulumi)",
+        "order": 5
       },
       {
         "id": 231,
-        "text": "GitOps (ArgoCD, Flux)"
+        "question_id": 22,
+        "option_text": "GitOps (ArgoCD, Flux)",
+        "order": 6
       },
       {
         "id": 232,
-        "text": "Edge / distributed deployments"
+        "question_id": 22,
+        "option_text": "Edge / distributed deployments",
+        "order": 7
       },
       {
         "id": 233,
-        "text": "Hybrid cloud"
+        "question_id": 22,
+        "option_text": "Hybrid cloud",
+        "order": 8
       }
     ],
-    "depends_on_options": [
-      9
+    "dependencies": [
+      {
+        "id": 15,
+        "source_question_id": 1,
+        "source_option_id": 9,
+        "target_question_id": 22,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 23,
-    "text": "Which cybersecurity domain takes up most of your time?",
+    "survey_id": 1,
+    "question": "Which cybersecurity domain takes up most of your time?",
     "type": "single_choice",
+    "order": 23,
+    "category": "tech_stack",
+    "description": "For security specialists.",
+    "required": false,
     "options": [
       {
         "id": 234,
-        "text": "Application security"
+        "question_id": 23,
+        "option_text": "Application security",
+        "order": 1
       },
       {
         "id": 235,
-        "text": "Cloud security"
+        "question_id": 23,
+        "option_text": "Cloud security",
+        "order": 2
       },
       {
         "id": 236,
-        "text": "Penetration testing"
+        "question_id": 23,
+        "option_text": "Penetration testing",
+        "order": 3
       },
       {
         "id": 237,
-        "text": "Threat intelligence"
+        "question_id": 23,
+        "option_text": "Threat intelligence",
+        "order": 4
       },
       {
         "id": 238,
-        "text": "Incident response"
+        "question_id": 23,
+        "option_text": "Incident response",
+        "order": 5
       },
       {
         "id": 239,
-        "text": "Security operations (SOC)"
+        "question_id": 23,
+        "option_text": "Security operations (SOC)",
+        "order": 6
       },
       {
         "id": 240,
-        "text": "Identity and access management (IAM)"
+        "question_id": 23,
+        "option_text": "Identity and access management (IAM)",
+        "order": 7
       },
       {
         "id": 241,
-        "text": "Compliance and governance"
+        "question_id": 23,
+        "option_text": "Compliance and governance",
+        "order": 8
       }
     ],
-    "depends_on_options": [
-      10
+    "dependencies": [
+      {
+        "id": 16,
+        "source_question_id": 1,
+        "source_option_id": 10,
+        "target_question_id": 23,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 24,
-    "text": "Which security tool category is most essential to you?",
+    "survey_id": 1,
+    "question": "Which security tool category is most essential to you?",
     "type": "single_choice",
+    "order": 24,
+    "category": "tech_stack",
+    "description": "For security specialists.",
+    "required": false,
     "options": [
       {
         "id": 242,
-        "text": "SIEM platforms"
+        "question_id": 24,
+        "option_text": "SIEM platforms",
+        "order": 1
       },
       {
         "id": 243,
-        "text": "Vulnerability scanners"
+        "question_id": 24,
+        "option_text": "Vulnerability scanners",
+        "order": 2
       },
       {
         "id": 244,
-        "text": "Endpoint detection tools"
+        "question_id": 24,
+        "option_text": "Endpoint detection tools",
+        "order": 3
       },
       {
         "id": 245,
-        "text": "Threat intelligence platforms"
+        "question_id": 24,
+        "option_text": "Threat intelligence platforms",
+        "order": 4
       },
       {
         "id": 246,
-        "text": "Identity management tools"
+        "question_id": 24,
+        "option_text": "Identity management tools",
+        "order": 5
       },
       {
         "id": 247,
-        "text": "Security automation"
+        "question_id": 24,
+        "option_text": "Security automation",
+        "order": 6
       },
       {
         "id": 248,
-        "text": "Custom internal tooling"
+        "question_id": 24,
+        "option_text": "Custom internal tooling",
+        "order": 7
       }
     ],
-    "depends_on_options": [
-      10
+    "dependencies": [
+      {
+        "id": 17,
+        "source_question_id": 1,
+        "source_option_id": 10,
+        "target_question_id": 24,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 25,
-    "text": "Which game engine is your daily driver?",
+    "survey_id": 1,
+    "question": "Which game engine is your daily driver?",
     "type": "single_choice",
+    "order": 25,
+    "category": "tech_stack",
+    "description": "For game developers.",
+    "required": false,
     "options": [
       {
         "id": 249,
-        "text": "Unity"
+        "question_id": 25,
+        "option_text": "Unity",
+        "order": 1
       },
       {
         "id": 250,
-        "text": "Unreal Engine"
+        "question_id": 25,
+        "option_text": "Unreal Engine",
+        "order": 2
       },
       {
         "id": 251,
-        "text": "Godot"
+        "question_id": 25,
+        "option_text": "Godot",
+        "order": 3
       },
       {
         "id": 252,
-        "text": "Source Engine"
+        "question_id": 25,
+        "option_text": "Source Engine",
+        "order": 4
       },
       {
         "id": 253,
-        "text": "CryEngine"
+        "question_id": 25,
+        "option_text": "CryEngine",
+        "order": 5
       },
       {
         "id": 254,
-        "text": "id Tech"
+        "question_id": 25,
+        "option_text": "id Tech",
+        "order": 6
       },
       {
         "id": 255,
-        "text": "GDevelop"
+        "question_id": 25,
+        "option_text": "GDevelop",
+        "order": 7
       }
     ],
-    "depends_on_options": [
-      12
+    "dependencies": [
+      {
+        "id": 18,
+        "source_question_id": 1,
+        "source_option_id": 12,
+        "target_question_id": 25,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 26,
-    "text": "Which microcontroller or architecture do you work with most?",
+    "survey_id": 1,
+    "question": "Which microcontroller or architecture do you work with most?",
     "type": "multiple_choice",
+    "order": 26,
+    "category": "tech_stack",
+    "description": "For embedded/hardware engineers.",
+    "required": false,
     "options": [
       {
         "id": 256,
-        "text": "STM32"
+        "question_id": 26,
+        "option_text": "STM32",
+        "order": 1
       },
       {
         "id": 257,
-        "text": "ESP32"
+        "question_id": 26,
+        "option_text": "ESP32",
+        "order": 2
       },
       {
         "id": 258,
-        "text": "ARM Cortex-M"
+        "question_id": 26,
+        "option_text": "ARM Cortex-M",
+        "order": 3
       },
       {
         "id": 259,
-        "text": "AVR"
+        "question_id": 26,
+        "option_text": "AVR",
+        "order": 4
       },
       {
         "id": 260,
-        "text": "RISC-V"
+        "question_id": 26,
+        "option_text": "RISC-V",
+        "order": 5
       },
       {
         "id": 261,
-        "text": "FPGA platforms"
+        "question_id": 26,
+        "option_text": "FPGA platforms",
+        "order": 6
       },
       {
         "id": 262,
-        "text": "Raspberry Pi"
+        "question_id": 26,
+        "option_text": "Raspberry Pi",
+        "order": 7
       },
       {
         "id": 263,
-        "text": "Custom silicon"
+        "question_id": 26,
+        "option_text": "Custom silicon",
+        "order": 8
       }
     ],
-    "depends_on_options": [
-      11
+    "dependencies": [
+      {
+        "id": 19,
+        "source_question_id": 1,
+        "source_option_id": 11,
+        "target_question_id": 26,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 27,
-    "text": "Which blockchain ecosystem are you actively building for?",
+    "survey_id": 1,
+    "question": "Which blockchain ecosystem are you actively building for?",
     "type": "multiple_choice",
+    "order": 27,
+    "category": "tech_stack",
+    "description": "For blockchain developers.",
+    "required": false,
     "options": [
       {
         "id": 264,
-        "text": "Ethereum ecosystem"
+        "question_id": 27,
+        "option_text": "Ethereum ecosystem",
+        "order": 1
       },
       {
         "id": 265,
-        "text": "Solana ecosystem"
+        "question_id": 27,
+        "option_text": "Solana ecosystem",
+        "order": 2
       },
       {
         "id": 266,
-        "text": "Bitcoin ecosystem"
+        "question_id": 27,
+        "option_text": "Bitcoin ecosystem",
+        "order": 3
       },
       {
         "id": 267,
-        "text": "Polkadot / Substrate"
+        "question_id": 27,
+        "option_text": "Polkadot / Substrate",
+        "order": 4
       },
       {
         "id": 268,
-        "text": "Cosmos ecosystem"
+        "question_id": 27,
+        "option_text": "Cosmos ecosystem",
+        "order": 5
       },
       {
         "id": 269,
-        "text": "Layer-2 networks (Arbitrum, Optimism, etc.)"
+        "question_id": 27,
+        "option_text": "Layer-2 networks (Arbitrum, Optimism, etc.)",
+        "order": 6
       },
       {
         "id": 270,
-        "text": "Enterprise blockchain"
+        "question_id": 27,
+        "option_text": "Enterprise blockchain",
+        "order": 7
       },
       {
         "id": 271,
-        "text": "Multiple ecosystems"
+        "question_id": 27,
+        "option_text": "Multiple ecosystems",
+        "order": 8
       }
     ],
-    "depends_on_options": [
-      13
+    "dependencies": [
+      {
+        "id": 20,
+        "source_question_id": 1,
+        "source_option_id": 13,
+        "target_question_id": 27,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 28,
-    "text": "How often do you use AI tools in your work?",
+    "survey_id": 1,
+    "question": "How often do you use AI tools in your work?",
     "type": "range",
+    "order": 28,
+    "category": "ai",
+    "description": "Be honest — passive use counts too.",
+    "required": true,
     "options": [
       {
         "id": 272,
-        "text": "1"
+        "question_id": 28,
+        "option_text": "1",
+        "order": 1
       },
       {
         "id": 273,
-        "text": "2"
+        "question_id": 28,
+        "option_text": "2",
+        "order": 2
       },
       {
         "id": 274,
-        "text": "3"
+        "question_id": 28,
+        "option_text": "3",
+        "order": 3
       },
       {
         "id": 275,
-        "text": "4"
+        "question_id": 28,
+        "option_text": "4",
+        "order": 4
       },
       {
         "id": 276,
-        "text": "5"
+        "question_id": 28,
+        "option_text": "5",
+        "order": 5
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 29,
-    "text": "Which AI tools do you actively use in your workflow?",
+    "survey_id": 1,
+    "question": "Which AI tools do you actively use in your workflow?",
     "type": "multiple_choice",
+    "order": 29,
+    "category": "ai",
+    "description": "Select everything you genuinely use — not just tried once.",
+    "required": true,
     "options": [
       {
         "id": 277,
-        "text": "ChatGPT"
+        "question_id": 29,
+        "option_text": "ChatGPT",
+        "order": 1
       },
       {
         "id": 278,
-        "text": "Claude"
+        "question_id": 29,
+        "option_text": "Claude",
+        "order": 2
       },
       {
         "id": 279,
-        "text": "Gemini"
+        "question_id": 29,
+        "option_text": "Gemini",
+        "order": 3
       },
       {
         "id": 280,
-        "text": "Copilot (Microsoft)"
+        "question_id": 29,
+        "option_text": "Copilot (Microsoft)",
+        "order": 4
       },
       {
         "id": 281,
-        "text": "Cursor"
+        "question_id": 29,
+        "option_text": "Cursor",
+        "order": 5
       },
       {
         "id": 282,
-        "text": "Windsurf"
+        "question_id": 29,
+        "option_text": "Windsurf",
+        "order": 6
       },
       {
         "id": 283,
-        "text": "Lovable / v0 / bolt.new"
+        "question_id": 29,
+        "option_text": "Lovable / v0 / bolt.new",
+        "order": 7
       },
       {
         "id": 284,
-        "text": "Perplexity"
+        "question_id": 29,
+        "option_text": "Perplexity",
+        "order": 8
       },
       {
         "id": 285,
-        "text": "Manus / AI agents"
+        "question_id": 29,
+        "option_text": "Manus / AI agents",
+        "order": 9
       },
       {
         "id": 286,
-        "text": "Local models (Ollama, LM Studio)"
+        "question_id": 29,
+        "option_text": "Local models (Ollama, LM Studio)",
+        "order": 10
       },
       {
         "id": 287,
-        "text": "AI-powered browsers (Comet, etc.)"
+        "question_id": 29,
+        "option_text": "AI-powered browsers (Comet, etc.)",
+        "order": 11
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 30,
-    "text": "Where in your workflow does AI actually help you the most?",
+    "survey_id": 1,
+    "question": "Where in your workflow does AI actually help you the most?",
     "type": "ranking",
+    "order": 30,
+    "category": "ai",
+    "description": "Rank from most to least impactful.",
+    "required": true,
     "options": [
       {
         "id": 288,
-        "text": "Writing code"
+        "question_id": 30,
+        "option_text": "Writing code",
+        "order": 1
       },
       {
         "id": 289,
-        "text": "Debugging or fixing bugs"
+        "question_id": 30,
+        "option_text": "Debugging or fixing bugs",
+        "order": 2
       },
       {
         "id": 290,
-        "text": "Searching for answers"
+        "question_id": 30,
+        "option_text": "Searching for answers",
+        "order": 3
       },
       {
         "id": 291,
-        "text": "Documenting code"
+        "question_id": 30,
+        "option_text": "Documenting code",
+        "order": 4
       },
       {
         "id": 292,
-        "text": "Learning new concepts"
+        "question_id": 30,
+        "option_text": "Learning new concepts",
+        "order": 5
       },
       {
         "id": 293,
-        "text": "Generating content or synthetic data"
+        "question_id": 30,
+        "option_text": "Generating content or synthetic data",
+        "order": 6
       },
       {
         "id": 294,
-        "text": "Testing code"
+        "question_id": 30,
+        "option_text": "Testing code",
+        "order": 7
       },
       {
         "id": 295,
-        "text": "Deployment and monitoring"
+        "question_id": 30,
+        "option_text": "Deployment and monitoring",
+        "order": 8
       },
       {
         "id": 296,
-        "text": "Project planning"
+        "question_id": 30,
+        "option_text": "Project planning",
+        "order": 9
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 31,
-    "text": "How well do AI tools handle the complex tasks you throw at them?",
+    "survey_id": 1,
+    "question": "How well do AI tools handle the complex tasks you throw at them?",
     "type": "range",
+    "order": 31,
+    "category": "ai",
+    "description": "1 = constantly fails me / 5 = handles almost everything",
+    "required": true,
     "options": [
       {
         "id": 297,
-        "text": "1"
+        "question_id": 31,
+        "option_text": "1",
+        "order": 1
       },
       {
         "id": 298,
-        "text": "2"
+        "question_id": 31,
+        "option_text": "2",
+        "order": 2
       },
       {
         "id": 299,
-        "text": "3"
+        "question_id": 31,
+        "option_text": "3",
+        "order": 3
       },
       {
         "id": 300,
-        "text": "4"
+        "question_id": 31,
+        "option_text": "4",
+        "order": 4
       },
       {
         "id": 301,
-        "text": "5"
+        "question_id": 31,
+        "option_text": "5",
+        "order": 5
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 32,
-    "text": "Do you think AI is a realistic threat to your current job?",
+    "survey_id": 1,
+    "question": "Do you think AI is a realistic threat to your current job?",
     "type": "single_choice",
+    "order": 32,
+    "category": "ai",
+    "description": "No judgment — just your honest read.",
+    "required": true,
     "options": [
       {
         "id": 302,
-        "text": "Yes — it's already replacing junior roles"
+        "question_id": 32,
+        "option_text": "Yes — it's already replacing junior roles",
+        "order": 1
       },
       {
         "id": 303,
-        "text": "Yes — within the next 5 years"
+        "question_id": 32,
+        "option_text": "Yes — within the next 5 years",
+        "order": 2
       },
       {
         "id": 304,
-        "text": "Maybe — but my specialization protects me"
+        "question_id": 32,
+        "option_text": "Maybe — but my specialization protects me",
+        "order": 3
       },
       {
         "id": 305,
-        "text": "Unlikely — AI needs humans to guide it"
+        "question_id": 32,
+        "option_text": "Unlikely — AI needs humans to guide it",
+        "order": 4
       },
       {
         "id": 306,
-        "text": "No — AI is just a better tool, not a replacement"
+        "question_id": 32,
+        "option_text": "No — AI is just a better tool, not a replacement",
+        "order": 5
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 33,
-    "text": "What worries you most about AI in the tech industry?",
+    "survey_id": 1,
+    "question": "What worries you most about AI in the tech industry?",
     "type": "single_choice",
+    "order": 33,
+    "category": "ai",
+    "description": "Pick your top concern.",
+    "required": false,
     "options": [
       {
         "id": 307,
-        "text": "Job displacement at scale"
+        "question_id": 33,
+        "option_text": "Job displacement at scale",
+        "order": 1
       },
       {
         "id": 308,
-        "text": "Concentration of power in a few big companies"
+        "question_id": 33,
+        "option_text": "Concentration of power in a few big companies",
+        "order": 2
       },
       {
         "id": 309,
-        "text": "Code quality and hallucinations shipped to production"
+        "question_id": 33,
+        "option_text": "Code quality and hallucinations shipped to production",
+        "order": 3
       },
       {
         "id": 310,
-        "text": "Surveillance and privacy erosion"
+        "question_id": 33,
+        "option_text": "Surveillance and privacy erosion",
+        "order": 4
       },
       {
         "id": 311,
-        "text": "Intellectual property and copyright issues"
+        "question_id": 33,
+        "option_text": "Intellectual property and copyright issues",
+        "order": 5
       },
       {
         "id": 312,
-        "text": "Widening the gap between senior and junior devs"
+        "question_id": 33,
+        "option_text": "Widening the gap between senior and junior devs",
+        "order": 6
       },
       {
         "id": 313,
-        "text": "None — I'm mostly optimistic about AI"
+        "question_id": 33,
+        "option_text": "None — I'm mostly optimistic about AI",
+        "order": 7
       }
     ],
-    "depends_on_options": [
-      302,
-      303,
-      304
+    "dependencies": [
+      {
+        "id": 64,
+        "source_question_id": 32,
+        "source_option_id": 302,
+        "target_question_id": 33,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 65,
+        "source_question_id": 32,
+        "source_option_id": 303,
+        "target_question_id": 33,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 66,
+        "source_question_id": 32,
+        "source_option_id": 304,
+        "target_question_id": 33,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 34,
-    "text": "What's your current employment situation?",
+    "survey_id": 1,
+    "question": "What's your current employment situation?",
     "type": "single_choice",
+    "order": 34,
+    "category": "career",
+    "description": null,
+    "required": true,
     "options": [
       {
         "id": 314,
-        "text": "Employed full-time at a company"
+        "question_id": 34,
+        "option_text": "Employed full-time at a company",
+        "order": 1
       },
       {
         "id": 315,
-        "text": "Self-employed / freelancer"
+        "question_id": 34,
+        "option_text": "Self-employed / freelancer",
+        "order": 2
       },
       {
         "id": 316,
-        "text": "Freelancing while employed (moonlighting)"
+        "question_id": 34,
+        "option_text": "Freelancing while employed (moonlighting)",
+        "order": 3
       },
       {
         "id": 317,
-        "text": "Running my own business or startup"
+        "question_id": 34,
+        "option_text": "Running my own business or startup",
+        "order": 4
       },
       {
         "id": 318,
-        "text": "Student — not working yet"
+        "question_id": 34,
+        "option_text": "Student — not working yet",
+        "order": 5
       },
       {
         "id": 319,
-        "text": "Unemployed and actively looking"
+        "question_id": 34,
+        "option_text": "Unemployed and actively looking",
+        "order": 6
       },
       {
         "id": 320,
-        "text": "Between projects"
+        "question_id": 34,
+        "option_text": "Between projects",
+        "order": 7
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 35,
-    "text": "What industry does your main employer or client operate in?",
+    "survey_id": 1,
+    "question": "What industry does your main employer or client operate in?",
     "type": "single_choice",
+    "order": 35,
+    "category": "career",
+    "description": null,
+    "required": false,
     "options": [
       {
         "id": 321,
-        "text": "Software / tech"
+        "question_id": 35,
+        "option_text": "Software / tech",
+        "order": 1
       },
       {
         "id": 322,
-        "text": "Fintech / banking"
+        "question_id": 35,
+        "option_text": "Fintech / banking",
+        "order": 2
       },
       {
         "id": 323,
-        "text": "Telecom"
+        "question_id": 35,
+        "option_text": "Telecom",
+        "order": 3
       },
       {
         "id": 324,
-        "text": "Education / e-learning"
+        "question_id": 35,
+        "option_text": "Education / e-learning",
+        "order": 4
       },
       {
         "id": 325,
-        "text": "Healthcare"
+        "question_id": 35,
+        "option_text": "Healthcare",
+        "order": 5
       },
       {
         "id": 326,
-        "text": "Government / public sector"
+        "question_id": 35,
+        "option_text": "Government / public sector",
+        "order": 6
       },
       {
         "id": 327,
-        "text": "Energy"
+        "question_id": 35,
+        "option_text": "Energy",
+        "order": 7
       },
       {
         "id": 328,
-        "text": "Manufacturing"
+        "question_id": 35,
+        "option_text": "Manufacturing",
+        "order": 8
       },
       {
         "id": 329,
-        "text": "Agriculture"
+        "question_id": 35,
+        "option_text": "Agriculture",
+        "order": 9
       },
       {
         "id": 330,
-        "text": "E-commerce / retail"
+        "question_id": 35,
+        "option_text": "E-commerce / retail",
+        "order": 10
       },
       {
         "id": 331,
-        "text": "Media / entertainment"
+        "question_id": 35,
+        "option_text": "Media / entertainment",
+        "order": 11
       },
       {
         "id": 332,
-        "text": "NGO / non-profit"
+        "question_id": 35,
+        "option_text": "NGO / non-profit",
+        "order": 12
       }
     ],
-    "depends_on_options": [
-      314,
-      316,
-      317
+    "dependencies": [
+      {
+        "id": 21,
+        "source_question_id": 34,
+        "source_option_id": 314,
+        "target_question_id": 35,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 24,
+        "source_question_id": 34,
+        "source_option_id": 316,
+        "target_question_id": 35,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 25,
+        "source_question_id": 34,
+        "source_option_id": 317,
+        "target_question_id": 35,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 36,
-    "text": "How big is the organization you work with most?",
+    "survey_id": 1,
+    "question": "How big is the organization you work with most?",
     "type": "single_choice",
+    "order": 36,
+    "category": "career",
+    "description": null,
+    "required": false,
     "options": [
       {
         "id": 333,
-        "text": "Solo or very small team (2–10)"
+        "question_id": 36,
+        "option_text": "Solo or very small team (2–10)",
+        "order": 1
       },
       {
         "id": 334,
-        "text": "Small company (11–50)"
+        "question_id": 36,
+        "option_text": "Small company (11–50)",
+        "order": 2
       },
       {
         "id": 335,
-        "text": "Medium company (51–250)"
+        "question_id": 36,
+        "option_text": "Medium company (51–250)",
+        "order": 3
       },
       {
         "id": 336,
-        "text": "Large company (250+)"
+        "question_id": 36,
+        "option_text": "Large company (250+)",
+        "order": 4
       },
       {
         "id": 337,
-        "text": "Enterprise (1000+)"
+        "question_id": 36,
+        "option_text": "Enterprise (1000+)",
+        "order": 5
       }
     ],
-    "depends_on_options": [
-      314,
-      317
+    "dependencies": [
+      {
+        "id": 26,
+        "source_question_id": 34,
+        "source_option_id": 314,
+        "target_question_id": 36,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 27,
+        "source_question_id": 34,
+        "source_option_id": 317,
+        "target_question_id": 36,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 37,
-    "text": "What's your work setup day-to-day?",
+    "survey_id": 1,
+    "question": "What's your work setup day-to-day?",
     "type": "single_choice",
+    "order": 37,
+    "category": "career",
+    "description": null,
+    "required": false,
     "options": [
       {
         "id": 338,
-        "text": "Fully in-person"
+        "question_id": 37,
+        "option_text": "Fully in-person",
+        "order": 1
       },
       {
         "id": 339,
-        "text": "Mostly in-person with some flexibility"
+        "question_id": 37,
+        "option_text": "Mostly in-person with some flexibility",
+        "order": 2
       },
       {
         "id": 340,
-        "text": "Hybrid — balanced"
+        "question_id": 37,
+        "option_text": "Hybrid — balanced",
+        "order": 3
       },
       {
         "id": 341,
-        "text": "Mostly remote with occasional on-site"
+        "question_id": 37,
+        "option_text": "Mostly remote with occasional on-site",
+        "order": 4
       },
       {
         "id": 342,
-        "text": "Fully remote"
+        "question_id": 37,
+        "option_text": "Fully remote",
+        "order": 5
       }
     ],
-    "depends_on_options": [
-      314,
-      315,
-      316
+    "dependencies": [
+      {
+        "id": 28,
+        "source_question_id": 34,
+        "source_option_id": 314,
+        "target_question_id": 37,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 29,
+        "source_question_id": 34,
+        "source_option_id": 315,
+        "target_question_id": 37,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 30,
+        "source_question_id": 34,
+        "source_option_id": 316,
+        "target_question_id": 37,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 38,
-    "text": "What are your main sources of freelance work?",
+    "survey_id": 1,
+    "question": "What are your main sources of freelance work?",
     "type": "multiple_choice",
+    "order": 38,
+    "category": "career",
+    "description": "Pick everything that's brought you paying clients.",
+    "required": false,
     "options": [
       {
         "id": 343,
-        "text": "Freelance platforms (Upwork, Fiverr, Malt)"
+        "question_id": 38,
+        "option_text": "Freelance platforms (Upwork, Fiverr, Malt)",
+        "order": 1
       },
       {
         "id": 344,
-        "text": "LinkedIn outreach and connections"
+        "question_id": 38,
+        "option_text": "LinkedIn outreach and connections",
+        "order": 2
       },
       {
         "id": 345,
-        "text": "Personal referrals and word of mouth"
+        "question_id": 38,
+        "option_text": "Personal referrals and word of mouth",
+        "order": 3
       },
       {
         "id": 346,
-        "text": "Direct clients from previous work or internships"
+        "question_id": 38,
+        "option_text": "Direct clients from previous work or internships",
+        "order": 4
       },
       {
         "id": 347,
-        "text": "Facebook groups and Algerian communities"
+        "question_id": 38,
+        "option_text": "Facebook groups and Algerian communities",
+        "order": 5
       },
       {
         "id": 348,
-        "text": "Personal website or portfolio"
+        "question_id": 38,
+        "option_text": "Personal website or portfolio",
+        "order": 6
       },
       {
         "id": 349,
-        "text": "GitHub / Stack Overflow visibility"
+        "question_id": 38,
+        "option_text": "GitHub / Stack Overflow visibility",
+        "order": 7
       },
       {
         "id": 350,
-        "text": "Freelance agencies or outsourcing companies"
+        "question_id": 38,
+        "option_text": "Freelance agencies or outsourcing companies",
+        "order": 8
       },
       {
         "id": 351,
-        "text": "X (Twitter) or other social media"
+        "question_id": 38,
+        "option_text": "X (Twitter) or other social media",
+        "order": 9
       }
     ],
-    "depends_on_options": [
-      315,
-      316
+    "dependencies": [
+      {
+        "id": 22,
+        "source_question_id": 34,
+        "source_option_id": 315,
+        "target_question_id": 38,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 23,
+        "source_question_id": 34,
+        "source_option_id": 316,
+        "target_question_id": 38,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 39,
-    "text": "Which payment methods do you actually use to receive income?",
+    "survey_id": 1,
+    "question": "Which payment methods do you actually use to receive income?",
     "type": "multiple_choice",
+    "order": 39,
+    "category": "career",
+    "description": "What works for you in practice.",
+    "required": false,
     "options": [
       {
         "id": 352,
-        "text": "Cash"
+        "question_id": 39,
+        "option_text": "Cash",
+        "order": 1
       },
       {
         "id": 353,
-        "text": "Algerian bank card (CIB / Edahabia)"
+        "question_id": 39,
+        "option_text": "Algerian bank card (CIB / Edahabia)",
+        "order": 2
       },
       {
         "id": 354,
-        "text": "Bank transfer (local)"
+        "question_id": 39,
+        "option_text": "Bank transfer (local)",
+        "order": 3
       },
       {
         "id": 355,
-        "text": "Wise / international transfer"
+        "question_id": 39,
+        "option_text": "Wise / international transfer",
+        "order": 4
       },
       {
         "id": 356,
-        "text": "RedotPay or crypto-based"
+        "question_id": 39,
+        "option_text": "RedotPay or crypto-based",
+        "order": 5
       },
       {
         "id": 357,
-        "text": "PayPal (where possible)"
+        "question_id": 39,
+        "option_text": "PayPal (where possible)",
+        "order": 6
       },
       {
         "id": 358,
-        "text": "Escrow through platforms (Upwork, etc.)"
+        "question_id": 39,
+        "option_text": "Escrow through platforms (Upwork, etc.)",
+        "order": 7
       }
     ],
-    "depends_on_options": [
-      315,
-      316
+    "dependencies": [
+      {
+        "id": 31,
+        "source_question_id": 34,
+        "source_option_id": 315,
+        "target_question_id": 39,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 32,
+        "source_question_id": 34,
+        "source_option_id": 316,
+        "target_question_id": 39,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 40,
-    "text": "What's your total annual compensation?",
+    "survey_id": 1,
+    "question": "What's your total annual compensation?",
     "type": "single_choice",
+    "order": 40,
+    "category": "salary",
+    "description": "Salary + bonuses + perks before taxes. DZD if based in Algeria.",
+    "required": false,
     "options": [
       {
         "id": 359,
-        "text": "Less than 400,000 DZD / year"
+        "question_id": 40,
+        "option_text": "Less than 400,000 DZD / year",
+        "order": 1
       },
       {
         "id": 360,
-        "text": "400,000 – 800,000 DZD / year"
+        "question_id": 40,
+        "option_text": "400,000 – 800,000 DZD / year",
+        "order": 2
       },
       {
         "id": 361,
-        "text": "800,000 – 1,200,000 DZD / year"
+        "question_id": 40,
+        "option_text": "800,000 – 1,200,000 DZD / year",
+        "order": 3
       },
       {
         "id": 362,
-        "text": "1,200,000 – 2,000,000 DZD / year"
+        "question_id": 40,
+        "option_text": "1,200,000 – 2,000,000 DZD / year",
+        "order": 4
       },
       {
         "id": 363,
-        "text": "More than 2,000,000 DZD / year"
+        "question_id": 40,
+        "option_text": "More than 2,000,000 DZD / year",
+        "order": 5
       },
       {
         "id": 364,
-        "text": "Paid in foreign currency (USD / EUR)"
+        "question_id": 40,
+        "option_text": "Paid in foreign currency (USD / EUR)",
+        "order": 6
       },
       {
         "id": 365,
-        "text": "Prefer not to share"
+        "question_id": 40,
+        "option_text": "Prefer not to share",
+        "order": 7
       }
     ],
-    "depends_on_options": [
-      314,
-      315,
-      316,
-      317
+    "dependencies": [
+      {
+        "id": 33,
+        "source_question_id": 34,
+        "source_option_id": 314,
+        "target_question_id": 40,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 34,
+        "source_question_id": 34,
+        "source_option_id": 315,
+        "target_question_id": 40,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 35,
+        "source_question_id": 34,
+        "source_option_id": 316,
+        "target_question_id": 40,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 36,
+        "source_question_id": 34,
+        "source_option_id": 317,
+        "target_question_id": 40,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 41,
-    "text": "How do you feel about your current compensation?",
+    "survey_id": 1,
+    "question": "How do you feel about your current compensation?",
     "type": "range",
+    "order": 41,
+    "category": "salary",
+    "description": "Relative to your skills and the market.",
+    "required": false,
     "options": [
       {
         "id": 366,
-        "text": "1"
+        "question_id": 41,
+        "option_text": "1",
+        "order": 1
       },
       {
         "id": 367,
-        "text": "2"
+        "question_id": 41,
+        "option_text": "2",
+        "order": 2
       },
       {
         "id": 368,
-        "text": "3"
+        "question_id": 41,
+        "option_text": "3",
+        "order": 3
       },
       {
         "id": 369,
-        "text": "4"
+        "question_id": 41,
+        "option_text": "4",
+        "order": 4
       },
       {
         "id": 370,
-        "text": "5"
+        "question_id": 41,
+        "option_text": "5",
+        "order": 5
       }
     ],
-    "depends_on_options": [
-      314,
-      315,
-      316,
-      317
+    "dependencies": [
+      {
+        "id": 37,
+        "source_question_id": 34,
+        "source_option_id": 314,
+        "target_question_id": 41,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 38,
+        "source_question_id": 34,
+        "source_option_id": 315,
+        "target_question_id": 41,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 39,
+        "source_question_id": 34,
+        "source_option_id": 316,
+        "target_question_id": 41,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 40,
+        "source_question_id": 34,
+        "source_option_id": 317,
+        "target_question_id": 41,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 42,
-    "text": "What's the biggest driver behind your compensation level?",
+    "survey_id": 1,
+    "question": "What's the biggest driver behind your compensation level?",
     "type": "single_choice",
+    "order": 42,
+    "category": "salary",
+    "description": "The thing that most explains where your pay landed.",
+    "required": false,
     "options": [
       {
         "id": 371,
-        "text": "Years of experience"
+        "question_id": 42,
+        "option_text": "Years of experience",
+        "order": 1
       },
       {
         "id": 372,
-        "text": "Specialized skills in a niche area"
+        "question_id": 42,
+        "option_text": "Specialized skills in a niche area",
+        "order": 2
       },
       {
         "id": 373,
-        "text": "Negotiation and knowing my worth"
+        "question_id": 42,
+        "option_text": "Negotiation and knowing my worth",
+        "order": 3
       },
       {
         "id": 374,
-        "text": "Location (remote access to better-paying clients)"
+        "question_id": 42,
+        "option_text": "Location (remote access to better-paying clients)",
+        "order": 4
       },
       {
         "id": 375,
-        "text": "Company budget — not much room to grow"
+        "question_id": 42,
+        "option_text": "Company budget — not much room to grow",
+        "order": 5
       },
       {
         "id": 376,
-        "text": "Market rates in Algeria are just low"
+        "question_id": 42,
+        "option_text": "Market rates in Algeria are just low",
+        "order": 6
       },
       {
         "id": 377,
-        "text": "I'm still building skills to ask for more"
+        "question_id": 42,
+        "option_text": "I'm still building skills to ask for more",
+        "order": 7
       }
     ],
-    "depends_on_options": [
-      314,
-      315,
-      316,
-      317
+    "dependencies": [
+      {
+        "id": 41,
+        "source_question_id": 34,
+        "source_option_id": 314,
+        "target_question_id": 42,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 42,
+        "source_question_id": 34,
+        "source_option_id": 315,
+        "target_question_id": 42,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 43,
+        "source_question_id": 34,
+        "source_option_id": 316,
+        "target_question_id": 42,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 44,
+        "source_question_id": 34,
+        "source_option_id": 317,
+        "target_question_id": 42,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 43,
-    "text": "How remote-friendly is your current work situation?",
+    "survey_id": 1,
+    "question": "How remote-friendly is your current work situation?",
     "type": "range",
+    "order": 43,
+    "category": "remote_work",
+    "description": "1 = fully on-site / 5 = fully remote",
+    "required": false,
     "options": [
       {
         "id": 378,
-        "text": "1"
+        "question_id": 43,
+        "option_text": "1",
+        "order": 1
       },
       {
         "id": 379,
-        "text": "2"
+        "question_id": 43,
+        "option_text": "2",
+        "order": 2
       },
       {
         "id": 380,
-        "text": "3"
+        "question_id": 43,
+        "option_text": "3",
+        "order": 3
       },
       {
         "id": 381,
-        "text": "4"
+        "question_id": 43,
+        "option_text": "4",
+        "order": 4
       },
       {
         "id": 382,
-        "text": "5"
+        "question_id": 43,
+        "option_text": "5",
+        "order": 5
       }
     ],
-    "depends_on_options": [
-      314,
-      315,
-      316,
-      317
+    "dependencies": [
+      {
+        "id": 45,
+        "source_question_id": 34,
+        "source_option_id": 314,
+        "target_question_id": 43,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 46,
+        "source_question_id": 34,
+        "source_option_id": 315,
+        "target_question_id": 43,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 47,
+        "source_question_id": 34,
+        "source_option_id": 316,
+        "target_question_id": 43,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 48,
+        "source_question_id": 34,
+        "source_option_id": 317,
+        "target_question_id": 43,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 44,
-    "text": "What's your biggest obstacle to working fully remotely?",
+    "survey_id": 1,
+    "question": "What's your biggest obstacle to working fully remotely?",
     "type": "single_choice",
+    "order": 44,
+    "category": "remote_work",
+    "description": "Pick the one that matters most.",
+    "required": false,
     "options": [
       {
         "id": 383,
-        "text": "Unstable or slow internet"
+        "question_id": 44,
+        "option_text": "Unstable or slow internet",
+        "order": 1
       },
       {
         "id": 384,
-        "text": "Client trust — locals prefer in-person"
+        "question_id": 44,
+        "option_text": "Client trust — locals prefer in-person",
+        "order": 2
       },
       {
         "id": 385,
-        "text": "No track record or portfolio for international work"
+        "question_id": 44,
+        "option_text": "No track record or portfolio for international work",
+        "order": 3
       },
       {
         "id": 386,
-        "text": "Payment collection barriers"
+        "question_id": 44,
+        "option_text": "Payment collection barriers",
+        "order": 4
       },
       {
         "id": 387,
-        "text": "Time zone and communication challenges"
+        "question_id": 44,
+        "option_text": "Time zone and communication challenges",
+        "order": 5
       },
       {
         "id": 388,
-        "text": "My company doesn't allow it"
+        "question_id": 44,
+        "option_text": "My company doesn't allow it",
+        "order": 6
       },
       {
         "id": 389,
-        "text": "I actually prefer working in person"
+        "question_id": 44,
+        "option_text": "I actually prefer working in person",
+        "order": 7
       }
     ],
-    "depends_on_options": [
-      314,
-      315,
-      316,
-      317,
-      390
+    "dependencies": [
+      {
+        "id": 49,
+        "source_question_id": 34,
+        "source_option_id": 314,
+        "target_question_id": 44,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 50,
+        "source_question_id": 34,
+        "source_option_id": 315,
+        "target_question_id": 44,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 51,
+        "source_question_id": 34,
+        "source_option_id": 316,
+        "target_question_id": 44,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 52,
+        "source_question_id": 34,
+        "source_option_id": 317,
+        "target_question_id": 44,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 53,
+        "source_question_id": 45,
+        "source_option_id": 390,
+        "target_question_id": 44,
+        "condition_type": "hide_if"
+      }
     ]
   },
   {
     "id": 45,
-    "text": "Are you actively looking for remote opportunities with international companies?",
+    "survey_id": 1,
+    "question": "Are you actively looking for remote opportunities with international companies?",
     "type": "single_choice",
+    "order": 45,
+    "category": "remote_work",
+    "description": null,
+    "required": true,
     "options": [
       {
         "id": 390,
-        "text": "Yes — actively applying or interviewing"
+        "question_id": 45,
+        "option_text": "Yes — actively applying or interviewing",
+        "order": 1
       },
       {
         "id": 391,
-        "text": "Yes — researching and preparing"
+        "question_id": 45,
+        "option_text": "Yes — researching and preparing",
+        "order": 2
       },
       {
         "id": 392,
-        "text": "Open to it but not actively pursuing"
+        "question_id": 45,
+        "option_text": "Open to it but not actively pursuing",
+        "order": 3
       },
       {
         "id": 393,
-        "text": "No — I prefer working locally"
+        "question_id": 45,
+        "option_text": "No — I prefer working locally",
+        "order": 4
       },
       {
         "id": 394,
-        "text": "I already work with international clients or companies"
+        "question_id": 45,
+        "option_text": "I already work with international clients or companies",
+        "order": 5
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 46,
-    "text": "What would make you choose a remote international job over a local one?",
+    "survey_id": 1,
+    "question": "What would make you choose a remote international job over a local one?",
     "type": "ranking",
+    "order": 46,
+    "category": "remote_work",
+    "description": "Rank your top motivators.",
+    "required": false,
     "options": [
       {
         "id": 395,
-        "text": "Better compensation"
+        "question_id": 46,
+        "option_text": "Better compensation",
+        "order": 1
       },
       {
         "id": 396,
-        "text": "Career growth and global exposure"
+        "question_id": 46,
+        "option_text": "Career growth and global exposure",
+        "order": 2
       },
       {
         "id": 397,
-        "text": "Work-life balance"
+        "question_id": 46,
+        "option_text": "Work-life balance",
+        "order": 3
       },
       {
         "id": 398,
-        "text": "Access to better tech and tooling"
+        "question_id": 46,
+        "option_text": "Access to better tech and tooling",
+        "order": 4
       },
       {
         "id": 399,
-        "text": "Stability and long-term contracts"
+        "question_id": 46,
+        "option_text": "Stability and long-term contracts",
+        "order": 5
       },
       {
         "id": 400,
-        "text": "Escape from local infrastructure limitations"
+        "question_id": 46,
+        "option_text": "Escape from local infrastructure limitations",
+        "order": 6
       }
     ],
-    "depends_on_options": [
-      394
+    "dependencies": [
+      {
+        "id": 54,
+        "source_question_id": 45,
+        "source_option_id": 394,
+        "target_question_id": 46,
+        "condition_type": "hide_if"
+      }
     ]
   },
   {
     "id": 47,
-    "text": "What are your main professional goals for the next 2 years?",
+    "survey_id": 1,
+    "question": "What are your main professional goals for the next 2 years?",
     "type": "multiple_choice",
+    "order": 47,
+    "category": "goals",
+    "description": "Pick up to 3.",
+    "required": true,
     "options": [
       {
         "id": 401,
-        "text": "Land a remote job with an international company"
+        "question_id": 47,
+        "option_text": "Land a remote job with an international company",
+        "order": 1
       },
       {
         "id": 402,
-        "text": "Build and launch my own product or startup"
+        "question_id": 47,
+        "option_text": "Build and launch my own product or startup",
+        "order": 2
       },
       {
         "id": 403,
-        "text": "Improve my technical skills significantly"
+        "question_id": 47,
+        "option_text": "Improve my technical skills significantly",
+        "order": 3
       },
       {
         "id": 404,
-        "text": "Move into a leadership or management role"
+        "question_id": 47,
+        "option_text": "Move into a leadership or management role",
+        "order": 4
       },
       {
         "id": 405,
-        "text": "Emigrate or relocate abroad"
+        "question_id": 47,
+        "option_text": "Emigrate or relocate abroad",
+        "order": 5
       },
       {
         "id": 406,
-        "text": "Grow my freelance income"
+        "question_id": 47,
+        "option_text": "Grow my freelance income",
+        "order": 6
       },
       {
         "id": 407,
-        "text": "Get into AI / ML seriously"
+        "question_id": 47,
+        "option_text": "Get into AI / ML seriously",
+        "order": 7
       },
       {
         "id": 408,
-        "text": "Contribute to open source at a higher level"
+        "question_id": 47,
+        "option_text": "Contribute to open source at a higher level",
+        "order": 8
       },
       {
         "id": 409,
-        "text": "Publish research or build a public profile"
+        "question_id": 47,
+        "option_text": "Publish research or build a public profile",
+        "order": 9
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 48,
-    "text": "How likely are you to still be working in Algeria in 3 years?",
+    "survey_id": 1,
+    "question": "How likely are you to still be working in Algeria in 3 years?",
     "type": "range",
+    "order": 48,
+    "category": "goals",
+    "description": "Be honest.",
+    "required": true,
     "options": [
       {
         "id": 410,
-        "text": "1"
+        "question_id": 48,
+        "option_text": "1",
+        "order": 1
       },
       {
         "id": 411,
-        "text": "2"
+        "question_id": 48,
+        "option_text": "2",
+        "order": 2
       },
       {
         "id": 412,
-        "text": "3"
+        "question_id": 48,
+        "option_text": "3",
+        "order": 3
       },
       {
         "id": 413,
-        "text": "4"
+        "question_id": 48,
+        "option_text": "4",
+        "order": 4
       },
       {
         "id": 414,
-        "text": "5"
+        "question_id": 48,
+        "option_text": "5",
+        "order": 5
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 49,
-    "text": "What's the primary reason behind your emigration plans or lack thereof?",
+    "survey_id": 1,
+    "question": "What's the primary reason behind your emigration plans or lack thereof?",
     "type": "single_choice",
+    "order": 49,
+    "category": "goals",
+    "description": "The real driver — not the polished answer.",
+    "required": false,
     "options": [
       {
         "id": 415,
-        "text": "No strong reason to leave — life is good here"
+        "question_id": 49,
+        "option_text": "No strong reason to leave — life is good here",
+        "order": 1
       },
       {
         "id": 416,
-        "text": "Family ties or personal reasons"
+        "question_id": 49,
+        "option_text": "Family ties or personal reasons",
+        "order": 2
       },
       {
         "id": 417,
-        "text": "Better salary abroad"
+        "question_id": 49,
+        "option_text": "Better salary abroad",
+        "order": 3
       },
       {
         "id": 418,
-        "text": "Career growth I can't find locally"
+        "question_id": 49,
+        "option_text": "Career growth I can't find locally",
+        "order": 4
       },
       {
         "id": 419,
-        "text": "Stability and quality of life"
+        "question_id": 49,
+        "option_text": "Stability and quality of life",
+        "order": 5
       },
       {
         "id": 420,
-        "text": "I already left or am in the process"
+        "question_id": 49,
+        "option_text": "I already left or am in the process",
+        "order": 6
       },
       {
         "id": 421,
-        "text": "I'm planning to leave but haven't committed yet"
+        "question_id": 49,
+        "option_text": "I'm planning to leave but haven't committed yet",
+        "order": 7
       },
       {
         "id": 422,
-        "text": "The local ecosystem is improving — I'm staying"
+        "question_id": 49,
+        "option_text": "The local ecosystem is improving — I'm staying",
+        "order": 8
       }
     ],
-    "depends_on_options": [
-      394,
-      410,
-      411
+    "dependencies": [
+      {
+        "id": 55,
+        "source_question_id": 45,
+        "source_option_id": 394,
+        "target_question_id": 49,
+        "condition_type": "hide_if"
+      },
+      {
+        "id": 56,
+        "source_question_id": 48,
+        "source_option_id": 410,
+        "target_question_id": 49,
+        "condition_type": "hide_if"
+      },
+      {
+        "id": 57,
+        "source_question_id": 48,
+        "source_option_id": 411,
+        "target_question_id": 49,
+        "condition_type": "hide_if"
+      }
     ]
   },
   {
     "id": 50,
-    "text": "What's your biggest professional challenge right now?",
+    "survey_id": 1,
+    "question": "What's your biggest professional challenge right now?",
     "type": "single_choice",
+    "order": 50,
+    "category": "challenges",
+    "description": "The thing that's actually slowing you down.",
+    "required": true,
     "options": [
       {
         "id": 423,
-        "text": "Finding well-paying clients or opportunities"
+        "question_id": 50,
+        "option_text": "Finding well-paying clients or opportunities",
+        "order": 1
       },
       {
         "id": 424,
-        "text": "Skill gaps in fast-moving areas"
+        "question_id": 50,
+        "option_text": "Skill gaps in fast-moving areas",
+        "order": 2
       },
       {
         "id": 425,
-        "text": "Poor internet or infrastructure"
+        "question_id": 50,
+        "option_text": "Poor internet or infrastructure",
+        "order": 3
       },
       {
         "id": 426,
-        "text": "Work-life imbalance or burnout"
+        "question_id": 50,
+        "option_text": "Work-life imbalance or burnout",
+        "order": 4
       },
       {
         "id": 427,
-        "text": "Navigating payment and banking limitations"
+        "question_id": 50,
+        "option_text": "Navigating payment and banking limitations",
+        "order": 5
       },
       {
         "id": 428,
-        "text": "Lack of mentorship or senior peers"
+        "question_id": 50,
+        "option_text": "Lack of mentorship or senior peers",
+        "order": 6
       },
       {
         "id": 429,
-        "text": "Imposter syndrome or confidence gaps"
+        "question_id": 50,
+        "option_text": "Imposter syndrome or confidence gaps",
+        "order": 7
       },
       {
         "id": 430,
-        "text": "Managing clients or stakeholders"
+        "question_id": 50,
+        "option_text": "Managing clients or stakeholders",
+        "order": 8
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 51,
-    "text": "What's the biggest obstacle when learning something new in tech?",
+    "survey_id": 1,
+    "question": "What's the biggest obstacle when learning something new in tech?",
     "type": "single_choice",
+    "order": 51,
+    "category": "challenges",
+    "description": "For people actively upskilling.",
+    "required": false,
     "options": [
       {
         "id": 431,
-        "text": "Too many technologies to choose from"
+        "question_id": 51,
+        "option_text": "Too many technologies to choose from",
+        "order": 1
       },
       {
         "id": 432,
-        "text": "No structured learning path"
+        "question_id": 51,
+        "option_text": "No structured learning path",
+        "order": 2
       },
       {
         "id": 433,
-        "text": "Limited access to paid resources"
+        "question_id": 51,
+        "option_text": "Limited access to paid resources",
+        "order": 3
       },
       {
         "id": 434,
-        "text": "Weak foundations in math or CS theory"
+        "question_id": 51,
+        "option_text": "Weak foundations in math or CS theory",
+        "order": 4
       },
       {
         "id": 435,
-        "text": "No real projects to practice on"
+        "question_id": 51,
+        "option_text": "No real projects to practice on",
+        "order": 5
       },
       {
         "id": 436,
-        "text": "Lack of mentors or community"
+        "question_id": 51,
+        "option_text": "Lack of mentors or community",
+        "order": 6
       },
       {
         "id": 437,
-        "text": "Language barrier (content mostly in English)"
+        "question_id": 51,
+        "option_text": "Language barrier (content mostly in English)",
+        "order": 7
       },
       {
         "id": 438,
-        "text": "Hard to stay consistent with self-study"
+        "question_id": 51,
+        "option_text": "Hard to stay consistent with self-study",
+        "order": 8
       }
     ],
-    "depends_on_options": [
-      16,
-      17,
-      19,
-      20
+    "dependencies": [
+      {
+        "id": 67,
+        "source_question_id": 1,
+        "source_option_id": 16,
+        "target_question_id": 51,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 68,
+        "source_question_id": 1,
+        "source_option_id": 17,
+        "target_question_id": 51,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 69,
+        "source_question_id": 2,
+        "source_option_id": 19,
+        "target_question_id": 51,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 70,
+        "source_question_id": 2,
+        "source_option_id": 20,
+        "target_question_id": 51,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 52,
-    "text": "What makes shipping code in Algeria harder than it should be?",
+    "survey_id": 1,
+    "question": "What makes shipping code in Algeria harder than it should be?",
     "type": "multiple_choice",
+    "order": 52,
+    "category": "challenges",
+    "description": "Infrastructure or ecosystem friction.",
+    "required": true,
     "options": [
       {
         "id": 439,
-        "text": "Slow or unreliable internet"
+        "question_id": 52,
+        "option_text": "Slow or unreliable internet",
+        "order": 1
       },
       {
         "id": 440,
-        "text": "No easy access to international payment tools"
+        "question_id": 52,
+        "option_text": "No easy access to international payment tools",
+        "order": 2
       },
       {
         "id": 441,
-        "text": "Difficulty accessing global cloud services"
+        "question_id": 52,
+        "option_text": "Difficulty accessing global cloud services",
+        "order": 3
       },
       {
         "id": 442,
-        "text": "VPN dependency for basic dev tools"
+        "question_id": 52,
+        "option_text": "VPN dependency for basic dev tools",
+        "order": 4
       },
       {
         "id": 443,
-        "text": "No local cloud or hosting options"
+        "question_id": 52,
+        "option_text": "No local cloud or hosting options",
+        "order": 5
       },
       {
         "id": 444,
-        "text": "Bureaucracy and legal red tape"
+        "question_id": 52,
+        "option_text": "Bureaucracy and legal red tape",
+        "order": 6
       },
       {
         "id": 445,
-        "text": "Limited local talent to hire or collaborate with"
+        "question_id": 52,
+        "option_text": "Limited local talent to hire or collaborate with",
+        "order": 7
       },
       {
         "id": 446,
-        "text": "Lack of local investor or VC ecosystem"
+        "question_id": 52,
+        "option_text": "Lack of local investor or VC ecosystem",
+        "order": 8
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 53,
-    "text": "What's your main way of staying up to date with tech?",
+    "survey_id": 1,
+    "question": "What's your main way of staying up to date with tech?",
     "type": "single_choice",
+    "order": 53,
+    "category": "learning",
+    "description": "How you actually consume new knowledge.",
+    "required": true,
     "options": [
       {
         "id": 447,
-        "text": "RSS feeds and newsletters"
+        "question_id": 53,
+        "option_text": "RSS feeds and newsletters",
+        "order": 1
       },
       {
         "id": 448,
-        "text": "Twitter / X and LinkedIn"
+        "question_id": 53,
+        "option_text": "Twitter / X and LinkedIn",
+        "order": 2
       },
       {
         "id": 449,
-        "text": "YouTube channels and video essays"
+        "question_id": 53,
+        "option_text": "YouTube channels and video essays",
+        "order": 3
       },
       {
         "id": 450,
-        "text": "Podcasts"
+        "question_id": 53,
+        "option_text": "Podcasts",
+        "order": 4
       },
       {
         "id": 451,
-        "text": "GitHub trending and open source exploration"
+        "question_id": 53,
+        "option_text": "GitHub trending and open source exploration",
+        "order": 5
       },
       {
         "id": 452,
-        "text": "Official documentation and changelogs"
+        "question_id": 53,
+        "option_text": "Official documentation and changelogs",
+        "order": 6
       },
       {
         "id": 453,
-        "text": "Online courses (structured)"
+        "question_id": 53,
+        "option_text": "Online courses (structured)",
+        "order": 7
       },
       {
         "id": 454,
-        "text": "Community forums (Reddit, Discord, etc.)"
+        "question_id": 53,
+        "option_text": "Community forums (Reddit, Discord, etc.)",
+        "order": 8
       },
       {
         "id": 455,
-        "text": "Building side projects and learning by doing"
+        "question_id": 53,
+        "option_text": "Building side projects and learning by doing",
+        "order": 9
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 54,
-    "text": "Rank how you prefer to learn something new from scratch.",
+    "survey_id": 1,
+    "question": "Rank how you prefer to learn something new from scratch.",
     "type": "ranking",
+    "order": 54,
+    "category": "learning",
+    "description": "Most effective to least for you personally.",
+    "required": true,
     "options": [
       {
         "id": 456,
-        "text": "Hands-on project from day one"
+        "question_id": 54,
+        "option_text": "Hands-on project from day one",
+        "order": 1
       },
       {
         "id": 457,
-        "text": "Structured course or curriculum"
+        "question_id": 54,
+        "option_text": "Structured course or curriculum",
+        "order": 2
       },
       {
         "id": 458,
-        "text": "Reading docs and examples"
+        "question_id": 54,
+        "option_text": "Reading docs and examples",
+        "order": 3
       },
       {
         "id": 459,
-        "text": "Watching video tutorials"
+        "question_id": 54,
+        "option_text": "Watching video tutorials",
+        "order": 4
       },
       {
         "id": 460,
-        "text": "Pair programming or mentoring"
+        "question_id": 54,
+        "option_text": "Pair programming or mentoring",
+        "order": 5
       },
       {
         "id": 461,
-        "text": "AI-assisted exploration"
+        "question_id": 54,
+        "option_text": "AI-assisted exploration",
+        "order": 6
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 55,
-    "text": "Are you part of any local tech communities or events?",
+    "survey_id": 1,
+    "question": "Are you part of any local tech communities or events?",
     "type": "single_choice",
+    "order": 55,
+    "category": "community",
+    "description": "Online or in-person.",
+    "required": true,
     "options": [
       {
         "id": 462,
-        "text": "Yes — I'm active in local communities (Discord, meetups, etc.)"
+        "question_id": 55,
+        "option_text": "Yes — I'm active in local communities (Discord, meetups, etc.)",
+        "order": 1
       },
       {
         "id": 463,
-        "text": "Occasionally — I attend events or follow groups"
+        "question_id": 55,
+        "option_text": "Occasionally — I attend events or follow groups",
+        "order": 2
       },
       {
         "id": 464,
-        "text": "No — I mostly learn and work solo"
+        "question_id": 55,
+        "option_text": "No — I mostly learn and work solo",
+        "order": 3
       },
       {
         "id": 465,
-        "text": "I'd like to be but can't find the right community"
+        "question_id": 55,
+        "option_text": "I'd like to be but can't find the right community",
+        "order": 4
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 56,
-    "text": "What's holding the Algerian tech ecosystem back the most?",
+    "survey_id": 1,
+    "question": "What's holding the Algerian tech ecosystem back the most?",
     "type": "single_choice",
+    "order": 56,
+    "category": "community",
+    "description": "Pick your top factor.",
+    "required": true,
     "options": [
       {
         "id": 466,
-        "text": "Brain brain — the best people leave"
+        "question_id": 56,
+        "option_text": "Brain brain — the best people leave",
+        "order": 1
       },
       {
         "id": 467,
-        "text": "Limited access to funding and investment"
+        "question_id": 56,
+        "option_text": "Limited access to funding and investment",
+        "order": 2
       },
       {
         "id": 468,
-        "text": "Weak university-to-industry pipeline"
+        "question_id": 56,
+        "option_text": "Weak university-to-industry pipeline",
+        "order": 3
       },
       {
         "id": 469,
-        "text": "Infrastructure limitations (internet, power)"
+        "question_id": 56,
+        "option_text": "Infrastructure limitations (internet, power)",
+        "order": 4
       },
       {
         "id": 470,
-        "text": "Cultural friction between traditional institutions and tech"
+        "question_id": 56,
+        "option_text": "Cultural friction between traditional institutions and tech",
+        "order": 5
       },
       {
         "id": 471,
-        "text": "Lack of entrepreneurship support"
+        "question_id": 56,
+        "option_text": "Lack of entrepreneurship support",
+        "order": 6
       },
       {
         "id": 472,
-        "text": "No strong local tech companies to learn from"
+        "question_id": 56,
+        "option_text": "No strong local tech companies to learn from",
+        "order": 7
       },
       {
         "id": 473,
-        "text": "Payment and banking restrictions"
+        "question_id": 56,
+        "option_text": "Payment and banking restrictions",
+        "order": 8
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 57,
-    "text": "How optimistic are you about the Algerian tech scene in the next 5 years?",
+    "survey_id": 1,
+    "question": "How optimistic are you about the Algerian tech scene in the next 5 years?",
     "type": "range",
+    "order": 57,
+    "category": "community",
+    "description": "1 = not at all / 5 = very",
+    "required": true,
     "options": [
       {
         "id": 474,
-        "text": "1"
+        "question_id": 57,
+        "option_text": "1",
+        "order": 1
       },
       {
         "id": 475,
-        "text": "2"
+        "question_id": 57,
+        "option_text": "2",
+        "order": 2
       },
       {
         "id": 476,
-        "text": "3"
+        "question_id": 57,
+        "option_text": "3",
+        "order": 3
       },
       {
         "id": 477,
-        "text": "4"
+        "question_id": 57,
+        "option_text": "4",
+        "order": 4
       },
       {
         "id": 478,
-        "text": "5"
+        "question_id": 57,
+        "option_text": "5",
+        "order": 5
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 58,
-    "text": "Have you ever started or seriously attempted to build a startup or product?",
+    "survey_id": 1,
+    "question": "Have you ever started or seriously attempted to build a startup or product?",
     "type": "single_choice",
+    "order": 58,
+    "category": "startup",
+    "description": null,
+    "required": true,
     "options": [
       {
         "id": 479,
-        "text": "Yes — I launched something (even if it failed)"
+        "question_id": 58,
+        "option_text": "Yes — I launched something (even if it failed)",
+        "order": 1
       },
       {
         "id": 480,
-        "text": "Yes — I'm currently building something"
+        "question_id": 58,
+        "option_text": "Yes — I'm currently building something",
+        "order": 2
       },
       {
         "id": 481,
-        "text": "I tried but didn't get far"
+        "question_id": 58,
+        "option_text": "I tried but didn't get far",
+        "order": 3
       },
       {
         "id": 482,
-        "text": "Not yet but I seriously want to"
+        "question_id": 58,
+        "option_text": "Not yet but I seriously want to",
+        "order": 4
       },
       {
         "id": 483,
-        "text": "No — it's not something I'm pursuing"
+        "question_id": 58,
+        "option_text": "No — it's not something I'm pursuing",
+        "order": 5
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 59,
-    "text": "What was the main reason your startup or product didn't take off?",
+    "survey_id": 1,
+    "question": "What was the main reason your startup or product didn't take off?",
     "type": "single_choice",
+    "order": 59,
+    "category": "startup",
+    "description": "If applicable.",
+    "required": false,
     "options": [
       {
         "id": 484,
-        "text": "Couldn't find early users or customers"
+        "question_id": 59,
+        "option_text": "Couldn't find early users or customers",
+        "order": 1
       },
       {
         "id": 485,
-        "text": "Ran out of time alongside a full-time job"
+        "question_id": 59,
+        "option_text": "Ran out of time alongside a full-time job",
+        "order": 2
       },
       {
         "id": 486,
-        "text": "Technical complexity was underestimated"
+        "question_id": 59,
+        "option_text": "Technical complexity was underestimated",
+        "order": 3
       },
       {
         "id": 487,
-        "text": "No co-founder or trusted partner"
+        "question_id": 59,
+        "option_text": "No co-founder or trusted partner",
+        "order": 4
       },
       {
         "id": 488,
-        "text": "Payment and monetization barriers"
+        "question_id": 59,
+        "option_text": "Payment and monetization barriers",
+        "order": 5
       },
       {
         "id": 489,
-        "text": "Couldn't secure funding"
+        "question_id": 59,
+        "option_text": "Couldn't secure funding",
+        "order": 6
       },
       {
         "id": 490,
-        "text": "Market in Algeria was too small"
+        "question_id": 59,
+        "option_text": "Market in Algeria was too small",
+        "order": 7
       },
       {
         "id": 491,
-        "text": "Lost motivation or pivoted focus"
+        "question_id": 59,
+        "option_text": "Lost motivation or pivoted focus",
+        "order": 8
       }
     ],
-    "depends_on_options": [
-      479,
-      481
+    "dependencies": [
+      {
+        "id": 58,
+        "source_question_id": 58,
+        "source_option_id": 479,
+        "target_question_id": 59,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 59,
+        "source_question_id": 58,
+        "source_option_id": 481,
+        "target_question_id": 59,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 60,
-    "text": "What's the single biggest obstacle to building a tech startup in Algeria?",
+    "survey_id": 1,
+    "question": "What's the single biggest obstacle to building a tech startup in Algeria?",
     "type": "single_choice",
+    "order": 60,
+    "category": "startup",
+    "description": "Pick the one that's most blocking.",
+    "required": false,
     "options": [
       {
         "id": 492,
-        "text": "Access to capital and funding"
+        "question_id": 60,
+        "option_text": "Access to capital and funding",
+        "order": 1
       },
       {
         "id": 493,
-        "text": "Tiny local market"
+        "question_id": 60,
+        "option_text": "Tiny local market",
+        "order": 2
       },
       {
         "id": 494,
-        "text": "Banking and payment infrastructure"
+        "question_id": 60,
+        "option_text": "Banking and payment infrastructure",
+        "order": 3
       },
       {
         "id": 495,
-        "text": "Talent acquisition"
+        "question_id": 60,
+        "option_text": "Talent acquisition",
+        "order": 4
       },
       {
         "id": 496,
-        "text": "Legal and bureaucratic friction"
+        "question_id": 60,
+        "option_text": "Legal and bureaucratic friction",
+        "order": 5
       },
       {
         "id": 497,
-        "text": "No strong startup culture or role models"
+        "question_id": 60,
+        "option_text": "No strong startup culture or role models",
+        "order": 6
       },
       {
         "id": 498,
-        "text": "Internet reliability for SaaS products"
+        "question_id": 60,
+        "option_text": "Internet reliability for SaaS products",
+        "order": 7
       },
       {
         "id": 499,
-        "text": "Getting government or enterprise contracts"
+        "question_id": 60,
+        "option_text": "Getting government or enterprise contracts",
+        "order": 8
       }
     ],
-    "depends_on_options": [
-      479,
-      481,
-      480,
-      482
+    "dependencies": [
+      {
+        "id": 60,
+        "source_question_id": 58,
+        "source_option_id": 479,
+        "target_question_id": 60,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 61,
+        "source_question_id": 58,
+        "source_option_id": 481,
+        "target_question_id": 60,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 62,
+        "source_question_id": 58,
+        "source_option_id": 480,
+        "target_question_id": 60,
+        "condition_type": "show_if"
+      },
+      {
+        "id": 63,
+        "source_question_id": 58,
+        "source_option_id": 482,
+        "target_question_id": 60,
+        "condition_type": "show_if"
+      }
     ]
   },
   {
     "id": 61,
-    "text": "How do you primarily code today?",
+    "survey_id": 1,
+    "question": "How do you primarily code today?",
     "type": "single_choice",
+    "order": 61,
+    "category": "opinions",
+    "description": "Your actual day-to-day coding style.",
+    "required": true,
     "options": [
       {
         "id": 500,
-        "text": "Writing most code manually"
+        "question_id": 61,
+        "option_text": "Writing most code manually",
+        "order": 1
       },
       {
         "id": 501,
-        "text": "AI-assisted — I review and edit AI output"
+        "question_id": 61,
+        "option_text": "AI-assisted — I review and edit AI output",
+        "order": 2
       },
       {
         "id": 502,
-        "text": "Pair programming with AI most of the time"
+        "question_id": 61,
+        "option_text": "Pair programming with AI most of the time",
+        "order": 3
       },
       {
         "id": 503,
-        "text": "Mostly prompting and steering AI agents"
+        "question_id": 61,
+        "option_text": "Mostly prompting and steering AI agents",
+        "order": 4
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 62,
-    "text": "What do you think is the most overhyped technology right now?",
+    "survey_id": 1,
+    "question": "What do you think is the most overhyped technology right now?",
     "type": "single_choice",
+    "order": 62,
+    "category": "opinions",
+    "description": "Just your honest opinion.",
+    "required": true,
     "options": [
       {
         "id": 504,
-        "text": "Blockchain / Web3"
+        "question_id": 62,
+        "option_text": "Blockchain / Web3",
+        "order": 1
       },
       {
         "id": 505,
-        "text": "The Metaverse"
+        "question_id": 62,
+        "option_text": "The Metaverse",
+        "order": 2
       },
       {
         "id": 506,
-        "text": "Quantum computing (for now)"
+        "question_id": 62,
+        "option_text": "Quantum computing (for now)",
+        "order": 3
       },
       {
         "id": 507,
-        "text": "AI replacing all developers immediately"
+        "question_id": 62,
+        "option_text": "AI replacing all developers immediately",
+        "order": 4
       },
       {
         "id": 508,
-        "text": "Microservices for everything"
+        "question_id": 62,
+        "option_text": "Microservices for everything",
+        "order": 5
       },
       {
         "id": 509,
-        "text": "No-code / low-code taking over"
+        "question_id": 62,
+        "option_text": "No-code / low-code taking over",
+        "order": 6
       },
       {
         "id": 510,
-        "text": "AR/VR in enterprise"
+        "question_id": 62,
+        "option_text": "AR/VR in enterprise",
+        "order": 7
       },
       {
         "id": 511,
-        "text": "Kubernetes for every team"
+        "question_id": 62,
+        "option_text": "Kubernetes for every team",
+        "order": 8
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   },
   {
     "id": 63,
-    "text": "Rank what matters most to you in a job or project.",
+    "survey_id": 1,
+    "question": "Rank what matters most to you in a job or project.",
     "type": "ranking",
+    "order": 63,
+    "category": "opinions",
+    "description": "Your real priorities — not what sounds good.",
+    "required": true,
     "options": [
       {
         "id": 512,
-        "text": "Salary and financial reward"
+        "question_id": 63,
+        "option_text": "Salary and financial reward",
+        "order": 1
       },
       {
         "id": 513,
-        "text": "Interesting and challenging problems"
+        "question_id": 63,
+        "option_text": "Interesting and challenging problems",
+        "order": 2
       },
       {
         "id": 514,
-        "text": "Work-life balance"
+        "question_id": 63,
+        "option_text": "Work-life balance",
+        "order": 3
       },
       {
         "id": 515,
-        "text": "Team quality and culture"
+        "question_id": 63,
+        "option_text": "Team quality and culture",
+        "order": 4
       },
       {
         "id": 516,
-        "text": "Career growth and learning"
+        "question_id": 63,
+        "option_text": "Career growth and learning",
+        "order": 5
       },
       {
         "id": 517,
-        "text": "Impact and mission"
+        "question_id": 63,
+        "option_text": "Impact and mission",
+        "order": 6
       },
       {
         "id": 518,
-        "text": "Autonomy and flexibility"
+        "question_id": 63,
+        "option_text": "Autonomy and flexibility",
+        "order": 7
       },
       {
         "id": 519,
-        "text": "Job stability and security"
+        "question_id": 63,
+        "option_text": "Job stability and security",
+        "order": 8
       }
     ],
-    "depends_on_options": []
+    "dependencies": []
   }
 ]

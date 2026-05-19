@@ -47,11 +47,7 @@ export function QuestionsProvider({ children }) {
   }, []);
 
   const isVisible = (question) => {
-    if (
-      !question.depends_on_options ||
-      question.depends_on_options.length === 0
-    )
-      return true;
+    if (!question.dependencies || question.dependencies.length === 0) return true;
 
     const answers = getValues();
     const allSelectedOptionIds = Object.values(answers).flatMap((val) => {
@@ -60,9 +56,20 @@ export function QuestionsProvider({ children }) {
       return [];
     });
 
-    return question.depends_on_options.some((reqOptId) =>
-      allSelectedOptionIds.includes(String(reqOptId)),
-    );
+    const showIfDeps = question.dependencies.filter(d => d.condition_type === 'show_if');
+    const hideIfDeps = question.dependencies.filter(d => d.condition_type === 'hide_if');
+
+    if (hideIfDeps.length > 0) {
+      const shouldHide = hideIfDeps.some(dep => allSelectedOptionIds.includes(String(dep.source_option_id)));
+      if (shouldHide) return false;
+    }
+
+    if (showIfDeps.length > 0) {
+      const shouldShow = showIfDeps.some(dep => allSelectedOptionIds.includes(String(dep.source_option_id)));
+      if (!shouldShow) return false;
+    }
+
+    return true;
   };
 
   const goNext = () => {

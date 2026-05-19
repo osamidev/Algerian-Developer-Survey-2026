@@ -3,30 +3,26 @@ import fs from "fs";
 
 async function run() {
   try {
-    const questionsRes = await pool.query('SELECT id, question as text, type, "order" as position FROM questions WHERE survey_id = 1 ORDER BY "order"');
-    const optionsRes = await pool.query('SELECT id, question_id, option_text as text, "order" as position FROM options ORDER BY "order"');
-    const depsRes = await pool.query('SELECT target_question_id as question_id, source_option_id as depends_on_option_id, condition_type FROM questions_depedencies');
+    const questionsRes = await pool.query('SELECT * FROM questions WHERE survey_id = 1 ORDER BY "order"');
+    const optionsRes = await pool.query('SELECT * FROM options ORDER BY "order"');
+    const depsRes = await pool.query('SELECT * FROM questions_depedencies');
 
     const optionsMap = {};
     optionsRes.rows.forEach(opt => {
       if (!optionsMap[opt.question_id]) optionsMap[opt.question_id] = [];
-      optionsMap[opt.question_id].push({ id: opt.id, text: opt.text });
+      optionsMap[opt.question_id].push(opt);
     });
 
     const depsMap = {};
     depsRes.rows.forEach(dep => {
-      if (!depsMap[dep.question_id]) depsMap[dep.question_id] = [];
-      if (dep.depends_on_option_id !== null) {
-        depsMap[dep.question_id].push(dep.depends_on_option_id);
-      }
+      if (!depsMap[dep.target_question_id]) depsMap[dep.target_question_id] = [];
+      depsMap[dep.target_question_id].push(dep);
     });
 
     const result = questionsRes.rows.map(q => ({
-      id: q.id,
-      text: q.text,
-      type: q.type,
+      ...q,
       options: optionsMap[q.id] || [],
-      depends_on_options: depsMap[q.id] || []
+      dependencies: depsMap[q.id] || []
     }));
 
     fs.writeFileSync("questions.json", JSON.stringify(result, null, 2));

@@ -31,7 +31,7 @@ export default function MultipleChoice({ question, control }) {
         render={({ field }) => (
           <div className="flex flex-col gap-4">
             {question.options.map((option) => {
-              const { id, text } = option;
+              const { id, option_text } = option;
               const stringId = String(id);
               const isSelected = field.value?.includes(stringId);
 
@@ -70,7 +70,7 @@ export default function MultipleChoice({ question, control }) {
                     className="sr-only"
                   />
                   <span className="text-text-high font-secondary font-medium">
-                    {text}
+                    {option_text}
                   </span>
                 </label>
               );

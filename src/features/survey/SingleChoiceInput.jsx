@@ -52,7 +52,7 @@ export default function SingleChoice({ question, register, errors }) {
                 }}
               />
               <div className="flex items-center justify-center text-base font-medium text-white/90">
-                <span>{option.text}</span>
+                <span>{option.option_text}</span>
               </div>
 
               {isSelected && (

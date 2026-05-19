@@ -7,7 +7,7 @@ import Header from "./Header";
 import toast from "react-hot-toast";
 import { submitResponses } from "../../services/apiSurvey";
 import { useAuth } from "../../Contexts/useAuth";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ExternalLink, Home } from "lucide-react";
 const questionSlideVariants = {
@@ -25,11 +25,28 @@ const questionSlideVariants = {
   }),
 };
 
+const categoryColors = {
+  background: "bg-blue-500/20 text-blue-300",
+  education: "bg-green-500/20 text-green-300",
+  tech_stack: "bg-purple-500/20 text-purple-300",
+  ai: "bg-pink-500/20 text-pink-300",
+  career: "bg-yellow-500/20 text-yellow-300",
+  salary: "bg-emerald-500/20 text-emerald-300",
+  remote_work: "bg-cyan-500/20 text-cyan-300",
+  goals: "bg-indigo-500/20 text-indigo-300",
+  challenges: "bg-orange-500/20 text-orange-300",
+  learning: "bg-teal-500/20 text-teal-300",
+  community: "bg-rose-500/20 text-rose-300",
+  startup: "bg-violet-500/20 text-violet-300",
+  opinions: "bg-fuchsia-500/20 text-fuchsia-300",
+};
+
 const MotionDiv = motion.div;
 
 function SurveyShell() {
   const { user } = useAuth();
   const [hasJustSubmitted, setHasJustSubmitted] = useState(false);
+  const [showDesc, setShowDesc] = useState(false);
 
   const {
     currentQuestion,
@@ -45,6 +62,10 @@ function SurveyShell() {
     control,
     formState: { errors },
   } = useFormContext();
+
+  useEffect(() => {
+    setShowDesc(false);
+  }, [currentQuestion?.id]);
 
   async function onSubmit(data) {
     setIsSubmitting(true);
@@ -209,13 +230,46 @@ function SurveyShell() {
                     transition={{ duration: 0.28, ease: "easeOut" }}
                     className="flex flex-col"
                   >
-                    <div className="mb-8 flex flex-col">
-                      <h2 className="mb-4 font-mono text-2xl leading-[1.3] font-bold tracking-wide text-white antialiased">
-                        {currentQuestion.text}
-                      </h2>
-                      <span className="font-mono text-sm tracking-wider text-white/50">
-                        {currentQuestion.description || "Select one that apply"}
+                    <div className="mb-4 flex">
+                      <span
+                        className={`rounded-md px-3 py-1 font-mono text-xs font-semibold tracking-wider uppercase ${
+                          categoryColors[currentQuestion.category] ||
+                          "bg-gray-500/20 text-gray-300"
+                        }`}
+                      >
+                        {currentQuestion.category?.replace("_", " ")}
                       </span>
+                    </div>
+                    <div className="mb-8 flex flex-col">
+                      <h2 className="mb-3 font-mono text-2xl leading-[1.3] font-bold tracking-wide text-white antialiased">
+                        {currentQuestion.question}
+                      </h2>
+                      
+                      {currentQuestion.description && (
+                        <div className="mt-1 flex flex-col items-start gap-3">
+                          <button
+                            type="button"
+                            onClick={() => setShowDesc(!showDesc)}
+                            className="cursor-pointer font-mono text-sm tracking-wide text-white/50 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white/80"
+                          >
+                            {showDesc ? "Hide description" : "See description"}
+                          </button>
+
+                          <AnimatePresence>
+                            {showDesc && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                exit={{ opacity: 0, height: 0 }}
+                                className="overflow-hidden font-mono text-sm leading-relaxed tracking-wider text-white/60"
+                              >
+                                {currentQuestion.description}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      )}
+                      
                     </div>
                     <QuestionRenderer
                       question={currentQuestion}
