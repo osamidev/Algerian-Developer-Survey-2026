@@ -95,51 +95,6 @@ function FooterLinks() {
   );
 }
 
-// export default function OAuthPage() {
-//   function handleOAuth(provider) {
-//     // TODO: redirect to provider OAuth URL
-//     console.log("OAuth with", provider);
-//   }
-
-//   return (
-//     <div className="bg-background-main scrollbar-hide relative flex h-dvh max-w-dvw flex-col overflow-x-hidden overflow-y-auto text-white">
-//       {/* Top gradient halo */}
-//       <div className="from-brand-primary/20 pointer-events-none absolute top-0 right-0 left-0 h-[45vh] bg-gradient-to-b to-transparent opacity-80" />
-
-//       {/* Logo — top-center on mobile, top-left on md+ */}
-//       <div className="relative z-10 flex w-full px-6 pt-8 md:justify-start">
-//         <Logo />
-//       </div>
-
-//       {/* Auth content — centered vertically in remaining space */}
-//       <div className="relative z-10 flex flex-1 flex-col items-center px-5 py-12">
-//         {/* Heading */}
-//         <div className="mb-10 w-full max-w-sm pt-24 text-center text-start md:text-left">
-//           <h1 className="justify-center text-2xl leading-snug font-bold tracking-wide text-white">
-//             Sign in to continue
-//           </h1>
-//           {/* <p className="mt-2 font-mono text-lg tracking-wide text-white/40">
-//             Choose a provider to get started.
-//           </p> */}
-//         </div>
-
-//         {/* Buttons — bare on mobile, card-wrapped on md+ */}
-//         <div className="md:border-border-subtle md:bg-background-card w-full max-w-sm md:rounded-2xl md:border md:p-6">
-//           <div className="flex flex-col gap-3">
-//             <GoogleButton onClick={() => handleOAuth("google")} />
-//             <GitHubButton onClick={() => handleOAuth("github")} />
-//           </div>
-//         </div>
-
-//         {/* Footer */}
-//         <div className="mt-8 w-full max-w-sm">
-//           <FooterLinks />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
 export default function OAuthPage() {
   const BACKEND_URL =
     import.meta.env.VITE_API_BASE_URL || "http://localhost:4000";

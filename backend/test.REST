@@ -1,4 +1,0 @@
-### 
-GET http://algerian-developers-survey.onrender.com/survey/1/questions
-###
-GET http://localhost:4000/survey/1/questions

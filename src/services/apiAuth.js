@@ -12,7 +12,7 @@ export const fetchSession = async () => {
     const data = await response.json();
 
     return data.session;
-  } catch (error) {
+  } catch {
     return null;
   }
 };

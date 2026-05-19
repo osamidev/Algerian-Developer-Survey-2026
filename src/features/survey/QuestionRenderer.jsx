@@ -1,7 +1,6 @@
 import SingleChoice from "./SingleChoiceInput";
 import MultipleChoice from "./MultipleChoiceInput";
 import RankingInput from "./RankingInput";
-import NumericInput from "./NumericInput";
 import RangeInput from "./RangeInput";
 
 // QuestionRenderer.jsx
@@ -20,8 +19,6 @@ function QuestionRenderer({ question, register, control, errors }) {
           errors={errors}
         />
       );
-    case "numeric":
-      return <NumericInput question={question} />;
     case "ranking":
       return <RankingInput question={question} />;
     case "range":

@@ -9,7 +9,7 @@ import { submitResponses } from "../../services/apiSurvey";
 import { useAuth } from "../../Contexts/useAuth";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ExternalLink, Home } from "lucide-react";
+import { ChevronDown, ChevronUp, ExternalLink, Home } from "lucide-react";
 const questionSlideVariants = {
   enter: (direction) => ({
     y: direction > 0 ? 40 : -40,
@@ -24,6 +24,7 @@ const questionSlideVariants = {
     opacity: 0,
   }),
 };
+import { transformSurveyData } from "../../utils/transformData";
 
 const categoryColors = {
   background: "bg-blue-500/20 text-blue-300",
@@ -69,70 +70,28 @@ function SurveyShell() {
 
   async function onSubmit(data) {
     setIsSubmitting(true);
-    const submission = { user_id: user?.user_id, answers: [] };
 
-    // Build a quick lookup for question metadata
-    const qLookup = new Map((questions || []).map((q) => [String(q.id), q]));
+    // 1. Let the helper format the answers payload
+    const submission = {
+      user_id: user?.user_id,
+      answers: transformSurveyData(data, questions),
+    };
 
-    for (const key in data) {
-      const qIdNum = parseInt(key, 10);
-      const rawVal = data[key];
-      const meta = qLookup.get(String(key));
-      const qType = meta?.type || null; // e.g. 'multiple_choice', 'single_choice', 'numeric', 'ranking', 'range'
-
-      if (Array.isArray(rawVal)) {
-        if (rawVal.length > 0 && typeof rawVal[0] === "object") {
-          // ranking: push one entry per item preserving order
-          for (const item of rawVal) {
-            const ans = item?.id ? parseInt(item.id, 10) : parseInt(item, 10);
-            submission.answers.push({
-              question_id: qIdNum,
-              type: "ranking",
-              answer: ans,
-            });
-          }
-        } else {
-          // multiple-choice: push one entry per selected option
-          for (const item of rawVal) {
-            const ans = typeof item === "number" ? item : parseInt(item, 10);
-            submission.answers.push({
-              question_id: qIdNum,
-              type: "multiple_choice",
-              answer: ans,
-            });
-          }
-        }
-      } else {
-        // single value
-        const isNumber =
-          typeof rawVal === "number" ||
-          (!isNaN(parseFloat(rawVal)) && isFinite(rawVal));
-        const answerVal = isNumber ? Number(rawVal) : rawVal;
-
-        let outType = "single_choice";
-        if (qType === "numeric") outType = "numeric";
-        else if (qType === "range") outType = "rating";
-        else if (qType === "ranking") outType = "ranking";
-        else if (qType === "multiple_choice") outType = "multiple_choice";
-
-        submission.answers.push({
-          question_id: qIdNum,
-          type: outType,
-          answer: answerVal,
-        });
-      }
-    }
+    // 2. Handle execution and side effects
     try {
       await submitResponses(submission);
       setHasJustSubmitted(true);
+
+      // Clean up cache
       localStorage.removeItem("surveyAnswers");
       localStorage.removeItem("currentQuestionIndex");
     } catch {
       toast.error("Failed to submit responses. Please try again.");
+    } finally {
+      // Putting this in finally ensures loading state resets even if an error occurs
+      setIsSubmitting(false);
     }
-    setIsSubmitting(false);
   }
-
   const isCompleted = user?.did_user_submit || hasJustSubmitted;
 
   function handleShare() {
@@ -232,7 +191,7 @@ function SurveyShell() {
                   >
                     <div className="mb-4 flex">
                       <span
-                        className={`rounded-md px-3 py-1 font-mono text-xs font-semibold tracking-wider uppercase ${
+                        className={`rounded-full px-3 py-2 font-mono text-xs font-semibold tracking-wider uppercase ${
                           categoryColors[currentQuestion.category] ||
                           "bg-gray-500/20 text-gray-300"
                         }`}
@@ -244,32 +203,30 @@ function SurveyShell() {
                       <h2 className="mb-3 font-mono text-2xl leading-[1.3] font-bold tracking-wide text-white antialiased">
                         {currentQuestion.question}
                       </h2>
-                      
+
                       {currentQuestion.description && (
                         <div className="mt-1 flex flex-col items-start gap-3">
                           <button
                             type="button"
                             onClick={() => setShowDesc(!showDesc)}
-                            className="cursor-pointer font-mono text-sm tracking-wide text-white/50 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white/80"
+                            className="bg-background-surface/30 cursor-pointer rounded-full px-3 py-2 font-mono text-xs tracking-wide text-white/50 decoration-white/20 underline-offset-4 transition-colors hover:text-white/80"
                           >
-                            {showDesc ? "Hide description" : "See description"}
+                            <span className="flex items-center gap-1 transition-all duration-75">
+                              {`${showDesc ? "Hide" : "Show"} description`}
+                              <ChevronUp
+                                className={`transform ${showDesc ? "rotate-180" : ""} transition-all duration-75`}
+                                size={16}
+                              />
+                            </span>
                           </button>
 
-                          <AnimatePresence>
-                            {showDesc && (
-                              <motion.div
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: "auto" }}
-                                exit={{ opacity: 0, height: 0 }}
-                                className="overflow-hidden font-mono text-sm leading-relaxed tracking-wider text-white/60"
-                              >
-                                {currentQuestion.description}
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
+                          {showDesc && (
+                            <div className="overflow-hidden font-mono text-sm leading-relaxed tracking-wider text-white/60">
+                              {currentQuestion.description}
+                            </div>
+                          )}
                         </div>
                       )}
-                      
                     </div>
                     <QuestionRenderer
                       question={currentQuestion}

@@ -45,7 +45,7 @@ export default function SingleChoice({ question, register, errors }) {
                   rest.onChange?.(e);
                   handleAutoNext();
                 }}
-                onClick={(e) => {
+                onClick={() => {
                   if (isSelected) {
                     handleAutoNext();
                   }
