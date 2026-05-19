@@ -1,0 +1,2681 @@
+[
+  {
+    "id": 1,
+    "text": "What's your primary role right now?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 1,
+        "text": "Full Stack Developer"
+      },
+      {
+        "id": 2,
+        "text": "Backend Developer"
+      },
+      {
+        "id": 3,
+        "text": "Frontend Developer"
+      },
+      {
+        "id": 4,
+        "text": "Mobile Developer"
+      },
+      {
+        "id": 5,
+        "text": "UI/UX Designer"
+      },
+      {
+        "id": 6,
+        "text": "Data Engineer"
+      },
+      {
+        "id": 7,
+        "text": "Data Scientist"
+      },
+      {
+        "id": 8,
+        "text": "ML / AI Engineer"
+      },
+      {
+        "id": 9,
+        "text": "DevOps / Cloud Engineer"
+      },
+      {
+        "id": 10,
+        "text": "Cybersecurity Specialist"
+      },
+      {
+        "id": 11,
+        "text": "Embedded / Hardware Engineer"
+      },
+      {
+        "id": 12,
+        "text": "Game Developer"
+      },
+      {
+        "id": 13,
+        "text": "Blockchain Developer"
+      },
+      {
+        "id": 14,
+        "text": "Academic Researcher"
+      },
+      {
+        "id": 15,
+        "text": "Engineering Manager / Tech Lead"
+      },
+      {
+        "id": 16,
+        "text": "Student"
+      },
+      {
+        "id": 17,
+        "text": "Educator / Instructor"
+      },
+      {
+        "id": 18,
+        "text": "Freelancer (generalist)"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 2,
+    "text": "How many years have you been writing code?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 19,
+        "text": "Less than 1 year"
+      },
+      {
+        "id": 20,
+        "text": "1–2 years"
+      },
+      {
+        "id": 21,
+        "text": "3–5 years"
+      },
+      {
+        "id": 22,
+        "text": "6–10 years"
+      },
+      {
+        "id": 23,
+        "text": "11–15 years"
+      },
+      {
+        "id": 24,
+        "text": "More than 15 years"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 3,
+    "text": "What's your age range?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 25,
+        "text": "Under 18"
+      },
+      {
+        "id": 26,
+        "text": "18–24"
+      },
+      {
+        "id": 27,
+        "text": "25–34"
+      },
+      {
+        "id": 28,
+        "text": "35–44"
+      },
+      {
+        "id": 29,
+        "text": "45 or older"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 4,
+    "text": "Where are you based?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 30,
+        "text": "Algiers"
+      },
+      {
+        "id": 31,
+        "text": "Oran"
+      },
+      {
+        "id": 32,
+        "text": "Constantine"
+      },
+      {
+        "id": 33,
+        "text": "Annaba"
+      },
+      {
+        "id": 34,
+        "text": "Blida / Mitidja"
+      },
+      {
+        "id": 35,
+        "text": "Tizi Ouzou / Bejaia"
+      },
+      {
+        "id": 36,
+        "text": "Another Algerian city"
+      },
+      {
+        "id": 37,
+        "text": "Outside Algeria"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 5,
+    "text": "What's your gender?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 38,
+        "text": "Male"
+      },
+      {
+        "id": 39,
+        "text": "Female"
+      },
+      {
+        "id": 40,
+        "text": "Prefer not to say"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 6,
+    "text": "What's your highest level of education?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 41,
+        "text": "Primary or middle school"
+      },
+      {
+        "id": 42,
+        "text": "High school (baccalauréat)"
+      },
+      {
+        "id": 43,
+        "text": "University — no degree (dropped out or in progress)"
+      },
+      {
+        "id": 44,
+        "text": "Bachelor's degree"
+      },
+      {
+        "id": 45,
+        "text": "Master's degree"
+      },
+      {
+        "id": 46,
+        "text": "Engineering degree (Grande École / Ingénieur)"
+      },
+      {
+        "id": 47,
+        "text": "Doctorate / PhD"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 7,
+    "text": "How did you actually learn to code?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": 48,
+        "text": "Self-taught from YouTube & tutorials"
+      },
+      {
+        "id": 49,
+        "text": "University or school coursework"
+      },
+      {
+        "id": 50,
+        "text": "Online courses (Coursera, Udemy, etc.)"
+      },
+      {
+        "id": 51,
+        "text": "Books and technical documentation"
+      },
+      {
+        "id": 52,
+        "text": "Bootcamp or intensive program"
+      },
+      {
+        "id": 53,
+        "text": "Colleagues, mentors, or friends"
+      },
+      {
+        "id": 54,
+        "text": "Open source contributions"
+      },
+      {
+        "id": 55,
+        "text": "Building personal projects"
+      },
+      {
+        "id": 56,
+        "text": "Job training on the fly"
+      },
+      {
+        "id": 57,
+        "text": "AI coding assistants"
+      },
+      {
+        "id": 58,
+        "text": "Stack Overflow and community forums"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 8,
+    "text": "What's your primary coding language today?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 59,
+        "text": "JavaScript / TypeScript"
+      },
+      {
+        "id": 60,
+        "text": "Python"
+      },
+      {
+        "id": 61,
+        "text": "Java"
+      },
+      {
+        "id": 62,
+        "text": "C / C++"
+      },
+      {
+        "id": 63,
+        "text": "C#"
+      },
+      {
+        "id": 64,
+        "text": "PHP"
+      },
+      {
+        "id": 65,
+        "text": "Go"
+      },
+      {
+        "id": 66,
+        "text": "Rust"
+      },
+      {
+        "id": 67,
+        "text": "Kotlin"
+      },
+      {
+        "id": 68,
+        "text": "Swift"
+      },
+      {
+        "id": 69,
+        "text": "Dart"
+      },
+      {
+        "id": 70,
+        "text": "Ruby"
+      },
+      {
+        "id": 71,
+        "text": "Scala"
+      },
+      {
+        "id": 72,
+        "text": "R"
+      },
+      {
+        "id": 73,
+        "text": "MATLAB"
+      },
+      {
+        "id": 74,
+        "text": "Bash / Shell scripting"
+      },
+      {
+        "id": 75,
+        "text": "Assembly"
+      },
+      {
+        "id": 76,
+        "text": "GDScript"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 9,
+    "text": "Which languages have you used seriously in the past 6 months?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": 77,
+        "text": "JavaScript"
+      },
+      {
+        "id": 78,
+        "text": "TypeScript"
+      },
+      {
+        "id": 79,
+        "text": "Python"
+      },
+      {
+        "id": 80,
+        "text": "Java"
+      },
+      {
+        "id": 81,
+        "text": "C#"
+      },
+      {
+        "id": 82,
+        "text": "C++"
+      },
+      {
+        "id": 83,
+        "text": "C"
+      },
+      {
+        "id": 84,
+        "text": "PHP"
+      },
+      {
+        "id": 85,
+        "text": "Go"
+      },
+      {
+        "id": 86,
+        "text": "Rust"
+      },
+      {
+        "id": 87,
+        "text": "Kotlin"
+      },
+      {
+        "id": 88,
+        "text": "Swift"
+      },
+      {
+        "id": 89,
+        "text": "Dart"
+      },
+      {
+        "id": 90,
+        "text": "Bash / Shell"
+      },
+      {
+        "id": 91,
+        "text": "SQL"
+      },
+      {
+        "id": 92,
+        "text": "HTML / CSS"
+      },
+      {
+        "id": 93,
+        "text": "Ruby"
+      },
+      {
+        "id": 94,
+        "text": "Scala"
+      },
+      {
+        "id": 95,
+        "text": "R"
+      },
+      {
+        "id": 96,
+        "text": "MATLAB"
+      },
+      {
+        "id": 97,
+        "text": "Lua"
+      },
+      {
+        "id": 98,
+        "text": "GDScript"
+      },
+      {
+        "id": 99,
+        "text": "Assembly"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 10,
+    "text": "Which databases are in your current stack?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": 100,
+        "text": "PostgreSQL"
+      },
+      {
+        "id": 101,
+        "text": "MySQL / MariaDB"
+      },
+      {
+        "id": 102,
+        "text": "MongoDB"
+      },
+      {
+        "id": 103,
+        "text": "Redis"
+      },
+      {
+        "id": 104,
+        "text": "SQLite"
+      },
+      {
+        "id": 105,
+        "text": "Microsoft SQL Server"
+      },
+      {
+        "id": 106,
+        "text": "Oracle DB"
+      },
+      {
+        "id": 107,
+        "text": "Supabase"
+      },
+      {
+        "id": 108,
+        "text": "Firebase / Firestore"
+      },
+      {
+        "id": 109,
+        "text": "Elasticsearch"
+      },
+      {
+        "id": 110,
+        "text": "BigQuery"
+      },
+      {
+        "id": 111,
+        "text": "Snowflake"
+      },
+      {
+        "id": 112,
+        "text": "DuckDB"
+      },
+      {
+        "id": 113,
+        "text": "Neo4j"
+      },
+      {
+        "id": 114,
+        "text": "Cassandra"
+      },
+      {
+        "id": 115,
+        "text": "Databricks"
+      },
+      {
+        "id": 116,
+        "text": "Cosmos DB"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 11,
+    "text": "Which cloud platforms or deployment targets do you use?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": 117,
+        "text": "AWS"
+      },
+      {
+        "id": 118,
+        "text": "Google Cloud (GCP)"
+      },
+      {
+        "id": 119,
+        "text": "Microsoft Azure"
+      },
+      {
+        "id": 120,
+        "text": "Cloudflare"
+      },
+      {
+        "id": 121,
+        "text": "Vercel"
+      },
+      {
+        "id": 122,
+        "text": "Netlify"
+      },
+      {
+        "id": 123,
+        "text": "Railway / Render"
+      },
+      {
+        "id": 124,
+        "text": "DigitalOcean"
+      },
+      {
+        "id": 125,
+        "text": "Heroku"
+      },
+      {
+        "id": 126,
+        "text": "Supabase"
+      },
+      {
+        "id": 127,
+        "text": "Firebase"
+      },
+      {
+        "id": 128,
+        "text": "IBM Cloud"
+      },
+      {
+        "id": 129,
+        "text": "Docker (self-hosted)"
+      },
+      {
+        "id": 130,
+        "text": "Kubernetes (self-hosted)"
+      },
+      {
+        "id": 131,
+        "text": "On-premise / bare metal"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 12,
+    "text": "Which web frameworks are part of your daily workflow?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": 132,
+        "text": "React"
+      },
+      {
+        "id": 133,
+        "text": "Next.js"
+      },
+      {
+        "id": 134,
+        "text": "Vue.js"
+      },
+      {
+        "id": 135,
+        "text": "Nuxt.js"
+      },
+      {
+        "id": 136,
+        "text": "Angular"
+      },
+      {
+        "id": 137,
+        "text": "Svelte / SvelteKit"
+      },
+      {
+        "id": 138,
+        "text": "Astro"
+      },
+      {
+        "id": 139,
+        "text": "Node.js / Express"
+      },
+      {
+        "id": 140,
+        "text": "Nest.js"
+      },
+      {
+        "id": 141,
+        "text": "FastAPI"
+      },
+      {
+        "id": 142,
+        "text": "Django"
+      },
+      {
+        "id": 143,
+        "text": "Flask"
+      },
+      {
+        "id": 144,
+        "text": "Laravel"
+      },
+      {
+        "id": 145,
+        "text": "Spring Boot"
+      },
+      {
+        "id": 146,
+        "text": "ASP.NET"
+      },
+      {
+        "id": 147,
+        "text": "Ruby on Rails"
+      },
+      {
+        "id": 148,
+        "text": "WordPress"
+      },
+      {
+        "id": 149,
+        "text": "Fastify"
+      },
+      {
+        "id": 150,
+        "text": "Symfony"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 13,
+    "text": "What's your IDE or editor of choice?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 151,
+        "text": "VS Code"
+      },
+      {
+        "id": 152,
+        "text": "Cursor"
+      },
+      {
+        "id": 153,
+        "text": "Neovim"
+      },
+      {
+        "id": 154,
+        "text": "Vim"
+      },
+      {
+        "id": 155,
+        "text": "JetBrains IDEs (IntelliJ, PyCharm, etc.)"
+      },
+      {
+        "id": 156,
+        "text": "Visual Studio"
+      },
+      {
+        "id": 157,
+        "text": "Jupyter Notebook / JupyterLab"
+      },
+      {
+        "id": 158,
+        "text": "Eclipse"
+      },
+      {
+        "id": 159,
+        "text": "Notepad++"
+      },
+      {
+        "id": 160,
+        "text": "Windsurf"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 14,
+    "text": "What OS do you primarily develop on?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 161,
+        "text": "Windows"
+      },
+      {
+        "id": 162,
+        "text": "Ubuntu"
+      },
+      {
+        "id": 163,
+        "text": "Debian"
+      },
+      {
+        "id": 164,
+        "text": "Arch Linux"
+      },
+      {
+        "id": 165,
+        "text": "Fedora"
+      },
+      {
+        "id": 166,
+        "text": "Pop!_OS"
+      },
+      {
+        "id": 167,
+        "text": "macOS"
+      },
+      {
+        "id": 168,
+        "text": "ChromeOS"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 15,
+    "text": "How do you handle state management in your apps?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 169,
+        "text": "Built-in framework state (Context, Vue stores, signals)"
+      },
+      {
+        "id": 170,
+        "text": "Redux / Redux Toolkit"
+      },
+      {
+        "id": 171,
+        "text": "Zustand"
+      },
+      {
+        "id": 172,
+        "text": "TanStack Query (server-state first)"
+      },
+      {
+        "id": 173,
+        "text": "URL / router-driven state"
+      },
+      {
+        "id": 174,
+        "text": "Signals-based (Solid, Angular signals)"
+      },
+      {
+        "id": 175,
+        "text": "Backend-driven UI (SSR / server actions)"
+      },
+      {
+        "id": 176,
+        "text": "Custom architecture"
+      }
+    ],
+    "depends_on_options": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 16,
+    "text": "What's your go-to architecture for new projects?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 177,
+        "text": "Monolith"
+      },
+      {
+        "id": 178,
+        "text": "Modular monolith"
+      },
+      {
+        "id": 179,
+        "text": "Microservices"
+      },
+      {
+        "id": 180,
+        "text": "Serverless"
+      },
+      {
+        "id": 181,
+        "text": "Event-driven"
+      },
+      {
+        "id": 182,
+        "text": "Clean / hexagonal architecture"
+      },
+      {
+        "id": 183,
+        "text": "Domain-Driven Design (DDD)"
+      },
+      {
+        "id": 184,
+        "text": "API-first"
+      }
+    ],
+    "depends_on_options": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": 17,
+    "text": "What's your preferred full-stack setup right now?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 185,
+        "text": "React + Node.js"
+      },
+      {
+        "id": 186,
+        "text": "Next.js (full-stack)"
+      },
+      {
+        "id": 187,
+        "text": "Vue + Laravel"
+      },
+      {
+        "id": 188,
+        "text": "Angular + Spring Boot / Java"
+      },
+      {
+        "id": 189,
+        "text": "Django or FastAPI full-stack"
+      },
+      {
+        "id": 190,
+        "text": ".NET full-stack"
+      },
+      {
+        "id": 191,
+        "text": "MERN / MEAN stack"
+      },
+      {
+        "id": 192,
+        "text": "Jamstack"
+      },
+      {
+        "id": 193,
+        "text": "Flutter + Firebase / Supabase"
+      }
+    ],
+    "depends_on_options": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 18,
+    "text": "Which mobile development approach do you use?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 194,
+        "text": "Native Android (Kotlin)"
+      },
+      {
+        "id": 195,
+        "text": "Native iOS (Swift)"
+      },
+      {
+        "id": 196,
+        "text": "Flutter"
+      },
+      {
+        "id": 197,
+        "text": "React Native"
+      },
+      {
+        "id": 198,
+        "text": "Kotlin Multiplatform"
+      },
+      {
+        "id": 199,
+        "text": "Progressive Web App (PWA)"
+      },
+      {
+        "id": 200,
+        "text": "Unity mobile"
+      },
+      {
+        "id": 201,
+        "text": "Cross-platform (.NET MAUI / Ionic)"
+      }
+    ],
+    "depends_on_options": [
+      4
+    ]
+  },
+  {
+    "id": 19,
+    "text": "What's your primary design or prototyping tool?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": 202,
+        "text": "Figma"
+      },
+      {
+        "id": 203,
+        "text": "Framer"
+      },
+      {
+        "id": 204,
+        "text": "Adobe XD"
+      },
+      {
+        "id": 205,
+        "text": "Sketch"
+      },
+      {
+        "id": 206,
+        "text": "ProtoPie"
+      },
+      {
+        "id": 207,
+        "text": "InVision"
+      },
+      {
+        "id": 208,
+        "text": "Zeplin"
+      },
+      {
+        "id": 209,
+        "text": "FigJam / collaborative whiteboarding"
+      }
+    ],
+    "depends_on_options": [
+      5,
+      3
+    ]
+  },
+  {
+    "id": 20,
+    "text": "What hardware do you use to train or run ML models?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 210,
+        "text": "Personal GPU workstation"
+      },
+      {
+        "id": 211,
+        "text": "Cloud GPU instances (Vast.ai, Lambda, etc.)"
+      },
+      {
+        "id": 212,
+        "text": "Managed AI platforms (Vertex, SageMaker, etc.)"
+      },
+      {
+        "id": 213,
+        "text": "Distributed GPU cluster"
+      },
+      {
+        "id": 214,
+        "text": "TPU infrastructure"
+      },
+      {
+        "id": 215,
+        "text": "Hybrid local + cloud"
+      },
+      {
+        "id": 216,
+        "text": "CPU only — experimentation scale"
+      },
+      {
+        "id": 217,
+        "text": "Research lab access"
+      }
+    ],
+    "depends_on_options": [
+      8,
+      7
+    ]
+  },
+  {
+    "id": 21,
+    "text": "What's your main data pipeline or orchestration tool?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 218,
+        "text": "Apache Airflow"
+      },
+      {
+        "id": 219,
+        "text": "Prefect"
+      },
+      {
+        "id": 220,
+        "text": "Dagster"
+      },
+      {
+        "id": 221,
+        "text": "Apache Spark"
+      },
+      {
+        "id": 222,
+        "text": "Cloud-native pipelines (AWS Glue, Dataflow, etc.)"
+      },
+      {
+        "id": 223,
+        "text": "dbt"
+      },
+      {
+        "id": 224,
+        "text": "Custom Python scripts"
+      },
+      {
+        "id": 225,
+        "text": "Kubernetes-based workflows"
+      }
+    ],
+    "depends_on_options": [
+      6
+    ]
+  },
+  {
+    "id": 22,
+    "text": "What cloud deployment strategy do you rely on most?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 226,
+        "text": "Docker containers"
+      },
+      {
+        "id": 227,
+        "text": "Kubernetes orchestration"
+      },
+      {
+        "id": 228,
+        "text": "Serverless (Lambda, Cloud Functions)"
+      },
+      {
+        "id": 229,
+        "text": "Platform-as-a-Service (PaaS)"
+      },
+      {
+        "id": 230,
+        "text": "Infrastructure as Code (Terraform, Pulumi)"
+      },
+      {
+        "id": 231,
+        "text": "GitOps (ArgoCD, Flux)"
+      },
+      {
+        "id": 232,
+        "text": "Edge / distributed deployments"
+      },
+      {
+        "id": 233,
+        "text": "Hybrid cloud"
+      }
+    ],
+    "depends_on_options": [
+      9
+    ]
+  },
+  {
+    "id": 23,
+    "text": "Which cybersecurity domain takes up most of your time?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 234,
+        "text": "Application security"
+      },
+      {
+        "id": 235,
+        "text": "Cloud security"
+      },
+      {
+        "id": 236,
+        "text": "Penetration testing"
+      },
+      {
+        "id": 237,
+        "text": "Threat intelligence"
+      },
+      {
+        "id": 238,
+        "text": "Incident response"
+      },
+      {
+        "id": 239,
+        "text": "Security operations (SOC)"
+      },
+      {
+        "id": 240,
+        "text": "Identity and access management (IAM)"
+      },
+      {
+        "id": 241,
+        "text": "Compliance and governance"
+      }
+    ],
+    "depends_on_options": [
+      10
+    ]
+  },
+  {
+    "id": 24,
+    "text": "Which security tool category is most essential to you?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 242,
+        "text": "SIEM platforms"
+      },
+      {
+        "id": 243,
+        "text": "Vulnerability scanners"
+      },
+      {
+        "id": 244,
+        "text": "Endpoint detection tools"
+      },
+      {
+        "id": 245,
+        "text": "Threat intelligence platforms"
+      },
+      {
+        "id": 246,
+        "text": "Identity management tools"
+      },
+      {
+        "id": 247,
+        "text": "Security automation"
+      },
+      {
+        "id": 248,
+        "text": "Custom internal tooling"
+      }
+    ],
+    "depends_on_options": [
+      10
+    ]
+  },
+  {
+    "id": 25,
+    "text": "Which game engine is your daily driver?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 249,
+        "text": "Unity"
+      },
+      {
+        "id": 250,
+        "text": "Unreal Engine"
+      },
+      {
+        "id": 251,
+        "text": "Godot"
+      },
+      {
+        "id": 252,
+        "text": "Source Engine"
+      },
+      {
+        "id": 253,
+        "text": "CryEngine"
+      },
+      {
+        "id": 254,
+        "text": "id Tech"
+      },
+      {
+        "id": 255,
+        "text": "GDevelop"
+      }
+    ],
+    "depends_on_options": [
+      12
+    ]
+  },
+  {
+    "id": 26,
+    "text": "Which microcontroller or architecture do you work with most?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": 256,
+        "text": "STM32"
+      },
+      {
+        "id": 257,
+        "text": "ESP32"
+      },
+      {
+        "id": 258,
+        "text": "ARM Cortex-M"
+      },
+      {
+        "id": 259,
+        "text": "AVR"
+      },
+      {
+        "id": 260,
+        "text": "RISC-V"
+      },
+      {
+        "id": 261,
+        "text": "FPGA platforms"
+      },
+      {
+        "id": 262,
+        "text": "Raspberry Pi"
+      },
+      {
+        "id": 263,
+        "text": "Custom silicon"
+      }
+    ],
+    "depends_on_options": [
+      11
+    ]
+  },
+  {
+    "id": 27,
+    "text": "Which blockchain ecosystem are you actively building for?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": 264,
+        "text": "Ethereum ecosystem"
+      },
+      {
+        "id": 265,
+        "text": "Solana ecosystem"
+      },
+      {
+        "id": 266,
+        "text": "Bitcoin ecosystem"
+      },
+      {
+        "id": 267,
+        "text": "Polkadot / Substrate"
+      },
+      {
+        "id": 268,
+        "text": "Cosmos ecosystem"
+      },
+      {
+        "id": 269,
+        "text": "Layer-2 networks (Arbitrum, Optimism, etc.)"
+      },
+      {
+        "id": 270,
+        "text": "Enterprise blockchain"
+      },
+      {
+        "id": 271,
+        "text": "Multiple ecosystems"
+      }
+    ],
+    "depends_on_options": [
+      13
+    ]
+  },
+  {
+    "id": 28,
+    "text": "How often do you use AI tools in your work?",
+    "type": "range",
+    "options": [
+      {
+        "id": 272,
+        "text": "1"
+      },
+      {
+        "id": 273,
+        "text": "2"
+      },
+      {
+        "id": 274,
+        "text": "3"
+      },
+      {
+        "id": 275,
+        "text": "4"
+      },
+      {
+        "id": 276,
+        "text": "5"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 29,
+    "text": "Which AI tools do you actively use in your workflow?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": 277,
+        "text": "ChatGPT"
+      },
+      {
+        "id": 278,
+        "text": "Claude"
+      },
+      {
+        "id": 279,
+        "text": "Gemini"
+      },
+      {
+        "id": 280,
+        "text": "Copilot (Microsoft)"
+      },
+      {
+        "id": 281,
+        "text": "Cursor"
+      },
+      {
+        "id": 282,
+        "text": "Windsurf"
+      },
+      {
+        "id": 283,
+        "text": "Lovable / v0 / bolt.new"
+      },
+      {
+        "id": 284,
+        "text": "Perplexity"
+      },
+      {
+        "id": 285,
+        "text": "Manus / AI agents"
+      },
+      {
+        "id": 286,
+        "text": "Local models (Ollama, LM Studio)"
+      },
+      {
+        "id": 287,
+        "text": "AI-powered browsers (Comet, etc.)"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 30,
+    "text": "Where in your workflow does AI actually help you the most?",
+    "type": "ranking",
+    "options": [
+      {
+        "id": 288,
+        "text": "Writing code"
+      },
+      {
+        "id": 289,
+        "text": "Debugging or fixing bugs"
+      },
+      {
+        "id": 290,
+        "text": "Searching for answers"
+      },
+      {
+        "id": 291,
+        "text": "Documenting code"
+      },
+      {
+        "id": 292,
+        "text": "Learning new concepts"
+      },
+      {
+        "id": 293,
+        "text": "Generating content or synthetic data"
+      },
+      {
+        "id": 294,
+        "text": "Testing code"
+      },
+      {
+        "id": 295,
+        "text": "Deployment and monitoring"
+      },
+      {
+        "id": 296,
+        "text": "Project planning"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 31,
+    "text": "How well do AI tools handle the complex tasks you throw at them?",
+    "type": "range",
+    "options": [
+      {
+        "id": 297,
+        "text": "1"
+      },
+      {
+        "id": 298,
+        "text": "2"
+      },
+      {
+        "id": 299,
+        "text": "3"
+      },
+      {
+        "id": 300,
+        "text": "4"
+      },
+      {
+        "id": 301,
+        "text": "5"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 32,
+    "text": "Do you think AI is a realistic threat to your current job?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 302,
+        "text": "Yes — it's already replacing junior roles"
+      },
+      {
+        "id": 303,
+        "text": "Yes — within the next 5 years"
+      },
+      {
+        "id": 304,
+        "text": "Maybe — but my specialization protects me"
+      },
+      {
+        "id": 305,
+        "text": "Unlikely — AI needs humans to guide it"
+      },
+      {
+        "id": 306,
+        "text": "No — AI is just a better tool, not a replacement"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 33,
+    "text": "What worries you most about AI in the tech industry?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 307,
+        "text": "Job displacement at scale"
+      },
+      {
+        "id": 308,
+        "text": "Concentration of power in a few big companies"
+      },
+      {
+        "id": 309,
+        "text": "Code quality and hallucinations shipped to production"
+      },
+      {
+        "id": 310,
+        "text": "Surveillance and privacy erosion"
+      },
+      {
+        "id": 311,
+        "text": "Intellectual property and copyright issues"
+      },
+      {
+        "id": 312,
+        "text": "Widening the gap between senior and junior devs"
+      },
+      {
+        "id": 313,
+        "text": "None — I'm mostly optimistic about AI"
+      }
+    ],
+    "depends_on_options": [
+      302,
+      303,
+      304
+    ]
+  },
+  {
+    "id": 34,
+    "text": "What's your current employment situation?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 314,
+        "text": "Employed full-time at a company"
+      },
+      {
+        "id": 315,
+        "text": "Self-employed / freelancer"
+      },
+      {
+        "id": 316,
+        "text": "Freelancing while employed (moonlighting)"
+      },
+      {
+        "id": 317,
+        "text": "Running my own business or startup"
+      },
+      {
+        "id": 318,
+        "text": "Student — not working yet"
+      },
+      {
+        "id": 319,
+        "text": "Unemployed and actively looking"
+      },
+      {
+        "id": 320,
+        "text": "Between projects"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 35,
+    "text": "What industry does your main employer or client operate in?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 321,
+        "text": "Software / tech"
+      },
+      {
+        "id": 322,
+        "text": "Fintech / banking"
+      },
+      {
+        "id": 323,
+        "text": "Telecom"
+      },
+      {
+        "id": 324,
+        "text": "Education / e-learning"
+      },
+      {
+        "id": 325,
+        "text": "Healthcare"
+      },
+      {
+        "id": 326,
+        "text": "Government / public sector"
+      },
+      {
+        "id": 327,
+        "text": "Energy"
+      },
+      {
+        "id": 328,
+        "text": "Manufacturing"
+      },
+      {
+        "id": 329,
+        "text": "Agriculture"
+      },
+      {
+        "id": 330,
+        "text": "E-commerce / retail"
+      },
+      {
+        "id": 331,
+        "text": "Media / entertainment"
+      },
+      {
+        "id": 332,
+        "text": "NGO / non-profit"
+      }
+    ],
+    "depends_on_options": [
+      314,
+      316,
+      317
+    ]
+  },
+  {
+    "id": 36,
+    "text": "How big is the organization you work with most?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 333,
+        "text": "Solo or very small team (2–10)"
+      },
+      {
+        "id": 334,
+        "text": "Small company (11–50)"
+      },
+      {
+        "id": 335,
+        "text": "Medium company (51–250)"
+      },
+      {
+        "id": 336,
+        "text": "Large company (250+)"
+      },
+      {
+        "id": 337,
+        "text": "Enterprise (1000+)"
+      }
+    ],
+    "depends_on_options": [
+      314,
+      317
+    ]
+  },
+  {
+    "id": 37,
+    "text": "What's your work setup day-to-day?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 338,
+        "text": "Fully in-person"
+      },
+      {
+        "id": 339,
+        "text": "Mostly in-person with some flexibility"
+      },
+      {
+        "id": 340,
+        "text": "Hybrid — balanced"
+      },
+      {
+        "id": 341,
+        "text": "Mostly remote with occasional on-site"
+      },
+      {
+        "id": 342,
+        "text": "Fully remote"
+      }
+    ],
+    "depends_on_options": [
+      314,
+      315,
+      316
+    ]
+  },
+  {
+    "id": 38,
+    "text": "What are your main sources of freelance work?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": 343,
+        "text": "Freelance platforms (Upwork, Fiverr, Malt)"
+      },
+      {
+        "id": 344,
+        "text": "LinkedIn outreach and connections"
+      },
+      {
+        "id": 345,
+        "text": "Personal referrals and word of mouth"
+      },
+      {
+        "id": 346,
+        "text": "Direct clients from previous work or internships"
+      },
+      {
+        "id": 347,
+        "text": "Facebook groups and Algerian communities"
+      },
+      {
+        "id": 348,
+        "text": "Personal website or portfolio"
+      },
+      {
+        "id": 349,
+        "text": "GitHub / Stack Overflow visibility"
+      },
+      {
+        "id": 350,
+        "text": "Freelance agencies or outsourcing companies"
+      },
+      {
+        "id": 351,
+        "text": "X (Twitter) or other social media"
+      }
+    ],
+    "depends_on_options": [
+      315,
+      316
+    ]
+  },
+  {
+    "id": 39,
+    "text": "Which payment methods do you actually use to receive income?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": 352,
+        "text": "Cash"
+      },
+      {
+        "id": 353,
+        "text": "Algerian bank card (CIB / Edahabia)"
+      },
+      {
+        "id": 354,
+        "text": "Bank transfer (local)"
+      },
+      {
+        "id": 355,
+        "text": "Wise / international transfer"
+      },
+      {
+        "id": 356,
+        "text": "RedotPay or crypto-based"
+      },
+      {
+        "id": 357,
+        "text": "PayPal (where possible)"
+      },
+      {
+        "id": 358,
+        "text": "Escrow through platforms (Upwork, etc.)"
+      }
+    ],
+    "depends_on_options": [
+      315,
+      316
+    ]
+  },
+  {
+    "id": 40,
+    "text": "What's your total annual compensation?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 359,
+        "text": "Less than 400,000 DZD / year"
+      },
+      {
+        "id": 360,
+        "text": "400,000 – 800,000 DZD / year"
+      },
+      {
+        "id": 361,
+        "text": "800,000 – 1,200,000 DZD / year"
+      },
+      {
+        "id": 362,
+        "text": "1,200,000 – 2,000,000 DZD / year"
+      },
+      {
+        "id": 363,
+        "text": "More than 2,000,000 DZD / year"
+      },
+      {
+        "id": 364,
+        "text": "Paid in foreign currency (USD / EUR)"
+      },
+      {
+        "id": 365,
+        "text": "Prefer not to share"
+      }
+    ],
+    "depends_on_options": [
+      314,
+      315,
+      316,
+      317
+    ]
+  },
+  {
+    "id": 41,
+    "text": "How do you feel about your current compensation?",
+    "type": "range",
+    "options": [
+      {
+        "id": 366,
+        "text": "1"
+      },
+      {
+        "id": 367,
+        "text": "2"
+      },
+      {
+        "id": 368,
+        "text": "3"
+      },
+      {
+        "id": 369,
+        "text": "4"
+      },
+      {
+        "id": 370,
+        "text": "5"
+      }
+    ],
+    "depends_on_options": [
+      314,
+      315,
+      316,
+      317
+    ]
+  },
+  {
+    "id": 42,
+    "text": "What's the biggest driver behind your compensation level?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 371,
+        "text": "Years of experience"
+      },
+      {
+        "id": 372,
+        "text": "Specialized skills in a niche area"
+      },
+      {
+        "id": 373,
+        "text": "Negotiation and knowing my worth"
+      },
+      {
+        "id": 374,
+        "text": "Location (remote access to better-paying clients)"
+      },
+      {
+        "id": 375,
+        "text": "Company budget — not much room to grow"
+      },
+      {
+        "id": 376,
+        "text": "Market rates in Algeria are just low"
+      },
+      {
+        "id": 377,
+        "text": "I'm still building skills to ask for more"
+      }
+    ],
+    "depends_on_options": [
+      314,
+      315,
+      316,
+      317
+    ]
+  },
+  {
+    "id": 43,
+    "text": "How remote-friendly is your current work situation?",
+    "type": "range",
+    "options": [
+      {
+        "id": 378,
+        "text": "1"
+      },
+      {
+        "id": 379,
+        "text": "2"
+      },
+      {
+        "id": 380,
+        "text": "3"
+      },
+      {
+        "id": 381,
+        "text": "4"
+      },
+      {
+        "id": 382,
+        "text": "5"
+      }
+    ],
+    "depends_on_options": [
+      314,
+      315,
+      316,
+      317
+    ]
+  },
+  {
+    "id": 44,
+    "text": "What's your biggest obstacle to working fully remotely?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 383,
+        "text": "Unstable or slow internet"
+      },
+      {
+        "id": 384,
+        "text": "Client trust — locals prefer in-person"
+      },
+      {
+        "id": 385,
+        "text": "No track record or portfolio for international work"
+      },
+      {
+        "id": 386,
+        "text": "Payment collection barriers"
+      },
+      {
+        "id": 387,
+        "text": "Time zone and communication challenges"
+      },
+      {
+        "id": 388,
+        "text": "My company doesn't allow it"
+      },
+      {
+        "id": 389,
+        "text": "I actually prefer working in person"
+      }
+    ],
+    "depends_on_options": [
+      314,
+      315,
+      316,
+      317,
+      390
+    ]
+  },
+  {
+    "id": 45,
+    "text": "Are you actively looking for remote opportunities with international companies?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 390,
+        "text": "Yes — actively applying or interviewing"
+      },
+      {
+        "id": 391,
+        "text": "Yes — researching and preparing"
+      },
+      {
+        "id": 392,
+        "text": "Open to it but not actively pursuing"
+      },
+      {
+        "id": 393,
+        "text": "No — I prefer working locally"
+      },
+      {
+        "id": 394,
+        "text": "I already work with international clients or companies"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 46,
+    "text": "What would make you choose a remote international job over a local one?",
+    "type": "ranking",
+    "options": [
+      {
+        "id": 395,
+        "text": "Better compensation"
+      },
+      {
+        "id": 396,
+        "text": "Career growth and global exposure"
+      },
+      {
+        "id": 397,
+        "text": "Work-life balance"
+      },
+      {
+        "id": 398,
+        "text": "Access to better tech and tooling"
+      },
+      {
+        "id": 399,
+        "text": "Stability and long-term contracts"
+      },
+      {
+        "id": 400,
+        "text": "Escape from local infrastructure limitations"
+      }
+    ],
+    "depends_on_options": [
+      394
+    ]
+  },
+  {
+    "id": 47,
+    "text": "What are your main professional goals for the next 2 years?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": 401,
+        "text": "Land a remote job with an international company"
+      },
+      {
+        "id": 402,
+        "text": "Build and launch my own product or startup"
+      },
+      {
+        "id": 403,
+        "text": "Improve my technical skills significantly"
+      },
+      {
+        "id": 404,
+        "text": "Move into a leadership or management role"
+      },
+      {
+        "id": 405,
+        "text": "Emigrate or relocate abroad"
+      },
+      {
+        "id": 406,
+        "text": "Grow my freelance income"
+      },
+      {
+        "id": 407,
+        "text": "Get into AI / ML seriously"
+      },
+      {
+        "id": 408,
+        "text": "Contribute to open source at a higher level"
+      },
+      {
+        "id": 409,
+        "text": "Publish research or build a public profile"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 48,
+    "text": "How likely are you to still be working in Algeria in 3 years?",
+    "type": "range",
+    "options": [
+      {
+        "id": 410,
+        "text": "1"
+      },
+      {
+        "id": 411,
+        "text": "2"
+      },
+      {
+        "id": 412,
+        "text": "3"
+      },
+      {
+        "id": 413,
+        "text": "4"
+      },
+      {
+        "id": 414,
+        "text": "5"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 49,
+    "text": "What's the primary reason behind your emigration plans or lack thereof?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 415,
+        "text": "No strong reason to leave — life is good here"
+      },
+      {
+        "id": 416,
+        "text": "Family ties or personal reasons"
+      },
+      {
+        "id": 417,
+        "text": "Better salary abroad"
+      },
+      {
+        "id": 418,
+        "text": "Career growth I can't find locally"
+      },
+      {
+        "id": 419,
+        "text": "Stability and quality of life"
+      },
+      {
+        "id": 420,
+        "text": "I already left or am in the process"
+      },
+      {
+        "id": 421,
+        "text": "I'm planning to leave but haven't committed yet"
+      },
+      {
+        "id": 422,
+        "text": "The local ecosystem is improving — I'm staying"
+      }
+    ],
+    "depends_on_options": [
+      394,
+      410,
+      411
+    ]
+  },
+  {
+    "id": 50,
+    "text": "What's your biggest professional challenge right now?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 423,
+        "text": "Finding well-paying clients or opportunities"
+      },
+      {
+        "id": 424,
+        "text": "Skill gaps in fast-moving areas"
+      },
+      {
+        "id": 425,
+        "text": "Poor internet or infrastructure"
+      },
+      {
+        "id": 426,
+        "text": "Work-life imbalance or burnout"
+      },
+      {
+        "id": 427,
+        "text": "Navigating payment and banking limitations"
+      },
+      {
+        "id": 428,
+        "text": "Lack of mentorship or senior peers"
+      },
+      {
+        "id": 429,
+        "text": "Imposter syndrome or confidence gaps"
+      },
+      {
+        "id": 430,
+        "text": "Managing clients or stakeholders"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 51,
+    "text": "What's the biggest obstacle when learning something new in tech?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 431,
+        "text": "Too many technologies to choose from"
+      },
+      {
+        "id": 432,
+        "text": "No structured learning path"
+      },
+      {
+        "id": 433,
+        "text": "Limited access to paid resources"
+      },
+      {
+        "id": 434,
+        "text": "Weak foundations in math or CS theory"
+      },
+      {
+        "id": 435,
+        "text": "No real projects to practice on"
+      },
+      {
+        "id": 436,
+        "text": "Lack of mentors or community"
+      },
+      {
+        "id": 437,
+        "text": "Language barrier (content mostly in English)"
+      },
+      {
+        "id": 438,
+        "text": "Hard to stay consistent with self-study"
+      }
+    ],
+    "depends_on_options": [
+      16,
+      17,
+      19,
+      20
+    ]
+  },
+  {
+    "id": 52,
+    "text": "What makes shipping code in Algeria harder than it should be?",
+    "type": "multiple_choice",
+    "options": [
+      {
+        "id": 439,
+        "text": "Slow or unreliable internet"
+      },
+      {
+        "id": 440,
+        "text": "No easy access to international payment tools"
+      },
+      {
+        "id": 441,
+        "text": "Difficulty accessing global cloud services"
+      },
+      {
+        "id": 442,
+        "text": "VPN dependency for basic dev tools"
+      },
+      {
+        "id": 443,
+        "text": "No local cloud or hosting options"
+      },
+      {
+        "id": 444,
+        "text": "Bureaucracy and legal red tape"
+      },
+      {
+        "id": 445,
+        "text": "Limited local talent to hire or collaborate with"
+      },
+      {
+        "id": 446,
+        "text": "Lack of local investor or VC ecosystem"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 53,
+    "text": "What's your main way of staying up to date with tech?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 447,
+        "text": "RSS feeds and newsletters"
+      },
+      {
+        "id": 448,
+        "text": "Twitter / X and LinkedIn"
+      },
+      {
+        "id": 449,
+        "text": "YouTube channels and video essays"
+      },
+      {
+        "id": 450,
+        "text": "Podcasts"
+      },
+      {
+        "id": 451,
+        "text": "GitHub trending and open source exploration"
+      },
+      {
+        "id": 452,
+        "text": "Official documentation and changelogs"
+      },
+      {
+        "id": 453,
+        "text": "Online courses (structured)"
+      },
+      {
+        "id": 454,
+        "text": "Community forums (Reddit, Discord, etc.)"
+      },
+      {
+        "id": 455,
+        "text": "Building side projects and learning by doing"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 54,
+    "text": "Rank how you prefer to learn something new from scratch.",
+    "type": "ranking",
+    "options": [
+      {
+        "id": 456,
+        "text": "Hands-on project from day one"
+      },
+      {
+        "id": 457,
+        "text": "Structured course or curriculum"
+      },
+      {
+        "id": 458,
+        "text": "Reading docs and examples"
+      },
+      {
+        "id": 459,
+        "text": "Watching video tutorials"
+      },
+      {
+        "id": 460,
+        "text": "Pair programming or mentoring"
+      },
+      {
+        "id": 461,
+        "text": "AI-assisted exploration"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 55,
+    "text": "Are you part of any local tech communities or events?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 462,
+        "text": "Yes — I'm active in local communities (Discord, meetups, etc.)"
+      },
+      {
+        "id": 463,
+        "text": "Occasionally — I attend events or follow groups"
+      },
+      {
+        "id": 464,
+        "text": "No — I mostly learn and work solo"
+      },
+      {
+        "id": 465,
+        "text": "I'd like to be but can't find the right community"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 56,
+    "text": "What's holding the Algerian tech ecosystem back the most?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 466,
+        "text": "Brain brain — the best people leave"
+      },
+      {
+        "id": 467,
+        "text": "Limited access to funding and investment"
+      },
+      {
+        "id": 468,
+        "text": "Weak university-to-industry pipeline"
+      },
+      {
+        "id": 469,
+        "text": "Infrastructure limitations (internet, power)"
+      },
+      {
+        "id": 470,
+        "text": "Cultural friction between traditional institutions and tech"
+      },
+      {
+        "id": 471,
+        "text": "Lack of entrepreneurship support"
+      },
+      {
+        "id": 472,
+        "text": "No strong local tech companies to learn from"
+      },
+      {
+        "id": 473,
+        "text": "Payment and banking restrictions"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 57,
+    "text": "How optimistic are you about the Algerian tech scene in the next 5 years?",
+    "type": "range",
+    "options": [
+      {
+        "id": 474,
+        "text": "1"
+      },
+      {
+        "id": 475,
+        "text": "2"
+      },
+      {
+        "id": 476,
+        "text": "3"
+      },
+      {
+        "id": 477,
+        "text": "4"
+      },
+      {
+        "id": 478,
+        "text": "5"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 58,
+    "text": "Have you ever started or seriously attempted to build a startup or product?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 479,
+        "text": "Yes — I launched something (even if it failed)"
+      },
+      {
+        "id": 480,
+        "text": "Yes — I'm currently building something"
+      },
+      {
+        "id": 481,
+        "text": "I tried but didn't get far"
+      },
+      {
+        "id": 482,
+        "text": "Not yet but I seriously want to"
+      },
+      {
+        "id": 483,
+        "text": "No — it's not something I'm pursuing"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 59,
+    "text": "What was the main reason your startup or product didn't take off?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 484,
+        "text": "Couldn't find early users or customers"
+      },
+      {
+        "id": 485,
+        "text": "Ran out of time alongside a full-time job"
+      },
+      {
+        "id": 486,
+        "text": "Technical complexity was underestimated"
+      },
+      {
+        "id": 487,
+        "text": "No co-founder or trusted partner"
+      },
+      {
+        "id": 488,
+        "text": "Payment and monetization barriers"
+      },
+      {
+        "id": 489,
+        "text": "Couldn't secure funding"
+      },
+      {
+        "id": 490,
+        "text": "Market in Algeria was too small"
+      },
+      {
+        "id": 491,
+        "text": "Lost motivation or pivoted focus"
+      }
+    ],
+    "depends_on_options": [
+      479,
+      481
+    ]
+  },
+  {
+    "id": 60,
+    "text": "What's the single biggest obstacle to building a tech startup in Algeria?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 492,
+        "text": "Access to capital and funding"
+      },
+      {
+        "id": 493,
+        "text": "Tiny local market"
+      },
+      {
+        "id": 494,
+        "text": "Banking and payment infrastructure"
+      },
+      {
+        "id": 495,
+        "text": "Talent acquisition"
+      },
+      {
+        "id": 496,
+        "text": "Legal and bureaucratic friction"
+      },
+      {
+        "id": 497,
+        "text": "No strong startup culture or role models"
+      },
+      {
+        "id": 498,
+        "text": "Internet reliability for SaaS products"
+      },
+      {
+        "id": 499,
+        "text": "Getting government or enterprise contracts"
+      }
+    ],
+    "depends_on_options": [
+      479,
+      481,
+      480,
+      482
+    ]
+  },
+  {
+    "id": 61,
+    "text": "How do you primarily code today?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 500,
+        "text": "Writing most code manually"
+      },
+      {
+        "id": 501,
+        "text": "AI-assisted — I review and edit AI output"
+      },
+      {
+        "id": 502,
+        "text": "Pair programming with AI most of the time"
+      },
+      {
+        "id": 503,
+        "text": "Mostly prompting and steering AI agents"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 62,
+    "text": "What do you think is the most overhyped technology right now?",
+    "type": "single_choice",
+    "options": [
+      {
+        "id": 504,
+        "text": "Blockchain / Web3"
+      },
+      {
+        "id": 505,
+        "text": "The Metaverse"
+      },
+      {
+        "id": 506,
+        "text": "Quantum computing (for now)"
+      },
+      {
+        "id": 507,
+        "text": "AI replacing all developers immediately"
+      },
+      {
+        "id": 508,
+        "text": "Microservices for everything"
+      },
+      {
+        "id": 509,
+        "text": "No-code / low-code taking over"
+      },
+      {
+        "id": 510,
+        "text": "AR/VR in enterprise"
+      },
+      {
+        "id": 511,
+        "text": "Kubernetes for every team"
+      }
+    ],
+    "depends_on_options": []
+  },
+  {
+    "id": 63,
+    "text": "Rank what matters most to you in a job or project.",
+    "type": "ranking",
+    "options": [
+      {
+        "id": 512,
+        "text": "Salary and financial reward"
+      },
+      {
+        "id": 513,
+        "text": "Interesting and challenging problems"
+      },
+      {
+        "id": 514,
+        "text": "Work-life balance"
+      },
+      {
+        "id": 515,
+        "text": "Team quality and culture"
+      },
+      {
+        "id": 516,
+        "text": "Career growth and learning"
+      },
+      {
+        "id": 517,
+        "text": "Impact and mission"
+      },
+      {
+        "id": 518,
+        "text": "Autonomy and flexibility"
+      },
+      {
+        "id": 519,
+        "text": "Job stability and security"
+      }
+    ],
+    "depends_on_options": []
+  }
+]

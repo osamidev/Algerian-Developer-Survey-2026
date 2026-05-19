@@ -3,6 +3,9 @@ import process from "node:process";
 import express from "express";
 import cors from "cors";
 import jwt from "jsonwebtoken";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 import {
   handleGithubUser,
   handleGoogleUser,
@@ -12,6 +15,9 @@ import {
   GetDepends,
   hasSubmittedSurvey,
 } from "./queries.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 dotenv.config();
 
@@ -213,28 +219,15 @@ app.post("/auth/logout", (req, res) => {
 
 app.get("/survey/:surveyId/questions", async (req, res) => {
   try {
-    const surveyId = req.params.surveyId;
-    const questions = await GetQuestions(surveyId);
-    
-    if (!questions || questions.length === 0) {
-      return res.json({ questions: [], options: {}, DependsRows: [] });
+    const questionsPath = path.join(__dirname, "questions.json");
+    if (!fs.existsSync(questionsPath)) {
+      return res.status(404).json({ message: "Questions file not found" });
     }
-
-    const optionsRows = await GetOptions(questions.map((q) => q.question_id));
-    const DependsRows = await GetDepends();
-
-    const options = {};
-
-    optionsRows.forEach((opt) => {
-      if (!options[opt.question_id]) {
-        options[opt.question_id] = [];
-      }
-      options[opt.question_id].push(opt);
-    });
-
-    res.json({ questions, options, DependsRows });
+    
+    const questionsData = fs.readFileSync(questionsPath, "utf-8");
+    res.json(JSON.parse(questionsData));
   } catch (error) {
-    console.error("Failed to fetch:", error.message);
+    console.error("Failed to fetch questions:", error.message);
     res.status(500).send("failed to fetch");
   }
 });

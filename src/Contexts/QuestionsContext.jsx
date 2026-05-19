@@ -17,37 +17,8 @@ export function QuestionsProvider({ children }) {
   const [fetchError, setFetchError] = useState(null);
 
   const questions = useMemo(() => {
-    if (!remoteData || !remoteData.questions) return [];
-
-    const rawQuestions = remoteData.questions;
-    const optionsMap = remoteData.options || {};
-    const dependsRows = remoteData.DependsRows || [];
-
-    return rawQuestions
-      .map((q) => {
-        const qOptions = optionsMap[q.question_id.toString()] || [];
-        const dependencies = dependsRows
-          .filter(
-            (r) =>
-              r.question_id === q.question_id &&
-              r.depends_on_option_id !== null,
-          )
-          .map((r) => r.depends_on_option_id);
-
-        return {
-          ...q,
-          id: q.question_id,
-          text: q.question_text,
-          type: q.question_type,
-          options: qOptions.map((opt) => ({
-            ...opt,
-            id: opt.option_id,
-            text: opt.option_text,
-          })),
-          depends_on_options: dependencies, // new visibility array
-        };
-      })
-      .sort((a, b) => a.position - b.position);
+    if (!Array.isArray(remoteData)) return [];
+    return remoteData;
   }, [remoteData]);
 
   // Fetch remote questions from backend
