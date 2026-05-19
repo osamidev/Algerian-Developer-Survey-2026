@@ -10,7 +10,7 @@ function Hero() {
   return (
     <section
       id="Hero"
-      className="text-text-high relative isolate mt-8 flex h-auto items-start justify-start overflow-hidden px-4 pt-20 sm:mt-4 sm:min-h-dvh sm:items-center sm:justify-center sm:px-6 sm:pt-0 sm:pb-8 md:mt-0 lg:px-10 lg:pb-0"
+      className="text-text-high relative isolate flex h-auto items-start justify-start overflow-hidden px-4 pt-32 sm:mt-4 sm:min-h-dvh sm:items-center sm:justify-center sm:px-6 sm:pt-0 sm:pb-8 md:mt-0 lg:px-10 lg:pb-0"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_58%,rgba(106,42,204,0.18),rgba(11,14,20,0)_52%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,rgba(106,42,204,0.12),rgba(11,14,20,0)_58%)]" />

@@ -1,3 +1,5 @@
+import Logo from "./Logo";
+
 function Footer() {
   const links = [
     { label: "Home", href: "#" },
@@ -7,35 +9,37 @@ function Footer() {
   ];
 
   return (
-    <footer className="relative px-10 py-12 text-text-high border-t border-border-subtle">
-
+    <footer className="text-text-high border-border-subtle relative border-t px-10 py-12">
       {/* Background glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[150px] bg-brand-primary opacity-10 blur-[100px] rounded-full pointer-events-none"></div>
+      <div className="bg-brand-primary pointer-events-none absolute bottom-0 left-1/2 h-[150px] w-[400px] -translate-x-1/2 rounded-full opacity-10 blur-[100px]"></div>
 
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 md:flex-row">
         {/* Logo + tagline */}
-        <div className="flex flex-col items-center md:items-start gap-1">
-          <span className="text-xl font-semibold tracking-tight text-text-high">insight</span>
-          <span className="text-xs text-text-disabled">The state of development in Algeria · 2026</span>
+        <div className="flex flex-col items-center gap-1 md:items-start">
+          <Logo />
+          <span className="text-text-disabled text-xs">
+            The state of development in Algeria · 2026
+          </span>
         </div>
 
         {/* Nav links */}
-        <div className="flex gap-6 text-sm text-text-medium">
+        <div className="text-text-medium flex gap-6 text-sm">
           {links.map((link, i) => (
-            <a key={i} href={link.href} className="hover:text-brand-hover transition">
+            <a
+              key={i}
+              href={link.href}
+              className="hover:text-brand-hover transition"
+            >
               {link.label}
             </a>
           ))}
         </div>
 
         {/* Made by */}
-        <div className="text-xs text-text-disabled text-center md:text-right">
+        <div className="text-text-disabled text-center text-xs md:text-right">
           Made by college students in Algeria @ESI-SBA
         </div>
-
       </div>
-
     </footer>
   );
 }
