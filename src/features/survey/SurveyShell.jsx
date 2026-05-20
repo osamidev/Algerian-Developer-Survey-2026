@@ -52,6 +52,7 @@ function SurveyShell() {
     setIsSubmitting,
     navigationDirection,
     isLoading,
+    fetchError,
     questions,
   } = useSurvey();
   const {
@@ -118,6 +119,43 @@ function SurveyShell() {
       {isLoading ? (
         <div className="flex min-h-0 w-full max-w-125 flex-1 -translate-y-10 items-center justify-center">
           <div className="loader-bars"></div>
+        </div>
+      ) : fetchError ? (
+        <div className="z-10 flex min-h-0 w-full max-w-125 flex-1 flex-col items-center justify-center px-4 pb-20 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex w-full flex-col items-center"
+          >
+            <div className="bg-red-500/10 text-red-300 mb-6 flex h-20 w-20 items-center justify-center rounded-full">
+              <svg
+                className="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-12.728 12.728M5.636 5.636l12.728 12.728" />
+              </svg>
+            </div>
+
+            <h2 className="mb-3 font-mono text-3xl font-bold tracking-tight text-white">Something went wrong</h2>
+            <p className="mb-10 max-w-md font-mono text-white/50">We couldn't load the survey questions. Please try again or come back later.</p>
+
+            <div className="flex w-full max-w-sm flex-col gap-4">
+              <button
+                onClick={() => window.location.reload()}
+                className="bg-brand-primary hover:bg-brand-hover flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4 font-mono text-lg font-semibold text-white transition-colors"
+              >
+                Retry
+              </button>
+              <Link
+                to="/"
+                className="bg-background-surface/30 flex w-full items-center justify-center gap-2 rounded-xl border border-white/20 px-6 py-4 font-mono text-lg font-medium text-white transition-colors hover:bg-white/5"
+              >
+                Go Home
+              </Link>
+            </div>
+          </motion.div>
         </div>
       ) : isCompleted ? (
         <div className="z-10 flex min-h-0 w-full max-w-125 flex-1 flex-col items-center justify-center px-4 pb-20 text-center">
