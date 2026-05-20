@@ -3,11 +3,21 @@ import { Link } from "react-router-dom";
 export default function NotFound() {
   return (
     <div className="bg-background-main flex min-h-screen items-center justify-center text-white">
-      <div className="z-10 w-full max-w-2xl rounded-2xl bg-background-surface/30 p-8 text-center backdrop-blur">
+      <div className="bg-background-surface/30 z-10 w-full max-w-2xl rounded-2xl p-8 text-center backdrop-blur">
         <div className="mb-6 flex items-center justify-center">
           <div className="bg-brand-primary/20 text-brand-primary flex h-16 w-16 items-center justify-center rounded-full">
-            <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12A9 9 0 1112 3a9 9 0 019 9z" />
+            <svg
+              className="h-8 w-8"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 8v4m0 4h.01M21 12A9 9 0 1112 3a9 9 0 019 9z"
+              />
             </svg>
           </div>
         </div>

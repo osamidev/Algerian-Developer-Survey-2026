@@ -9,17 +9,24 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
-      <>
-    <AuthProvider>
-      <Toaster position="top-center" />
+    <>
+      <AuthProvider>
+        <Toaster position="top-center" />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/oauth" element={<OAuthPage />} />
-          <Route path="/survey" element={<ProtectedRoute><SurveyPage /></ProtectedRoute>} />
+          <Route
+            path="/survey"
+            element={
+              <ProtectedRoute>
+                <SurveyPage />
+              </ProtectedRoute>
+            }
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
-    </AuthProvider>
-      </>
+      </AuthProvider>
+    </>
   );
 }
 

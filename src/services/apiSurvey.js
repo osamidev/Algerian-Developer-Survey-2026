@@ -7,7 +7,7 @@ const getQuestions = async () => {
     );
   }
 
-  const data = await fetch(questionsApiUrl);
+  const data = await fetch("");
 
   if (!data.ok) {
     throw new Error(

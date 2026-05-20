@@ -23,7 +23,6 @@ export function QuestionsProvider({ children }) {
 
   // Fetch remote questions from backend
   useEffect(() => {
-    let mounted = true;
 
     async function fetchRemote() {
       setIsLoading(true);
@@ -31,11 +30,11 @@ export function QuestionsProvider({ children }) {
 
       try {
         const data = await getQuestions();
-        if (mounted) setRemoteData(data);
+         setRemoteData(data);
       } catch (err) {
-        if (mounted) setFetchError(err);
+        setFetchError(err);
       } finally {
-        if (mounted) setIsLoading(false);
+        setIsLoading(false);
       }
     }
 
