@@ -34,11 +34,8 @@ const categoryColors = {
   career: "bg-yellow-500/20 text-yellow-300",
   salary: "bg-emerald-500/20 text-emerald-300",
   remote_work: "bg-cyan-500/20 text-cyan-300",
-  goals: "bg-indigo-500/20 text-indigo-300",
   challenges: "bg-orange-500/20 text-orange-300",
   learning: "bg-teal-500/20 text-teal-300",
-  community: "bg-rose-500/20 text-rose-300",
-  startup: "bg-violet-500/20 text-violet-300",
   opinions: "bg-fuchsia-500/20 text-fuchsia-300",
 };
 

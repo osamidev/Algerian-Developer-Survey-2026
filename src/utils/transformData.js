@@ -41,13 +41,26 @@ export function transformSurveyData(formData, questions = []) {
         });
       }
     }
-    // Handle Single Values and range input (0-10)
+    // Handle Single Values and range input (1-5)
     else {
-      answers.push({
-        question_id: qIdNum,
-        type: qType,
-        answer: normalizeValue(rawVal),
-      });
+      if (qType === "range") {
+        const question = questions.find((q) => String(q.id) === key);
+        const option = question?.options[normalizeValue(rawVal) - 1];
+
+        if (option) {
+          answers.push({
+            question_id: qIdNum,
+            type: qType,
+            answer: option.id,
+          });
+        }
+      } else {
+        answers.push({
+          question_id: qIdNum,
+          type: qType,
+          answer: normalizeValue(rawVal),
+        });
+      }
     }
   }
 

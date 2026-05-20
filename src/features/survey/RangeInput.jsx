@@ -5,14 +5,16 @@ function RangeInput({ question }) {
   const { register, control } = useFormContext();
   const [isDragging, setIsDragging] = useState(false);
 
+  const options = question.options || [];
+  const maxVal = options.length > 0 ? options.length : 5;
   const value = useWatch({
     control,
     name: String(question.id),
-    defaultValue: 5,
+    defaultValue: Math.ceil(maxVal / 2),
   });
 
   // Calculate percentage to position the floating value over the thumb
-  const percent = ((value - 1) / 9) * 100;
+  const percent = ((value - 1) / (maxVal - 1)) * 100;
 
   return (
     <div className="flex w-full max-w-sm flex-col gap-2 pt-8">
@@ -23,8 +25,8 @@ function RangeInput({ question }) {
             isDragging ? "opacity-100" : "opacity-0"
           }`}
           style={{
-            left: `calc(${percent}% + (${16 - percent * 0.32}px))`,
-            transform: "translateX(-50%)",
+            left: `${percent}%`,
+            transform: `translateX(-50%) translateX(${16 - (percent / 100) * 32}px)`,
           }}
         >
           {value}
@@ -34,7 +36,7 @@ function RangeInput({ question }) {
         <input
           type="range"
           min="1"
-          max="10"
+          max={maxVal}
           step="1"
           {...register(String(question.id), {
             required: "This question is required",
