@@ -18,7 +18,7 @@ function Showcase() {
   }
 
   function handleShare() {
-    navigator.clipboard.writeText(window.location.origin + "/survey");
+    navigator.clipboard.writeText(window.location.origin);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }
