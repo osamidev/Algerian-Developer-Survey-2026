@@ -32,6 +32,7 @@ export function QuestionsProvider({ children }) {
         setRemoteData(data);
       } catch (err) {
         setFetchError(err);
+        setFetchError(err);
       } finally {
         setIsLoading(false);
       }
