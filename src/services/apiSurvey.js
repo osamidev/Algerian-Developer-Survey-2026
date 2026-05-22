@@ -1,3 +1,5 @@
+import { transformSurveyData } from "../utils/transformData";
+
 const questionsApiUrl = import.meta.env.VITE_QUESTIONS_API_URL;
 
 const getQuestions = async () => {
@@ -35,7 +37,7 @@ const submitResponses = async (responses) => {
       // 2. Pass the token securely in the Authorization header
       ...(token && { Authorization: `Bearer ${token}` }),
     },
-    body: JSON.stringify(responses),
+    body: JSON.parse(transformSurveyData(responses, await getQuestions())),
   });
 
   if (!data.ok) {
