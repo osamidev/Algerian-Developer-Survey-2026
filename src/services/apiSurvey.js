@@ -25,10 +25,15 @@ const submitResponses = async (responses) => {
       "Submit API is not configured. Set VITE_SUBMIT_API_URL and try again.",
     );
 
+  // 1. Grab the token from localStorage
+  const token = localStorage.getItem("survey_session");
+
   const data = await fetch(submitUrl, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      // 2. Pass the token securely in the Authorization header
+      ...(token && { Authorization: `Bearer ${token}` }),
     },
     body: JSON.stringify(responses),
   });

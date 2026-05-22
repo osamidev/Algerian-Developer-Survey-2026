@@ -1,21 +1,29 @@
-export const fetchSession = async () => {
-  try {
-    const baseUrl =
-      import.meta.env.VITE_API_BASE_URL ?? "http://localhost:4000";
-    const response = await fetch(`${baseUrl}/auth/session`, {
-      method: "GET",
-      credentials: "include",
-    });
+export async function fetchSession() {
+  // Pull the token from localStorage
+  const token = localStorage.getItem("survey_session");
 
-    if (!response.ok) throw new Error("Not authenticated!");
+  // If there is no token locally, don't waste an API call
+  if (!token) throw new Error("No session stored locally");
 
-    const data = await response.json();
+  const baseUrl = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:4000";
+  const response = await fetch(`${baseUrl}/auth/session`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      // Pass the token inside the modern Bearer authorization format
+      Authorization: `Bearer ${token}`,
+    },
+  });
 
-    return data.session;
-  } catch {
-    return null;
+  if (!response.ok) {
+    throw new Error("Failed to fetch session");
   }
-};
+
+  const data = await response.json();
+
+  // Return the session object payload to populate the 'user' context state
+  return data.session;
+}
 
 export const logoutUser = async () => {
   const baseUrl = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:4000";
