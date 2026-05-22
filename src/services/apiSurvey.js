@@ -37,7 +37,7 @@ const submitResponses = async (responses) => {
       // 2. Pass the token securely in the Authorization header
       ...(token && { Authorization: `Bearer ${token}` }),
     },
-    body: JSON.parse(transformSurveyData(responses, await getQuestions())),
+    body: JSON.stringify(responses),
   });
 
   if (!data.ok) {
