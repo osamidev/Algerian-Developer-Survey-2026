@@ -39,7 +39,8 @@ function Header({ progress }) {
             {avatar_image ? (
               <img
                 src={avatar_image}
-                alt="User Avatar"
+                alt="User Profile"
+                referrerPolicy="no-referrer"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className="h-10 w-10 cursor-pointer rounded-full object-cover transition-transform duration-200 hover:scale-105 active:scale-95"
               />
