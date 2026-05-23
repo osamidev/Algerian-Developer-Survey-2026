@@ -1,13 +1,28 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import { BrowserRouter } from 'react-router-dom'
+import { StrictMode } from "react";
+import { createRoot, hydrateRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import { BrowserRouter } from "react-router-dom";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-     <BrowserRouter>
-     <App />   
-     </BrowserRouter>  
-  </StrictMode>,
-)
+const container = document.getElementById("root");
+
+if (container.hasChildNodes()) {
+  // Pass the JSX tree directly inline
+  hydrateRoot(
+    container,
+    <StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </StrictMode>,
+  );
+} else {
+  // Pass the JSX tree directly inline
+  createRoot(container).render(
+    <StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </StrictMode>,
+  );
+}

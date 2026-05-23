@@ -1,5 +1,5 @@
 import { useFormContext } from "react-hook-form";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, defaultOffset, motion } from "framer-motion";
 import { useSurvey } from "../../Contexts/useSurvey";
 import SomethingWentWrong from "../../pages/SomethingWentWrong";
 import QuestionRenderer from "./QuestionRenderer";
@@ -29,7 +29,6 @@ import { transformSurveyData } from "../../utils/transformData";
 
 const categoryColors = {
   "Education & Background": "bg-blue-500/20 text-blue-300",
-  Education: "bg-green-500/20 text-green-300",
   Tech: "bg-purple-500/20 text-purple-300",
   AI: "bg-pink-500/20 text-pink-300",
   Career: "bg-yellow-500/20 text-yellow-300",
@@ -69,7 +68,8 @@ function SurveyShell() {
 
   useEffect(() => {
     // Scroll to top whenever the question changes
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const el = document.getElementById("scrollable");
+    el.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentQuestion]);
 
   async function onSubmit(data) {
@@ -185,7 +185,10 @@ function SurveyShell() {
             onSubmit={handleSubmit(onSubmit)}
             className="flex h-full w-full flex-col justify-between"
           >
-            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-32">
+            <div
+              id="scrollable"
+              className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-32"
+            >
               <AnimatePresence mode="wait" custom={navigationDirection}>
                 {currentQuestion && (
                   <MotionDiv
