@@ -1,5 +1,5 @@
 import { useFormContext } from "react-hook-form";
-import { AnimatePresence, defaultOffset, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useSurvey } from "../../Contexts/useSurvey";
 import SomethingWentWrong from "../../pages/SomethingWentWrong";
 import QuestionRenderer from "./QuestionRenderer";
@@ -8,7 +8,7 @@ import Header from "./Header";
 import toast from "react-hot-toast";
 import { submitResponses } from "../../services/apiSurvey";
 import { useAuth } from "../../Contexts/useAuth";
-import { useState, useEffect } from "react";
+import { useState, useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, ChevronUp, ExternalLink, Home } from "lucide-react";
 const questionSlideVariants = {
@@ -28,16 +28,11 @@ const questionSlideVariants = {
 import { transformSurveyData } from "../../utils/transformData";
 
 const categoryColors = {
-  "Education & Background": "bg-blue-500/20 text-blue-300",
+  Demographics: "bg-gray-500/20 text-gray-300",
   Tech: "bg-purple-500/20 text-purple-300",
   AI: "bg-pink-500/20 text-pink-300",
   Career: "bg-yellow-500/20 text-yellow-300",
-  Salary: "bg-emerald-500/20 text-emerald-300",
-  "Remote Work": "bg-cyan-500/20 text-cyan-300",
   "Challenges & Opinions": "bg-orange-500/20 text-orange-300",
-  Learning: "bg-teal-500/20 text-teal-300",
-  Opinions: "bg-fuchsia-500/20 text-fuchsia-300",
-  Demographics: "bg-gray-500/20 text-gray-300",
 };
 
 const MotionDiv = motion.div;
@@ -45,6 +40,7 @@ const MotionDiv = motion.div;
 function SurveyShell() {
   const { user } = useAuth();
   const [showDesc, setShowDesc] = useState(false);
+  const scrollContainerRef = useRef(null);
 
   const {
     currentQuestion,
@@ -62,14 +58,16 @@ function SurveyShell() {
     formState: { errors },
   } = useFormContext();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setShowDesc(false);
   }, [currentQuestion?.id]);
 
-  useEffect(() => {
-    // Scroll to top whenever the question changes
-    const el = document.getElementById("scrollable");
-    el.scrollTo({ top: 0, behavior: "smooth" });
+  useLayoutEffect(() => {
+    // Reset the question scroll position after each navigation step.
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    container.scrollTo({ top: 0, behavior: "auto" });
   }, [currentQuestion]);
 
   async function onSubmit(data) {
@@ -186,7 +184,7 @@ function SurveyShell() {
             className="flex h-full w-full flex-col justify-between"
           >
             <div
-              id="scrollable"
+              ref={scrollContainerRef}
               className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-32"
             >
               <AnimatePresence mode="wait" custom={navigationDirection}>
@@ -208,7 +206,7 @@ function SurveyShell() {
                           "bg-gray-500/20 text-gray-300"
                         }`}
                       >
-                        {currentQuestion.category?.replace("_", " ")}
+                        {currentQuestion.category}
                       </span>
                     </div>
                     <div className="mb-8 flex flex-col">
