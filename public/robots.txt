@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /$            # Allows landing page
+Allow: /showcase/    # Allows statistics showcases
+Disallow: /survey    # Blocks crawlers from trying to enter the survey loop
