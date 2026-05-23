@@ -28,16 +28,17 @@ const questionSlideVariants = {
 import { transformSurveyData } from "../../utils/transformData";
 
 const categoryColors = {
-  background: "bg-blue-500/20 text-blue-300",
-  education: "bg-green-500/20 text-green-300",
-  tech_stack: "bg-purple-500/20 text-purple-300",
-  ai: "bg-pink-500/20 text-pink-300",
-  career: "bg-yellow-500/20 text-yellow-300",
-  salary: "bg-emerald-500/20 text-emerald-300",
-  remote_work: "bg-cyan-500/20 text-cyan-300",
-  challenges: "bg-orange-500/20 text-orange-300",
-  learning: "bg-teal-500/20 text-teal-300",
-  opinions: "bg-fuchsia-500/20 text-fuchsia-300",
+  "Education & Background": "bg-blue-500/20 text-blue-300",
+  Education: "bg-green-500/20 text-green-300",
+  Tech: "bg-purple-500/20 text-purple-300",
+  AI: "bg-pink-500/20 text-pink-300",
+  Career: "bg-yellow-500/20 text-yellow-300",
+  Salary: "bg-emerald-500/20 text-emerald-300",
+  "Remote Work": "bg-cyan-500/20 text-cyan-300",
+  "Challenges & Opinions": "bg-orange-500/20 text-orange-300",
+  Learning: "bg-teal-500/20 text-teal-300",
+  Opinions: "bg-fuchsia-500/20 text-fuchsia-300",
+  Demographics: "bg-gray-500/20 text-gray-300",
 };
 
 const MotionDiv = motion.div;
@@ -65,6 +66,11 @@ function SurveyShell() {
   useEffect(() => {
     setShowDesc(false);
   }, [currentQuestion?.id]);
+
+  useEffect(() => {
+    // Scroll to top whenever the question changes
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentQuestion]);
 
   async function onSubmit(data) {
     setIsSubmitting(true);
