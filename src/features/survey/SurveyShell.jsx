@@ -62,14 +62,6 @@ function SurveyShell() {
     setShowDesc(false);
   }, [currentQuestion?.id]);
 
-  useLayoutEffect(() => {
-    // Reset the question scroll position after each navigation step.
-    const container = scrollContainerRef.current;
-    if (!container) return;
-
-    container.scrollTo({ top: 0, behavior: "auto" });
-  }, [currentQuestion]);
-
   async function onSubmit(data) {
     setIsSubmitting(true);
 
@@ -198,6 +190,14 @@ function SurveyShell() {
                     exit="exit"
                     transition={{ duration: 0.28, ease: "easeOut" }}
                     className="flex flex-col"
+                    onAnimationStart={(variant) => {
+                      if (variant === "center") {
+                        scrollContainerRef.current?.scrollTo({
+                          top: 0,
+                          behavior: "auto",
+                        });
+                      }
+                    }}
                   >
                     <div className="mb-4 flex">
                       <span
