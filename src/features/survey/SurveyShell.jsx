@@ -44,7 +44,6 @@ const MotionDiv = motion.div;
 
 function SurveyShell() {
   const { user } = useAuth();
-  const [hasJustSubmitted, setHasJustSubmitted] = useState(false);
   const [showDesc, setShowDesc] = useState(false);
 
   const {
@@ -78,12 +77,17 @@ function SurveyShell() {
 
     // 2. Handle execution and side effects
     try {
-      await submitResponses(submission);
-      setHasJustSubmitted(true);
+      const result = await submitResponses(submission);
+
+      if (result?.session_token) {
+        localStorage.setItem("survey_session", result.session_token);
+      }
 
       // Clean up cache
       localStorage.removeItem("surveyAnswers");
       localStorage.removeItem("currentQuestionIndex");
+
+      window.location.reload();
     } catch {
       toast.error("Failed to submit responses. Please try again.");
     } finally {
@@ -91,7 +95,7 @@ function SurveyShell() {
       setIsSubmitting(false);
     }
   }
-  const isCompleted = user?.did_user_submit || hasJustSubmitted;
+  const isCompleted = user?.did_user_submit;
 
   function handleShare() {
     if (navigator.share) {

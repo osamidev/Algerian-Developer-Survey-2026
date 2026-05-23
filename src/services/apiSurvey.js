@@ -1,5 +1,3 @@
-import { transformSurveyData } from "../utils/transformData";
-
 const questionsApiUrl = import.meta.env.VITE_QUESTIONS_API_URL;
 
 const getQuestions = async () => {
@@ -29,8 +27,7 @@ const submitResponses = async (responses) => {
 
   // 1. Grab the token from localStorage
   const token = localStorage.getItem("survey_session");
-
-  const data = await fetch(submitUrl, {
+  const response = await fetch(submitUrl, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -40,13 +37,16 @@ const submitResponses = async (responses) => {
     body: JSON.stringify(responses),
   });
 
-  if (!data.ok) {
+  const data = await response.json().catch(() => null);
+
+  if (!response.ok) {
     throw new Error(
-      `Failed to submit responses (${data.status} ${data.statusText || "Unknown error"}).`,
+      data?.message ||
+        `Failed to submit responses (${response.status} ${response.statusText || "Unknown error"}).`,
     );
   }
 
-  return data.json();
+  return data;
 };
 
 export { getQuestions, submitResponses };

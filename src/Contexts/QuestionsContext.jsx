@@ -44,6 +44,7 @@ export function QuestionsProvider({ children }) {
   const isVisible = (question) => {
     if (!question.dependencies || question.dependencies.length === 0)
       return true;
+    if (question.required) return true; // Always show required questions
 
     const answers = getValues();
     const allSelectedOptionIds = Object.values(answers).flatMap((val) => {
