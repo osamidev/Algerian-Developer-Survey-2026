@@ -77,11 +77,7 @@ function SurveyShell() {
 
     // 2. Handle execution and side effects
     try {
-      const result = await submitResponses(submission);
-
-      if (result?.session_token) {
-        localStorage.setItem("survey_session", result.session_token);
-      }
+      await submitResponses(submission);
 
       // Clean up cache
       localStorage.removeItem("surveyAnswers");
