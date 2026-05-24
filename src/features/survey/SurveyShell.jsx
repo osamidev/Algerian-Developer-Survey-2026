@@ -26,13 +26,14 @@ const questionSlideVariants = {
   }),
 };
 import { transformSurveyData } from "../../utils/transformData";
+import BackToHomeBtn from "../../components/BackToHomeBtn";
 
 const categoryColors = {
-  Demographics: "bg-gray-500/20 text-gray-300",
-  Tech: "bg-purple-500/20 text-purple-300",
-  AI: "bg-pink-500/20 text-pink-300",
-  Career: "bg-yellow-500/20 text-yellow-300",
-  "Challenges & Opinions": "bg-orange-500/20 text-orange-300",
+  demographics: "bg-gray-500/20 text-gray-300",
+  tech: "bg-purple-500/20 text-purple-300",
+  ai: "bg-pink-500/20 text-pink-300",
+  career: "bg-yellow-500/20 text-yellow-300",
+  "challenges&opinions": "bg-orange-500/20 text-orange-300",
 };
 
 const MotionDiv = motion.div;
@@ -113,8 +114,8 @@ function SurveyShell() {
         <Header progress={isCompleted ? null : progress} />
       </div>
       {isLoading ? (
-        <div className="flex min-h-0 w-full max-w-125 flex-1 -translate-y-10 items-center justify-center">
-          <div className="loader-bars"></div>
+        <div className="absolute top-1/2 left-1/2 flex min-h-0 w-full max-w-125 flex-1 -translate-y-10 items-center justify-center">
+          <div className="loader-spinner"></div>
         </div>
       ) : fetchError ? (
         <SomethingWentWrong
@@ -154,31 +155,25 @@ function SurveyShell() {
             <div className="flex w-full max-w-sm flex-col gap-4">
               <button
                 onClick={handleShare}
-                className="bg-brand-primary hover:bg-brand-hover flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4 font-mono text-lg font-semibold text-white transition-colors"
+                className="bg-brand-primary flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4 font-mono text-lg font-semibold text-white transition-all duration-100 hover:scale-103 active:scale-97"
               >
                 <ExternalLink className="h-5 w-5" />
                 Share Survey
               </button>
-              <Link
-                to="/"
-                className="bg-background-surface/30 flex w-full items-center justify-center gap-2 rounded-xl border border-white/20 px-6 py-4 font-mono text-lg font-medium text-white transition-colors hover:bg-white/5"
-              >
-                <Home className="h-5 w-5" />
-                Back to Home
-              </Link>
+              <BackToHomeBtn />
             </div>
           </motion.div>
         </div>
       ) : (
-        <div className="z-10 flex min-h-0 w-full max-w-125 flex-1 flex-col">
+        <div
+          className="z-10 flex min-h-0 w-full max-w-125 flex-1 flex-col"
+          ref={scrollContainerRef}
+        >
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex h-full w-full flex-col justify-between"
           >
-            <div
-              ref={scrollContainerRef}
-              className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-32"
-            >
+            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-32">
               <AnimatePresence mode="wait" custom={navigationDirection}>
                 {currentQuestion && (
                   <MotionDiv
@@ -202,8 +197,9 @@ function SurveyShell() {
                     <div className="mb-4 flex">
                       <span
                         className={`rounded-full px-3 py-2 font-mono text-xs font-semibold tracking-wider uppercase ${
-                          categoryColors[currentQuestion.category] ||
-                          "bg-gray-500/20 text-gray-300"
+                          categoryColors[
+                            currentQuestion.category.toLowerCase().trim()
+                          ] || "bg-gray-500/20 text-gray-300"
                         }`}
                       >
                         {currentQuestion.category}
