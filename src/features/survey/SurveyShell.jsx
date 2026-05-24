@@ -165,15 +165,15 @@ function SurveyShell() {
           </motion.div>
         </div>
       ) : (
-        <div
-          className="z-10 flex min-h-0 w-full max-w-125 flex-1 flex-col"
-          ref={scrollContainerRef}
-        >
+        <div className="z-10 flex min-h-0 w-full max-w-125 flex-1 flex-col">
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex h-full w-full flex-col justify-between"
           >
-            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-32">
+            <div
+              className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-32"
+              ref={scrollContainerRef}
+            >
               <AnimatePresence mode="wait" custom={navigationDirection}>
                 {currentQuestion && (
                   <MotionDiv
