@@ -28,7 +28,7 @@ function DataPrivacyPage() {
                 address. Your username (Google or GitHub) is used solely to
                 prevent duplicate submissions — no passwords are ever accessed
                 or stored. Your email address is used only to notify you when
-                the results page is published; it will not be used for any other
+                the results page is published, it will not be used for any other
                 purpose.
               </p>
               <p>
