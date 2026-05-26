@@ -1,11 +1,15 @@
+import { useNavigate } from "react-router";
+import useScroll from "../hooks/useScroll";
 import Logo from "./Logo";
 
 function Footer() {
+  const { scrollTo } = useScroll();
+  const navigate = useNavigate();
   const links = [
-    { label: "Home", href: "#" },
-    { label: "About", href: "#" },
-    { label: "Who We Are", href: "#" },
-    { label: "Showcase", href: "#" },
+    { label: "Home", to: "hero" },
+    { label: "About", to: "about" },
+    { label: "Who We Are", to: "who" },
+    { label: "Showcase", to: "showcase" },
   ];
 
   return (
@@ -25,14 +29,29 @@ function Footer() {
         {/* Nav links */}
         <div className="text-text-medium flex gap-6 text-sm">
           {links.map((link, i) => (
-            <a
+            <button
               key={i}
-              href={link.href}
-              className="hover:text-brand-hover transition"
+              onClick={() => scrollTo(link.to)}
+              className="hover:text-brand-hover cursor-pointer transition"
             >
               {link.label}
-            </a>
+            </button>
           ))}
+          <button
+            onClick={() => {
+              navigate("/data-privacy");
+              setTimeout(function () {
+                window.scrollTo({
+                  top: 0,
+                  left: 0,
+                  behavior: "smooth",
+                });
+              }, 20);
+            }}
+            className="hover:text-brand-hover cursor-pointer transition"
+          >
+            Data Privacy
+          </button>
         </div>
 
         {/* Made by */}

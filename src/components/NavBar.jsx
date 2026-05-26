@@ -1,28 +1,17 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Logo from "./Logo";
 import toast from "react-hot-toast";
-import { useLocation, useNavigate } from "react-router";
+import useScroll from "../hooks/useScroll";
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.pathname === "/" && location.state?.scrollToId) {
-      const timer = setTimeout(() => {
-        const el = document.getElementById(location.state.scrollToId);
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-        navigate("/", { replace: true, state: {} });
-      }, 100);
-
-      return () => clearTimeout(timer);
-    }
-  }, [location, navigate]);
+  const { scrollTo } = useScroll();
 
   function handleShare() {
     let link = window.location.href;
     if (link.endsWith("/oauth")) {
       link = link.slice(0, -6); // Remove /oauth if present
+    } else if (link.endsWith("/data-privacy")) {
+      link = link.slice(0, -13); // Remove /data-privacy if present
     }
     navigator.clipboard.writeText(link);
     toast.success("Link copied to clipboard!", {
@@ -35,20 +24,6 @@ function NavBar() {
     });
   }
 
-  // 2. Updated scroll logic to handle multi-page checks
-  function scrollTo(id) {
-    setIsOpen(false);
-
-    // If we are on the home page, scroll normally
-    if (location.pathname === "/") {
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    } else {
-      // If we are on /oauth or any other page, redirect home and send the ID along
-      navigate("/", { state: { scrollToId: id } });
-    }
-  }
-
   return (
     <nav className="bg-background-main/60 border-border-subtle/30 fixed top-0 right-0 left-0 z-50 border-b backdrop-blur-md">
       <div className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-8 py-4">
@@ -57,25 +32,37 @@ function NavBar() {
         {/* Desktop Links */}
         <div className="text-text-medium border-border-subtle absolute left-1/2 hidden -translate-x-1/2 gap-8 rounded-full border bg-white/5 px-8 py-3 text-sm shadow-[0_8px_32px_rgba(0,0,0,0.25)] backdrop-blur-xl md:flex">
           <button
-            onClick={() => scrollTo("Hero")}
+            onClick={() => {
+              setIsOpen(false);
+              scrollTo("hero");
+            }}
             className="hover:text-brand-hover cursor-pointer transition"
           >
             Home
           </button>
           <button
-            onClick={() => scrollTo("About")}
+            onClick={() => {
+              setIsOpen(false);
+              scrollTo("about");
+            }}
             className="hover:text-brand-hover cursor-pointer transition"
           >
             About
           </button>
           <button
-            onClick={() => scrollTo("who")}
+            onClick={() => {
+              setIsOpen(false);
+              scrollTo("who");
+            }}
             className="hover:text-brand-hover cursor-pointer transition"
           >
             Who We Are
           </button>
           <button
-            onClick={() => scrollTo("showcase")}
+            onClick={() => {
+              setIsOpen(false);
+              scrollTo("showcase");
+            }}
             className="hover:text-brand-hover cursor-pointer transition"
           >
             Showcase

@@ -5,6 +5,7 @@ import ShowcasePage from "./pages/ShowcasePage";
 import SurveyPage from "./pages/SurveyPage";
 import OAuthPage from "./pages/OAuthPage";
 import NotFound from "./pages/NotFound";
+import DataPrivacyPage from "./pages/DataPrivacyPage";
 import AuthProvider from "./Contexts/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/showcase" element={<ShowcasePage />} />
           <Route path="/oauth" element={<OAuthPage />} />
+          <Route path="/data-privacy" element={<DataPrivacyPage />} />
           <Route
             path="/survey"
             element={

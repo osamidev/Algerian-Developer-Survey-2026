@@ -9,7 +9,7 @@ function Hero() {
 
   return (
     <section
-      id="Hero"
+      id="hero"
       className="text-text-high relative isolate flex h-auto items-start justify-start overflow-hidden px-4 pt-32 sm:mt-4 sm:min-h-dvh sm:items-center sm:justify-center sm:px-6 sm:pt-0 sm:pb-8 md:mt-0 lg:px-10 lg:pb-0"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_58%,rgba(106,42,204,0.18),rgba(11,14,20,0)_52%)]" />
@@ -57,7 +57,7 @@ function Hero() {
               Take the survey
             </Link>
             <button
-              onClick={() => scrollTo("About")}
+              onClick={() => scrollTo("about")}
               className="border-border-subtle hover:border-brand-primary/50 inline-flex h-14 flex-1 items-center justify-center rounded-lg border bg-transparent px-6 text-base font-medium tracking-tight text-white transition-colors sm:text-lg"
             >
               Learn more
